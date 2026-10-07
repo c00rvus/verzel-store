@@ -1,5 +1,7 @@
 # Dashboard de resultados
 
+[Acessar dashboard](https://c00rvus.github.io/verzel-store/).
+
 Visualização estática dos resultados, bugs, evidências e código do projeto. Os dados refletem os registros existentes no momento da geração.
 
 | Local | Conteúdo |

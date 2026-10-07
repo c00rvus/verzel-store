@@ -27,6 +27,8 @@ O escopo cobre carrinho, cupons, frete, checkout e contratos da API. O ambiente 
 
 ## Dashboard
 
+[Acessar dashboard](https://c00rvus.github.io/verzel-store/).
+
 Visualização estática dos resultados, bugs, evidências e código. A fonte fica em `dashboard/`; os dados refletem os registros existentes no momento da geração.
 
 Na raiz do projeto:
