@@ -125,3 +125,15 @@ node dashboard/serve.cjs
 ```
 
 Abra [http://127.0.0.1:4174/](http://127.0.0.1:4174/). O dashboard exibe os registros existentes; esses comandos não executam testes.
+
+## Uso de IA
+
+Conduzi o projeto e coordenei o uso do Codex ao longo das etapas. Defini as prioridades, solicitei as atividades e revisei as entregas, orientando ajustes na documentação, nos testes e na apresentação dos resultados. Na automação, determinei que o foco deveria estar nos fluxos principais e críticos, com uma estrutura simples para ser lida e compreendida
+
+Executei pessoalmente parte dos testes manuais, incluindo variações de cupons, remoção e reaplicação do desconto e condições de frete grátis. Informei os comportamentos e valores observados, os horários, o navegador utilizado e as capturas correspondentes para compor os registros de execução e as evidências.
+
+Também direcionei a organização técnica da automação: solicitei a separação em Page Objects, a utilização de locators existentes nas páginas, a organização do cliente, dos dados e das validações da API e a parametrização de testes semelhantes. Orientei a execução em paralelo, investiguei problemas de duração e comportamento dos testes, identifiquei o problema e solicitei ajuste ao modelo.
+
+O Codex foi utilizado na análise da documentação, elaboração dos cenários em Gherkin, execução de parte dos testes de interface e API, organização das evidências, documentação dos bugs e geração e refatoração do código Playwright. Também criou o dashboard e auxiliou na publicação no GitHub Pages.
+
+Revisei a apresentação das entregas e solicitei melhorias para facilitar a avaliação, como evidências isoladas por cenário, comparação de antes e depois, destaque dos bugs, visualização do código e um README objetivo com instruções de execução e estrutura de pastas.
