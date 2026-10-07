@@ -69,7 +69,3 @@ node dashboard/serve.cjs
 ```
 
 Abra [http://127.0.0.1:4174/](http://127.0.0.1:4174/). O dashboard exibe os registros existentes; esses comandos não executam testes.
-
-## Uso de IA
-
-Utilizei IA na análise dos requisitos, elaboração dos cenários, execução e organização dos testes manuais e de API, automação Playwright e criação do dashboard.
