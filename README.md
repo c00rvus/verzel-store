@@ -29,6 +29,60 @@ Testes de carrinho, cupons, frete e checkout na interface e na API. Card **VZS-1
 
 Ambiente: [loja](https://verzel-store.qa-test-verzel-store.workers.dev/) e [documentação](https://verzel-store.qa-test-verzel-store.workers.dev/documentacao).
 
+## Estrutura do projeto
+
+Principais pastas e arquivos:
+
+```text
+verzel-store/
+├── .github/
+│   └── workflows/
+│       └── dashboard.yml
+├── dashboard/
+│   ├── lib/
+│   ├── index.html
+│   ├── app.js
+│   ├── styles.css
+│   ├── build.cjs
+│   └── serve.cjs
+├── docs/
+│   ├── assets/
+│   │   └── dashboard-inicio.jpg
+│   ├── gherkin/
+│   │   ├── api.feature
+│   │   ├── carrinho.feature
+│   │   └── checkout.feature
+│   ├── bugs.md
+│   ├── cenarios.md
+│   ├── evidencias.md
+│   └── execucao.md
+├── evidencias/
+│   ├── automacao/
+│   ├── cenarios/
+│   ├── execucao-2026-10-07/
+│   ├── revisao-2026-10-07/
+│   └── revisao-ambiente/
+├── tests/
+│   ├── api/
+│   │   ├── dados.ts
+│   │   ├── LojaApi.ts
+│   │   └── validacoes.ts
+│   ├── pages/
+│   │   ├── CarrinhoPage.ts
+│   │   ├── CheckoutPage.ts
+│   │   ├── PedidoConfirmadoPage.ts
+│   │   ├── ProdutosPage.ts
+│   │   └── ResumoPedido.ts
+│   ├── carrinho.spec.ts
+│   ├── checkout.spec.ts
+│   ├── limite-api.spec.ts
+│   └── helpers.ts
+├── package.json
+├── package-lock.json
+├── playwright.config.ts
+└── README.md
+```
+
 ## Executar a automação
 
 Requisitos: **Node.js 22+**, npm e acesso à internet. Na raiz do projeto:
