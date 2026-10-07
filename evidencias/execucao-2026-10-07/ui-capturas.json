@@ -1,0 +1,612 @@
+[
+  {
+    "arquivo": "CT-001-vitrine-antes-adicionar.png",
+    "etapa": "Vitrine com carrinho vazio",
+    "observadoEmUTC": "2026-10-07T14:15:13.788Z"
+  },
+  {
+    "arquivo": "CT-001-vitrine-depois-adicionar.png",
+    "etapa": "Uma mochila adicionada",
+    "observadoEmUTC": "2026-10-07T14:15:14.227Z"
+  },
+  {
+    "arquivo": "CT-001-cupom-antes.png",
+    "etapa": "Resumo completo sem cupom",
+    "observadoEmUTC": "2026-10-07T14:16:06.592Z"
+  },
+  {
+    "arquivo": "CT-001-cupom-preenchido.png",
+    "etapa": "BEMVINDO10 preenchido antes de aplicar",
+    "observadoEmUTC": "2026-10-07T14:16:06.779Z"
+  },
+  {
+    "arquivo": "CT-001-cupom-depois.png",
+    "etapa": "Cupom aplicado e resumo recalculado",
+    "observadoEmUTC": "2026-10-07T14:16:07.238Z"
+  },
+  {
+    "arquivo": "CT-002-espacos-inicio-antes.png",
+    "etapa": "Uma mochila sem cupom",
+    "observadoEmUTC": "2026-10-07T14:16:47.122Z"
+  },
+  {
+    "arquivo": "CT-002-espacos-inicio-preenchido.png",
+    "etapa": "Dois espaços antes de BEMVINDO10",
+    "observadoEmUTC": "2026-10-07T14:16:47.353Z"
+  },
+  {
+    "arquivo": "CT-002-espacos-inicio-depois.png",
+    "etapa": "Cupom com espaços iniciais aceito",
+    "observadoEmUTC": "2026-10-07T14:16:47.825Z"
+  },
+  {
+    "arquivo": "CT-002-espacos-fim-antes.png",
+    "etapa": "Carrinho sem cupom",
+    "observadoEmUTC": "2026-10-07T14:17:17.340Z"
+  },
+  {
+    "arquivo": "CT-002-espacos-fim-preenchido.png",
+    "etapa": "Entrada exata registrada em JSON",
+    "observadoEmUTC": "2026-10-07T14:17:17.582Z"
+  },
+  {
+    "arquivo": "CT-002-espacos-fim-depois.png",
+    "etapa": "Cupom aceito e resumo atualizado",
+    "observadoEmUTC": "2026-10-07T14:17:18.055Z"
+  },
+  {
+    "arquivo": "CT-002-letras-espacos-antes.png",
+    "etapa": "Carrinho sem cupom",
+    "observadoEmUTC": "2026-10-07T14:17:18.509Z"
+  },
+  {
+    "arquivo": "CT-002-letras-espacos-preenchido.png",
+    "etapa": "Entrada exata registrada em JSON",
+    "observadoEmUTC": "2026-10-07T14:17:18.747Z"
+  },
+  {
+    "arquivo": "CT-002-letras-espacos-depois.png",
+    "etapa": "Cupom aceito e resumo atualizado",
+    "observadoEmUTC": "2026-10-07T14:17:19.200Z"
+  },
+  {
+    "arquivo": "CT-003-cupom-antes.png",
+    "etapa": "Uma mochila sem desconto",
+    "observadoEmUTC": "2026-10-07T14:17:47.458Z"
+  },
+  {
+    "arquivo": "CT-003-cupom-preenchido.png",
+    "etapa": "Cupom inexistente antes de aplicar",
+    "observadoEmUTC": "2026-10-07T14:17:47.674Z"
+  },
+  {
+    "arquivo": "CT-003-cupom-depois.png",
+    "etapa": "Cupom inválido rejeitado",
+    "observadoEmUTC": "2026-10-07T14:17:49.150Z"
+  },
+  {
+    "arquivo": "CT-004-cupom-antes.png",
+    "etapa": "Carrinho sem cupom expirado",
+    "observadoEmUTC": "2026-10-07T14:17:50.324Z"
+  },
+  {
+    "arquivo": "CT-004-cupom-preenchido.png",
+    "etapa": "VERAO2026 antes de aplicar",
+    "observadoEmUTC": "2026-10-07T14:17:51.510Z"
+  },
+  {
+    "arquivo": "CT-004-cupom-depois.png",
+    "etapa": "Cupom expirado rejeitado",
+    "observadoEmUTC": "2026-10-07T14:17:52.938Z"
+  },
+  {
+    "arquivo": "CT-010-aumentar-antes.png",
+    "etapa": "Uma mochila com cupom",
+    "observadoEmUTC": "2026-10-07T14:18:18.599Z"
+  },
+  {
+    "arquivo": "CT-010-aumentar-depois.png",
+    "etapa": "Duas mochilas; frete indevido em R$ 200,00",
+    "observadoEmUTC": "2026-10-07T14:18:19.083Z"
+  },
+  {
+    "arquivo": "CT-010-diminuir-antes.png",
+    "etapa": "Duas mochilas antes de diminuir",
+    "observadoEmUTC": "2026-10-07T14:18:19.251Z"
+  },
+  {
+    "arquivo": "CT-010-diminuir-depois.png",
+    "etapa": "Uma mochila; frete e desconto recalculados",
+    "observadoEmUTC": "2026-10-07T14:18:19.695Z"
+  },
+  {
+    "arquivo": "CT-010-adicionar-antes.png",
+    "etapa": "Resumo antes de adicionar outro produto",
+    "observadoEmUTC": "2026-10-07T14:18:19.855Z"
+  },
+  {
+    "arquivo": "CT-010-vitrine-antes-adicionar.png",
+    "etapa": "Vitrine antes de adicionar a garrafa",
+    "observadoEmUTC": "2026-10-07T14:18:37.450Z"
+  },
+  {
+    "arquivo": "CT-010-vitrine-depois-adicionar.png",
+    "etapa": "Garrafa adicionada à mochila",
+    "observadoEmUTC": "2026-10-07T14:18:38.947Z"
+  },
+  {
+    "arquivo": "CT-010-adicionar-depois.png",
+    "etapa": "Resumo recalculado com mochila e garrafa",
+    "observadoEmUTC": "2026-10-07T14:18:39.272Z"
+  },
+  {
+    "arquivo": "CT-010-remover-antes.png",
+    "etapa": "Duas linhas de produtos antes da remoção",
+    "observadoEmUTC": "2026-10-07T14:18:39.405Z"
+  },
+  {
+    "arquivo": "CT-010-remover-depois.png",
+    "etapa": "Resumo recalculado após remover garrafa",
+    "observadoEmUTC": "2026-10-07T14:18:39.917Z"
+  },
+  {
+    "arquivo": "CT-009-quantidade-antes.png",
+    "etapa": "Quatro mochilas; aumento disponível",
+    "observadoEmUTC": "2026-10-07T14:19:05.891Z"
+  },
+  {
+    "arquivo": "CT-009-quantidade-depois.png",
+    "etapa": "Cinco mochilas; aumento bloqueado",
+    "observadoEmUTC": "2026-10-07T14:19:06.325Z"
+  },
+  {
+    "arquivo": "CT-012-UI-01-carrinho-antes-checkout.png",
+    "etapa": "Uma mochila sem cupom antes do checkout",
+    "observadoEmUTC": "2026-10-07T14:19:07.670Z"
+  },
+  {
+    "arquivo": "CT-012-UI-01-checkout-antes-preencher.png",
+    "etapa": "Checkout vazio e resumo sem cupom",
+    "observadoEmUTC": "2026-10-07T14:19:07.973Z"
+  },
+  {
+    "arquivo": "CT-012-UI-01-checkout-depois-preencher.png",
+    "etapa": "Dados válidos com CEP com hífen antes de confirmar",
+    "observadoEmUTC": "2026-10-07T14:19:40.156Z"
+  },
+  {
+    "arquivo": "CT-012-UI-01-pedido-depois-confirmar.png",
+    "etapa": "Pedido sem cupom confirmado",
+    "observadoEmUTC": "2026-10-07T14:19:40.561Z"
+  },
+  {
+    "arquivo": "CT-012-UI-02-carrinho-antes-checkout.png",
+    "etapa": "Resumo antes do checkout",
+    "observadoEmUTC": "2026-10-07T14:20:07.327Z"
+  },
+  {
+    "arquivo": "CT-012-UI-02-checkout-antes-preencher.png",
+    "etapa": "Formulário vazio e resumo",
+    "observadoEmUTC": "2026-10-07T14:20:07.605Z"
+  },
+  {
+    "arquivo": "CT-012-UI-02-checkout-depois-preencher.png",
+    "etapa": "Dados preenchidos antes de confirmar",
+    "observadoEmUTC": "2026-10-07T14:20:07.872Z"
+  },
+  {
+    "arquivo": "CT-012-UI-02-pedido-depois-confirmar.png",
+    "etapa": "Pedido confirmado com valores preservados",
+    "observadoEmUTC": "2026-10-07T14:20:08.267Z"
+  },
+  {
+    "arquivo": "CT-012-UI-03-cupom-antes.png",
+    "etapa": "Carrinho antes do cupom",
+    "observadoEmUTC": "2026-10-07T14:20:09.067Z"
+  },
+  {
+    "arquivo": "CT-012-UI-03-cupom-preenchido.png",
+    "etapa": "Cupom antes de aplicar",
+    "observadoEmUTC": "2026-10-07T14:20:09.243Z"
+  },
+  {
+    "arquivo": "CT-012-UI-03-cupom-depois.png",
+    "etapa": "Cupom aplicado",
+    "observadoEmUTC": "2026-10-07T14:20:09.694Z"
+  },
+  {
+    "arquivo": "CT-012-UI-03-carrinho-antes-checkout.png",
+    "etapa": "Resumo antes do checkout",
+    "observadoEmUTC": "2026-10-07T14:20:09.810Z"
+  },
+  {
+    "arquivo": "CT-012-UI-03-checkout-antes-preencher.png",
+    "etapa": "Formulário vazio e resumo",
+    "observadoEmUTC": "2026-10-07T14:20:10.105Z"
+  },
+  {
+    "arquivo": "CT-012-UI-03-checkout-depois-preencher.png",
+    "etapa": "Dados preenchidos antes de confirmar",
+    "observadoEmUTC": "2026-10-07T14:20:10.317Z"
+  },
+  {
+    "arquivo": "CT-012-UI-03-pedido-depois-confirmar.png",
+    "etapa": "Pedido confirmado com valores preservados",
+    "observadoEmUTC": "2026-10-07T14:20:10.686Z"
+  },
+  {
+    "arquivo": "CT-012-UI-04-cupom-antes.png",
+    "etapa": "Carrinho antes do cupom",
+    "observadoEmUTC": "2026-10-07T14:20:11.567Z"
+  },
+  {
+    "arquivo": "CT-012-UI-04-cupom-preenchido.png",
+    "etapa": "Cupom antes de aplicar",
+    "observadoEmUTC": "2026-10-07T14:20:11.763Z"
+  },
+  {
+    "arquivo": "CT-012-UI-04-cupom-depois.png",
+    "etapa": "Cupom aplicado",
+    "observadoEmUTC": "2026-10-07T14:20:12.216Z"
+  },
+  {
+    "arquivo": "CT-012-UI-04-carrinho-antes-checkout.png",
+    "etapa": "Resumo antes do checkout",
+    "observadoEmUTC": "2026-10-07T14:20:12.338Z"
+  },
+  {
+    "arquivo": "CT-012-UI-04-checkout-antes-preencher.png",
+    "etapa": "Checkout com cupom e campos vazios",
+    "observadoEmUTC": "2026-10-07T14:20:35.484Z"
+  },
+  {
+    "arquivo": "CT-012-UI-04-checkout-depois-preencher.png",
+    "etapa": "CEP sem hífen e dados válidos antes de confirmar",
+    "observadoEmUTC": "2026-10-07T14:20:35.773Z"
+  },
+  {
+    "arquivo": "CT-012-UI-04-pedido-depois-confirmar.png",
+    "etapa": "Pedido com cupom e CEP sem hífen confirmado",
+    "observadoEmUTC": "2026-10-07T14:20:36.105Z"
+  },
+  {
+    "arquivo": "CT-013-carrinho-antes-checkout.png",
+    "etapa": "Uma mochila sem cupom antes das validações",
+    "observadoEmUTC": "2026-10-07T14:21:38.791Z"
+  },
+  {
+    "arquivo": "CT-013-nome-sem-sobrenome-formulario-antes.png",
+    "etapa": "Formulário vazio",
+    "observadoEmUTC": "2026-10-07T14:21:39.092Z"
+  },
+  {
+    "arquivo": "CT-013-nome-sem-sobrenome-antes-confirmar.png",
+    "etapa": "Nome sem sobrenome; demais campos válidos",
+    "observadoEmUTC": "2026-10-07T14:21:39.363Z"
+  },
+  {
+    "arquivo": "CT-013-nome-sem-sobrenome-depois-confirmar.png",
+    "etapa": "Confirmação impedida e erro do nome",
+    "observadoEmUTC": "2026-10-07T14:21:39.811Z"
+  },
+  {
+    "arquivo": "CT-013-nome-sem-sobrenome-depois-corrigir.png",
+    "etapa": "Nome corrigido; formulário permanece editável",
+    "observadoEmUTC": "2026-10-07T14:21:39.989Z"
+  },
+  {
+    "arquivo": "CT-013-email-sem-arroba-carrinho-antes-esvaziar.png",
+    "etapa": "Preparação: carrinho anterior",
+    "observadoEmUTC": "2026-10-07T14:22:20.171Z"
+  },
+  {
+    "arquivo": "CT-013-email-sem-arroba-carrinho-vazio.png",
+    "etapa": "Pré-condição: carrinho vazio",
+    "observadoEmUTC": "2026-10-07T14:22:20.555Z"
+  },
+  {
+    "arquivo": "CT-013-email-sem-arroba-carrinho-depois-adicionar.png",
+    "etapa": "Preparação: uma mochila sem cupom",
+    "observadoEmUTC": "2026-10-07T14:22:21.341Z"
+  },
+  {
+    "arquivo": "CT-013-email-sem-arroba-formulario-antes.png",
+    "etapa": "Formulário vazio",
+    "observadoEmUTC": "2026-10-07T14:22:21.650Z"
+  },
+  {
+    "arquivo": "CT-013-email-sem-arroba-antes-confirmar.png",
+    "etapa": "E-mail sem arroba; outros campos válidos",
+    "observadoEmUTC": "2026-10-07T14:22:21.867Z"
+  },
+  {
+    "arquivo": "CT-013-email-sem-arroba-depois-confirmar.png",
+    "etapa": "E-mail inválido rejeitado pela interface",
+    "observadoEmUTC": "2026-10-07T14:22:22.323Z"
+  },
+  {
+    "arquivo": "CT-013-email-sem-arroba-mensagem.png",
+    "etapa": "Mensagem de validação do e-mail",
+    "observadoEmUTC": "2026-10-07T14:22:22.637Z"
+  },
+  {
+    "arquivo": "CT-013-email-sem-arroba-depois-corrigir.png",
+    "etapa": "E-mail corrigido no formulário",
+    "observadoEmUTC": "2026-10-07T14:22:22.836Z"
+  },
+  {
+    "arquivo": "CT-013-cep-sete-digitos-carrinho-antes-esvaziar.png",
+    "etapa": "Preparação: carrinho anterior",
+    "observadoEmUTC": "2026-10-07T14:23:28.335Z"
+  },
+  {
+    "arquivo": "CT-013-cep-sete-digitos-carrinho-vazio.png",
+    "etapa": "Pré-condição: carrinho vazio",
+    "observadoEmUTC": "2026-10-07T14:23:28.749Z"
+  },
+  {
+    "arquivo": "CT-013-cep-sete-digitos-carrinho-depois-adicionar.png",
+    "etapa": "Preparação: uma mochila sem cupom",
+    "observadoEmUTC": "2026-10-07T14:23:29.679Z"
+  },
+  {
+    "arquivo": "CT-013-cep-sete-digitos-formulario-antes.png",
+    "etapa": "Formulário vazio",
+    "observadoEmUTC": "2026-10-07T14:23:30.009Z"
+  },
+  {
+    "arquivo": "CT-013-cep-sete-digitos-antes-confirmar.png",
+    "etapa": "Um campo inválido; demais campos válidos",
+    "observadoEmUTC": "2026-10-07T14:23:30.265Z"
+  },
+  {
+    "arquivo": "CT-013-cep-sete-digitos-depois-confirmar.png",
+    "etapa": "Erro do campo e pedido não confirmado",
+    "observadoEmUTC": "2026-10-07T14:23:30.742Z"
+  },
+  {
+    "arquivo": "CT-013-cep-sete-digitos-depois-corrigir.png",
+    "etapa": "Campo corrigido e formulário editável",
+    "observadoEmUTC": "2026-10-07T14:23:30.935Z"
+  },
+  {
+    "arquivo": "CT-013-cep-nove-digitos-carrinho-antes-esvaziar.png",
+    "etapa": "Preparação: carrinho anterior",
+    "observadoEmUTC": "2026-10-07T14:23:31.320Z"
+  },
+  {
+    "arquivo": "CT-013-cep-nove-digitos-carrinho-vazio.png",
+    "etapa": "Pré-condição: carrinho vazio",
+    "observadoEmUTC": "2026-10-07T14:23:31.759Z"
+  },
+  {
+    "arquivo": "CT-013-cep-nove-digitos-carrinho-depois-adicionar.png",
+    "etapa": "Preparação: uma mochila sem cupom",
+    "observadoEmUTC": "2026-10-07T14:23:32.490Z"
+  },
+  {
+    "arquivo": "CT-013-cep-nove-digitos-formulario-antes.png",
+    "etapa": "Formulário vazio",
+    "observadoEmUTC": "2026-10-07T14:23:32.822Z"
+  },
+  {
+    "arquivo": "CT-013-cep-nove-digitos-antes-confirmar.png",
+    "etapa": "Um campo inválido; demais campos válidos",
+    "observadoEmUTC": "2026-10-07T14:23:33.128Z"
+  },
+  {
+    "arquivo": "CT-013-cep-nove-digitos-depois-confirmar.png",
+    "etapa": "Erro do campo e pedido não confirmado",
+    "observadoEmUTC": "2026-10-07T14:23:33.580Z"
+  },
+  {
+    "arquivo": "CT-013-cep-nove-digitos-depois-corrigir.png",
+    "etapa": "Campo corrigido e formulário editável",
+    "observadoEmUTC": "2026-10-07T14:23:33.766Z"
+  },
+  {
+    "arquivo": "CT-013-nome-vazio-carrinho-antes-esvaziar.png",
+    "etapa": "Preparação: carrinho anterior",
+    "observadoEmUTC": "2026-10-07T14:24:58.501Z"
+  },
+  {
+    "arquivo": "CT-013-nome-vazio-carrinho-vazio.png",
+    "etapa": "Pré-condição: carrinho vazio",
+    "observadoEmUTC": "2026-10-07T14:24:58.943Z"
+  },
+  {
+    "arquivo": "CT-013-nome-vazio-carrinho-depois-adicionar.png",
+    "etapa": "Preparação: uma mochila sem cupom",
+    "observadoEmUTC": "2026-10-07T14:25:01.200Z"
+  },
+  {
+    "arquivo": "CT-013-nome-vazio-formulario-antes.png",
+    "etapa": "Formulário vazio",
+    "observadoEmUTC": "2026-10-07T14:25:02.612Z"
+  },
+  {
+    "arquivo": "CT-013-nome-vazio-antes-confirmar.png",
+    "etapa": "Campo obrigatório vazio; demais campos válidos",
+    "observadoEmUTC": "2026-10-07T14:25:02.817Z"
+  },
+  {
+    "arquivo": "CT-013-nome-vazio-depois-confirmar.png",
+    "etapa": "Campo vazio rejeitado",
+    "observadoEmUTC": "2026-10-07T14:25:03.270Z"
+  },
+  {
+    "arquivo": "CT-013-nome-vazio-depois-corrigir.png",
+    "etapa": "Campo obrigatório preenchido e formulário editável",
+    "observadoEmUTC": "2026-10-07T14:25:03.465Z"
+  },
+  {
+    "arquivo": "CT-013-email-vazio-carrinho-antes-esvaziar.png",
+    "etapa": "Preparação: carrinho antes de esvaziar",
+    "observadoEmUTC": "2026-10-07T14:29:41.255Z"
+  },
+  {
+    "arquivo": "CT-013-email-vazio-carrinho-vazio.png",
+    "etapa": "Preparação: carrinho vazio",
+    "observadoEmUTC": "2026-10-07T14:29:41.684Z"
+  },
+  {
+    "arquivo": "CT-013-email-vazio-carrinho-depois-adicionar.png",
+    "etapa": "Preparação: uma mochila sem cupom",
+    "observadoEmUTC": "2026-10-07T14:29:44.925Z"
+  },
+  {
+    "arquivo": "CT-013-email-vazio-formulario-antes.png",
+    "etapa": "Formulário vazio; resumo completo",
+    "observadoEmUTC": "2026-10-07T14:29:45.282Z"
+  },
+  {
+    "arquivo": "CT-013-email-vazio-antes-confirmar.png",
+    "etapa": "E-mail vazio; demais dados válidos",
+    "observadoEmUTC": "2026-10-07T14:29:45.533Z"
+  },
+  {
+    "arquivo": "CT-013-email-vazio-depois-confirmar.png",
+    "etapa": "E-mail obrigatório rejeitado",
+    "observadoEmUTC": "2026-10-07T14:29:45.999Z"
+  },
+  {
+    "arquivo": "CT-013-email-vazio-depois-corrigir.png",
+    "etapa": "E-mail corrigido; formulário editável",
+    "observadoEmUTC": "2026-10-07T14:29:46.214Z"
+  },
+  {
+    "arquivo": "CT-013-cep-vazio-carrinho-antes-esvaziar.png",
+    "etapa": "Preparação: carrinho antes de esvaziar",
+    "observadoEmUTC": "2026-10-07T14:30:04.109Z"
+  },
+  {
+    "arquivo": "CT-013-cep-vazio-carrinho-vazio.png",
+    "etapa": "Preparação: carrinho vazio",
+    "observadoEmUTC": "2026-10-07T14:30:04.532Z"
+  },
+  {
+    "arquivo": "CT-013-cep-vazio-carrinho-depois-adicionar.png",
+    "etapa": "Preparação: uma mochila sem cupom",
+    "observadoEmUTC": "2026-10-07T14:30:07.812Z"
+  },
+  {
+    "arquivo": "CT-013-cep-vazio-formulario-antes.png",
+    "etapa": "Formulário vazio; resumo completo",
+    "observadoEmUTC": "2026-10-07T14:30:08.087Z"
+  },
+  {
+    "arquivo": "CT-013-cep-vazio-antes-confirmar.png",
+    "etapa": "CEP vazio; demais dados válidos",
+    "observadoEmUTC": "2026-10-07T14:30:08.329Z"
+  },
+  {
+    "arquivo": "CT-013-cep-vazio-depois-confirmar.png",
+    "etapa": "CEP obrigatório rejeitado",
+    "observadoEmUTC": "2026-10-07T14:30:08.776Z"
+  },
+  {
+    "arquivo": "CT-013-cep-vazio-depois-corrigir.png",
+    "etapa": "CEP corrigido; formulário editável",
+    "observadoEmUTC": "2026-10-07T14:30:08.951Z"
+  },
+  {
+    "arquivo": "EXP-01-carrinho-antes-cupom.png",
+    "etapa": "Exploração: carrinho com uma mochila, sem cupom",
+    "observadoEmUTC": "2026-10-07T14:28:28.942Z"
+  },
+  {
+    "arquivo": "EXP-01-cupom-preenchido.png",
+    "etapa": "Exploração: cupom preenchido antes de aplicar",
+    "observadoEmUTC": "2026-10-07T14:28:29.106Z"
+  },
+  {
+    "arquivo": "EXP-01-carrinho-depois-cupom.png",
+    "etapa": "Exploração: cupom aplicado",
+    "observadoEmUTC": "2026-10-07T14:28:29.615Z"
+  },
+  {
+    "arquivo": "EXP-01-antes-esvaziar.png",
+    "etapa": "Exploração: carrinho com cupom antes de esvaziar",
+    "observadoEmUTC": "2026-10-07T14:28:39.859Z"
+  },
+  {
+    "arquivo": "EXP-01-depois-esvaziar.png",
+    "etapa": "Exploração: carrinho vazio após limpar",
+    "observadoEmUTC": "2026-10-07T14:28:40.304Z"
+  },
+  {
+    "arquivo": "EXP-01-vitrine-antes-readicionar.png",
+    "etapa": "Exploração: vitrine antes de readicionar produto",
+    "observadoEmUTC": "2026-10-07T14:28:41.633Z"
+  },
+  {
+    "arquivo": "EXP-01-vitrine-depois-readicionar.png",
+    "etapa": "Exploração: produto readicionado",
+    "observadoEmUTC": "2026-10-07T14:28:43.117Z"
+  },
+  {
+    "arquivo": "EXP-01-depois-readicionar.png",
+    "etapa": "Exploração: produto readicionado sem cupom residual",
+    "observadoEmUTC": "2026-10-07T14:28:43.762Z"
+  },
+  {
+    "arquivo": "EXP-01-aba-original-antes.png",
+    "etapa": "Exploração: aba original com uma mochila",
+    "observadoEmUTC": "2026-10-07T14:28:49.176Z"
+  },
+  {
+    "arquivo": "EXP-01-aba-nova-antes.png",
+    "etapa": "Exploração: nova aba com carrinho vazio",
+    "observadoEmUTC": "2026-10-07T14:29:05.520Z"
+  },
+  {
+    "arquivo": "EXP-01-aba-nova-vitrine-antes.png",
+    "etapa": "Exploração: nova aba antes de adicionar garrafa",
+    "observadoEmUTC": "2026-10-07T14:29:05.937Z"
+  },
+  {
+    "arquivo": "EXP-01-aba-nova-vitrine-depois.png",
+    "etapa": "Exploração: garrafa adicionada somente na nova aba",
+    "observadoEmUTC": "2026-10-07T14:29:06.571Z"
+  },
+  {
+    "arquivo": "EXP-01-aba-nova-depois.png",
+    "etapa": "Exploração: nova aba com garrafa e total 69,90",
+    "observadoEmUTC": "2026-10-07T14:29:07.196Z"
+  },
+  {
+    "arquivo": "EXP-01-aba-original-depois.png",
+    "etapa": "Exploração: aba original preserva mochila e total 119,90",
+    "observadoEmUTC": "2026-10-07T14:29:07.390Z"
+  },
+  {
+    "arquivo": "CT-013-email-vazio-vitrine-antes-adicionar.png",
+    "etapa": "Preparação: vitrine antes de adicionar mochila",
+    "observadoEmUTC": "2026-10-07T14:29:42.968Z"
+  },
+  {
+    "arquivo": "CT-013-email-vazio-vitrine-depois-adicionar.png",
+    "etapa": "Preparação: mochila adicionada ao carrinho pela vitrine",
+    "observadoEmUTC": "2026-10-07T14:29:44.460Z"
+  },
+  {
+    "arquivo": "CT-013-cep-vazio-vitrine-antes-adicionar.png",
+    "etapa": "Preparação: vitrine antes de adicionar mochila",
+    "observadoEmUTC": "2026-10-07T14:30:05.782Z"
+  },
+  {
+    "arquivo": "CT-013-cep-vazio-vitrine-depois-adicionar.png",
+    "etapa": "Preparação: mochila adicionada ao carrinho pela vitrine",
+    "observadoEmUTC": "2026-10-07T14:30:07.296Z"
+  },
+  {
+    "arquivo": "EXP-01-checkout-antes-reenviar.png",
+    "etapa": "Exploração: dados corrigidos antes de reenviar",
+    "observadoEmUTC": "2026-10-07T14:30:09.078Z"
+  },
+  {
+    "arquivo": "EXP-01-checkout-depois-reenviar.png",
+    "etapa": "Exploração: confirmação após corrigir CEP",
+    "observadoEmUTC": "2026-10-07T14:30:09.397Z"
+  }
+]

@@ -1,0 +1,62 @@
+{
+  "caseId": "CT-011-API-01",
+  "group": "CT-011",
+  "layer": "API",
+  "input": "POST /api/carrinho/calcular; P004 ×1, P008 ×3; BEMVINDO10",
+  "date": "06/10 14:07:12",
+  "expected": "200; 199,90 / 19,99 / 19,90 / 199,81",
+  "actual": "200; 199,90 / 19,99 / 19,90 / 199,81; faltante 0,10",
+  "status": "Aprovado",
+  "evidenceId": "EV-006",
+  "bugIds": [],
+  "method": "POST",
+  "path": "/api/carrinho/calcular",
+  "request": {
+    "cupom": "BEMVINDO10",
+    "itens": [
+      {
+        "produtoId": "P004",
+        "quantidade": 1
+      },
+      {
+        "produtoId": "P008",
+        "quantidade": 3
+      }
+    ]
+  },
+  "response": {
+    "itens": [
+      {
+        "produtoId": "P004",
+        "nome": "Boné Aba Curva",
+        "precoUnitario": 49.9,
+        "quantidade": 1,
+        "total": 49.9
+      },
+      {
+        "produtoId": "P008",
+        "nome": "Garrafa Térmica 750ml",
+        "precoUnitario": 50,
+        "quantidade": 3,
+        "total": 150
+      }
+    ],
+    "subtotal": 199.9,
+    "desconto": 19.99,
+    "frete": 19.9,
+    "freteGratis": false,
+    "valorFaltanteFreteGratis": 0.1,
+    "total": 199.81,
+    "cupom": {
+      "codigo": "BEMVINDO10",
+      "aplicado": true,
+      "mensagem": "Cupom aplicado: 10% de desconto nos produtos."
+    }
+  },
+  "httpStatus": 200,
+  "sourcePath": "evidencias/revisao-ambiente/api-observacoes-powershell.json",
+  "sourceId": "CT-011-A",
+  "recordedAtUTC": "2026-10-06T18:07:12.4527898Z",
+  "images": [],
+  "pairs": []
+}

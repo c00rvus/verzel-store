@@ -1,0 +1,28 @@
+{
+  "caseId": "CT-015-API-01",
+  "group": "CT-015",
+  "layer": "API",
+  "input": "POST /api/carrinho/calcular; {}",
+  "date": "07/10 10:15:23",
+  "expected": "422 ITENS_OBRIGATORIOS",
+  "actual": "422 ITENS_OBRIGATORIOS; campo itens; Informe ao menos um item.",
+  "status": "Aprovado",
+  "evidenceId": "EV-035",
+  "bugIds": [],
+  "method": "POST",
+  "path": "/api/carrinho/calcular",
+  "request": {},
+  "response": {
+    "erro": {
+      "codigo": "ITENS_OBRIGATORIOS",
+      "mensagem": "Informe ao menos um item.",
+      "campo": "itens"
+    }
+  },
+  "httpStatus": 422,
+  "sourcePath": "evidencias/execucao-2026-10-07/api-pendentes.json",
+  "sourceId": "CT-015-API-01",
+  "recordedAtUTC": "2026-10-07T14:15:23.7030348Z",
+  "images": [],
+  "pairs": []
+}

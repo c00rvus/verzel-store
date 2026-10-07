@@ -1,0 +1,2058 @@
+{
+  "baseURL": "https://verzel-store.qa-test-verzel-store.workers.dev",
+  "dataExecucao": "2026-10-07",
+  "fusoRegistro": "UTC",
+  "cliente": "PowerShell com identificação padrão",
+  "natureza": "Execução pontual das 19 entradas de API pendentes, uma chamada por entrada; sem implementação ou execução de Playwright.",
+  "fonteExpectativas": "docs/gherkin/api.feature e contrato documentado VZS-142 / 2.3.0",
+  "iniciadoEmUTC": "2026-10-07T14:15:22.2885547Z",
+  "finalizadoEmUTC": "2026-10-07T14:15:24.8602449Z",
+  "planejados": 19,
+  "executados": 19,
+  "resumo": {
+    "aprovados": 18,
+    "reprovados": 1,
+    "bloqueados": 0
+  },
+  "motivoInterrupcao": null,
+  "naoExecutados": [],
+  "resultados": [
+    {
+      "id": "CT-009-API-5P",
+      "cenarioFonte": "docs/gherkin/api.feature",
+      "tipoExecucao": "Chamada HTTP pontual; sem Playwright",
+      "method": "POST",
+      "path": "/api/pedidos",
+      "observadoEmUTC": "2026-10-07T14:15:22.2942822Z",
+      "recebidoEmUTC": "2026-10-07T14:15:22.6683319Z",
+      "request": {
+        "itens": [
+          {
+            "produtoId": "P005",
+            "quantidade": 5
+          }
+        ],
+        "cliente": {
+          "nome": "Maria Silva",
+          "email": "maria@example.com",
+          "cep": "01310-100"
+        }
+      },
+      "requestRaw": "{\"itens\":[{\"produtoId\":\"P005\",\"quantidade\":5}],\"cliente\":{\"nome\":\"Maria Silva\",\"email\":\"maria@example.com\",\"cep\":\"01310-100\"}}",
+      "expectedHttpStatus": 201,
+      "esperado": {
+        "subtotal": 500,
+        "numero": "^VZ-[0-9]{6}$",
+        "total": 500,
+        "criadoEm": "ISO 8601 válido",
+        "frete": 0,
+        "quantidade": 5,
+        "desconto": 0,
+        "cliente": "Maria Silva / maria@example.com / 01310100"
+      },
+      "status": 201,
+      "responseContentType": "application/json; charset=utf-8",
+      "response": {
+        "numero": "VZ-771001",
+        "criadoEm": "2026-10-07T14:15:26.687Z",
+        "cliente": {
+          "nome": "Maria Silva",
+          "email": "maria@example.com",
+          "cep": "01310100"
+        },
+        "itens": [
+          {
+            "produtoId": "P005",
+            "nome": "Mochila Urbana 20L",
+            "precoUnitario": 100,
+            "quantidade": 5,
+            "total": 500
+          }
+        ],
+        "subtotal": 500,
+        "desconto": 0,
+        "frete": 0,
+        "freteGratis": true,
+        "valorFaltanteFreteGratis": 0,
+        "total": 500,
+        "cupom": null
+      },
+      "responseRaw": "{\"numero\":\"VZ-771001\",\"criadoEm\":\"2026-10-07T14:15:26.687Z\",\"cliente\":{\"nome\":\"Maria Silva\",\"email\":\"maria@example.com\",\"cep\":\"01310100\"},\"itens\":[{\"produtoId\":\"P005\",\"nome\":\"Mochila Urbana 20L\",\"precoUnitario\":100,\"quantidade\":5,\"total\":500}],\"subtotal\":500,\"desconto\":0,\"frete\":0,\"freteGratis\":true,\"valorFaltanteFreteGratis\":0,\"total\":500,\"cupom\":null}",
+      "erroTransporte": null,
+      "checagens": [
+        {
+          "checagem": "status HTTP",
+          "esperado": 201,
+          "obtido": 201,
+          "aprovado": true
+        },
+        {
+          "checagem": "corpo JSON válido do tipo objeto",
+          "esperado": true,
+          "obtido": true,
+          "aprovado": true
+        },
+        {
+          "checagem": "Content-Type da resposta indica JSON",
+          "esperado": "application/json",
+          "obtido": "application/json; charset=utf-8",
+          "aprovado": true
+        },
+        {
+          "checagem": "itens.length",
+          "esperado": 1.0,
+          "obtido": 1,
+          "aprovado": true
+        },
+        {
+          "checagem": "itens[0].produtoId",
+          "esperado": "P005",
+          "obtido": "P005",
+          "aprovado": true
+        },
+        {
+          "checagem": "itens[0].nome",
+          "esperado": "Mochila Urbana 20L",
+          "obtido": "Mochila Urbana 20L",
+          "aprovado": true
+        },
+        {
+          "checagem": "itens[0].precoUnitario",
+          "esperado": 100.0,
+          "obtido": 100,
+          "aprovado": true
+        },
+        {
+          "checagem": "itens[0].quantidade",
+          "esperado": 5.0,
+          "obtido": 5,
+          "aprovado": true
+        },
+        {
+          "checagem": "itens[0].total",
+          "esperado": 500.0,
+          "obtido": 500,
+          "aprovado": true
+        },
+        {
+          "checagem": "subtotal",
+          "esperado": 500.0,
+          "obtido": 500,
+          "aprovado": true
+        },
+        {
+          "checagem": "desconto",
+          "esperado": 0.0,
+          "obtido": 0,
+          "aprovado": true
+        },
+        {
+          "checagem": "frete",
+          "esperado": 0.0,
+          "obtido": 0,
+          "aprovado": true
+        },
+        {
+          "checagem": "total",
+          "esperado": 500.0,
+          "obtido": 500,
+          "aprovado": true
+        },
+        {
+          "checagem": "valorFaltanteFreteGratis",
+          "esperado": 0.0,
+          "obtido": 0,
+          "aprovado": true
+        },
+        {
+          "checagem": "freteGratis",
+          "esperado": true,
+          "obtido": true,
+          "aprovado": true
+        },
+        {
+          "checagem": "total = subtotal - desconto + frete",
+          "esperado": 500,
+          "obtido": 500,
+          "aprovado": true
+        },
+        {
+          "checagem": "numero no formato VZ- seguido de seis dígitos",
+          "esperado": "^VZ-[0-9]{6}$",
+          "obtido": "VZ-771001",
+          "aprovado": true
+        },
+        {
+          "checagem": "criadoEm em ISO 8601 válido",
+          "esperado": "data e hora ISO 8601 com fuso",
+          "obtido": "2026-10-07T14:15:26.687Z",
+          "aprovado": true
+        },
+        {
+          "checagem": "criadoEm coerente com horário da chamada",
+          "esperado": "2026-10-07T14:13:22.2942822Z a 2026-10-07T14:17:22.6683319Z",
+          "obtido": "2026-10-07T14:15:26.687Z",
+          "aprovado": true
+        },
+        {
+          "checagem": "cliente.nome",
+          "esperado": "Maria Silva",
+          "obtido": "Maria Silva",
+          "aprovado": true
+        },
+        {
+          "checagem": "cliente.email",
+          "esperado": "maria@example.com",
+          "obtido": "maria@example.com",
+          "aprovado": true
+        },
+        {
+          "checagem": "cliente.cep sem máscara",
+          "esperado": "01310100",
+          "obtido": "01310100",
+          "aprovado": true
+        },
+        {
+          "checagem": "sem cupom aplicado",
+          "esperado": null,
+          "obtido": null,
+          "aprovado": true
+        }
+      ],
+      "resultado": "Aprovado",
+      "checagensReprovadas": [],
+      "notaValidacao": "Data ISO 8601 verificada no corpo JSON bruto, preservando o texto; revisão local da checagem sem repetir a chamada HTTP."
+    },
+    {
+      "id": "CT-009-API-6P",
+      "cenarioFonte": "docs/gherkin/api.feature",
+      "tipoExecucao": "Chamada HTTP pontual; sem Playwright",
+      "method": "POST",
+      "path": "/api/pedidos",
+      "observadoEmUTC": "2026-10-07T14:15:22.7585775Z",
+      "recebidoEmUTC": "2026-10-07T14:15:22.8596593Z",
+      "request": {
+        "itens": [
+          {
+            "produtoId": "P005",
+            "quantidade": 6
+          }
+        ],
+        "cliente": {
+          "nome": "Maria Silva",
+          "email": "maria@example.com",
+          "cep": "01310-100"
+        }
+      },
+      "requestRaw": "{\"itens\":[{\"produtoId\":\"P005\",\"quantidade\":6}],\"cliente\":{\"nome\":\"Maria Silva\",\"email\":\"maria@example.com\",\"cep\":\"01310-100\"}}",
+      "expectedHttpStatus": 422,
+      "esperado": {
+        "mensagem": "Descrição do limite de cinco unidades por produto",
+        "campo": "itens[0].quantidade",
+        "codigo": "QUANTIDADE_MAXIMA_EXCEDIDA"
+      },
+      "status": 201,
+      "responseContentType": "application/json; charset=utf-8",
+      "response": {
+        "numero": "VZ-056227",
+        "criadoEm": "2026-10-07T14:15:26.908Z",
+        "cliente": {
+          "nome": "Maria Silva",
+          "email": "maria@example.com",
+          "cep": "01310100"
+        },
+        "itens": [
+          {
+            "produtoId": "P005",
+            "nome": "Mochila Urbana 20L",
+            "precoUnitario": 100,
+            "quantidade": 6,
+            "total": 600
+          }
+        ],
+        "subtotal": 600,
+        "desconto": 0,
+        "frete": 0,
+        "freteGratis": true,
+        "valorFaltanteFreteGratis": 0,
+        "total": 600,
+        "cupom": null
+      },
+      "responseRaw": "{\"numero\":\"VZ-056227\",\"criadoEm\":\"2026-10-07T14:15:26.908Z\",\"cliente\":{\"nome\":\"Maria Silva\",\"email\":\"maria@example.com\",\"cep\":\"01310100\"},\"itens\":[{\"produtoId\":\"P005\",\"nome\":\"Mochila Urbana 20L\",\"precoUnitario\":100,\"quantidade\":6,\"total\":600}],\"subtotal\":600,\"desconto\":0,\"frete\":0,\"freteGratis\":true,\"valorFaltanteFreteGratis\":0,\"total\":600,\"cupom\":null}",
+      "erroTransporte": null,
+      "checagens": [
+        {
+          "checagem": "status HTTP",
+          "esperado": 422,
+          "obtido": 201,
+          "aprovado": false
+        },
+        {
+          "checagem": "corpo JSON válido do tipo objeto",
+          "esperado": true,
+          "obtido": true,
+          "aprovado": true
+        },
+        {
+          "checagem": "Content-Type da resposta indica JSON",
+          "esperado": "application/json",
+          "obtido": "application/json; charset=utf-8",
+          "aprovado": true
+        },
+        {
+          "checagem": "envelope erro do tipo objeto",
+          "esperado": true,
+          "obtido": false,
+          "aprovado": false
+        },
+        {
+          "checagem": "erro.codigo",
+          "esperado": "QUANTIDADE_MAXIMA_EXCEDIDA",
+          "obtido": null,
+          "aprovado": false
+        },
+        {
+          "checagem": "erro.mensagem não vazia",
+          "esperado": "texto explicativo",
+          "obtido": "",
+          "aprovado": false
+        },
+        {
+          "checagem": "mensagem descreve limite de cinco por produto",
+          "esperado": "Descrição do limite de cinco unidades por produto",
+          "obtido": "",
+          "aprovado": false
+        },
+        {
+          "checagem": "erro.campo",
+          "esperado": "itens[0].quantidade",
+          "obtido": null,
+          "aprovado": false
+        }
+      ],
+      "resultado": "Reprovado",
+      "checagensReprovadas": [
+        "status HTTP",
+        "envelope erro do tipo objeto",
+        "erro.codigo",
+        "erro.mensagem não vazia",
+        "mensagem descreve limite de cinco por produto",
+        "erro.campo"
+      ]
+    },
+    {
+      "id": "CT-011-API-02",
+      "cenarioFonte": "docs/gherkin/api.feature",
+      "tipoExecucao": "Chamada HTTP pontual; sem Playwright",
+      "method": "POST",
+      "path": "/api/carrinho/calcular",
+      "observadoEmUTC": "2026-10-07T14:15:22.8714827Z",
+      "recebidoEmUTC": "2026-10-07T14:15:23.0199431Z",
+      "request": {
+        "itens": [
+          {
+            "produtoId": "P007",
+            "quantidade": 1
+          }
+        ],
+        "cupom": "BEMVINDO10"
+      },
+      "requestRaw": "{\"itens\":[{\"produtoId\":\"P007\",\"quantidade\":1}],\"cupom\":\"BEMVINDO10\"}",
+      "expectedHttpStatus": 200,
+      "esperado": {
+        "cupom": "BEMVINDO10",
+        "desconto": 22.99,
+        "frete": 0,
+        "valorFaltanteFreteGratis": 0,
+        "total": 206.91,
+        "subtotal": 229.9,
+        "freteGratis": true
+      },
+      "status": 200,
+      "responseContentType": "application/json; charset=utf-8",
+      "response": {
+        "itens": [
+          {
+            "produtoId": "P007",
+            "nome": "Jaqueta Corta-Vento",
+            "precoUnitario": 229.9,
+            "quantidade": 1,
+            "total": 229.9
+          }
+        ],
+        "subtotal": 229.9,
+        "desconto": 22.99,
+        "frete": 0,
+        "freteGratis": true,
+        "valorFaltanteFreteGratis": 0,
+        "total": 206.91,
+        "cupom": {
+          "codigo": "BEMVINDO10",
+          "aplicado": true,
+          "mensagem": "Cupom aplicado: 10% de desconto nos produtos."
+        }
+      },
+      "responseRaw": "{\"itens\":[{\"produtoId\":\"P007\",\"nome\":\"Jaqueta Corta-Vento\",\"precoUnitario\":229.9,\"quantidade\":1,\"total\":229.9}],\"subtotal\":229.9,\"desconto\":22.99,\"frete\":0,\"freteGratis\":true,\"valorFaltanteFreteGratis\":0,\"total\":206.91,\"cupom\":{\"codigo\":\"BEMVINDO10\",\"aplicado\":true,\"mensagem\":\"Cupom aplicado: 10% de desconto nos produtos.\"}}",
+      "erroTransporte": null,
+      "checagens": [
+        {
+          "checagem": "status HTTP",
+          "esperado": 200,
+          "obtido": 200,
+          "aprovado": true
+        },
+        {
+          "checagem": "corpo JSON válido do tipo objeto",
+          "esperado": true,
+          "obtido": true,
+          "aprovado": true
+        },
+        {
+          "checagem": "Content-Type da resposta indica JSON",
+          "esperado": "application/json",
+          "obtido": "application/json; charset=utf-8",
+          "aprovado": true
+        },
+        {
+          "checagem": "itens.length",
+          "esperado": 1.0,
+          "obtido": 1,
+          "aprovado": true
+        },
+        {
+          "checagem": "itens[0].produtoId",
+          "esperado": "P007",
+          "obtido": "P007",
+          "aprovado": true
+        },
+        {
+          "checagem": "itens[0].nome",
+          "esperado": "Jaqueta Corta-Vento",
+          "obtido": "Jaqueta Corta-Vento",
+          "aprovado": true
+        },
+        {
+          "checagem": "itens[0].precoUnitario",
+          "esperado": 229.9,
+          "obtido": 229.9,
+          "aprovado": true
+        },
+        {
+          "checagem": "itens[0].quantidade",
+          "esperado": 1.0,
+          "obtido": 1,
+          "aprovado": true
+        },
+        {
+          "checagem": "itens[0].total",
+          "esperado": 229.9,
+          "obtido": 229.9,
+          "aprovado": true
+        },
+        {
+          "checagem": "subtotal",
+          "esperado": 229.9,
+          "obtido": 229.9,
+          "aprovado": true
+        },
+        {
+          "checagem": "desconto",
+          "esperado": 22.99,
+          "obtido": 22.99,
+          "aprovado": true
+        },
+        {
+          "checagem": "frete",
+          "esperado": 0.0,
+          "obtido": 0,
+          "aprovado": true
+        },
+        {
+          "checagem": "total",
+          "esperado": 206.91,
+          "obtido": 206.91,
+          "aprovado": true
+        },
+        {
+          "checagem": "valorFaltanteFreteGratis",
+          "esperado": 0.0,
+          "obtido": 0,
+          "aprovado": true
+        },
+        {
+          "checagem": "freteGratis",
+          "esperado": true,
+          "obtido": true,
+          "aprovado": true
+        },
+        {
+          "checagem": "total = subtotal - desconto + frete",
+          "esperado": 206.91,
+          "obtido": 206.91,
+          "aprovado": true
+        },
+        {
+          "checagem": "cupom.codigo",
+          "esperado": "BEMVINDO10",
+          "obtido": "BEMVINDO10",
+          "aprovado": true
+        },
+        {
+          "checagem": "cupom.aplicado",
+          "esperado": true,
+          "obtido": true,
+          "aprovado": true
+        },
+        {
+          "checagem": "cupom.mensagem explicativa",
+          "esperado": "cupom aplicado com 10% nos produtos",
+          "obtido": "Cupom aplicado: 10% de desconto nos produtos.",
+          "aprovado": true
+        },
+        {
+          "checagem": "desconto de 10% somente no subtotal dos produtos",
+          "esperado": 22.99,
+          "obtido": 22.99,
+          "aprovado": true
+        }
+      ],
+      "resultado": "Aprovado",
+      "checagensReprovadas": []
+    },
+    {
+      "id": "CT-013-API-01",
+      "cenarioFonte": "docs/gherkin/api.feature",
+      "tipoExecucao": "Chamada HTTP pontual; sem Playwright",
+      "method": "POST",
+      "path": "/api/pedidos",
+      "observadoEmUTC": "2026-10-07T14:15:23.0346198Z",
+      "recebidoEmUTC": "2026-10-07T14:15:23.1382286Z",
+      "request": {
+        "itens": [
+          {
+            "produtoId": "P005",
+            "quantidade": 1
+          }
+        ],
+        "cliente": {
+          "nome": "Maria",
+          "email": "maria@example.com",
+          "cep": "01310-100"
+        }
+      },
+      "requestRaw": "{\"itens\":[{\"produtoId\":\"P005\",\"quantidade\":1}],\"cliente\":{\"nome\":\"Maria\",\"email\":\"maria@example.com\",\"cep\":\"01310-100\"}}",
+      "expectedHttpStatus": 422,
+      "esperado": {
+        "mensagem": "Dados inválidos e mensagem explicativa do campo nome",
+        "campo": "cliente.nome",
+        "codigo": "DADOS_INVALIDOS"
+      },
+      "status": 422,
+      "responseContentType": "application/json; charset=utf-8",
+      "response": {
+        "erro": {
+          "codigo": "DADOS_INVALIDOS",
+          "mensagem": "Existem campos inválidos no pedido.",
+          "campos": [
+            {
+              "campo": "cliente.nome",
+              "mensagem": "Informe nome e sobrenome."
+            }
+          ]
+        }
+      },
+      "responseRaw": "{\"erro\":{\"codigo\":\"DADOS_INVALIDOS\",\"mensagem\":\"Existem campos inválidos no pedido.\",\"campos\":[{\"campo\":\"cliente.nome\",\"mensagem\":\"Informe nome e sobrenome.\"}]}}",
+      "erroTransporte": null,
+      "checagens": [
+        {
+          "checagem": "status HTTP",
+          "esperado": 422,
+          "obtido": 422,
+          "aprovado": true
+        },
+        {
+          "checagem": "corpo JSON válido do tipo objeto",
+          "esperado": true,
+          "obtido": true,
+          "aprovado": true
+        },
+        {
+          "checagem": "Content-Type da resposta indica JSON",
+          "esperado": "application/json",
+          "obtido": "application/json; charset=utf-8",
+          "aprovado": true
+        },
+        {
+          "checagem": "envelope erro do tipo objeto",
+          "esperado": true,
+          "obtido": true,
+          "aprovado": true
+        },
+        {
+          "checagem": "erro.codigo",
+          "esperado": "DADOS_INVALIDOS",
+          "obtido": "DADOS_INVALIDOS",
+          "aprovado": true
+        },
+        {
+          "checagem": "erro.mensagem não vazia",
+          "esperado": "texto explicativo",
+          "obtido": "Existem campos inválidos no pedido.",
+          "aprovado": true
+        },
+        {
+          "checagem": "erro.mensagem indica dados inválidos",
+          "esperado": "campos ou dados inválidos",
+          "obtido": "Existem campos inválidos no pedido.",
+          "aprovado": true
+        },
+        {
+          "checagem": "erro.campos contém o campo correspondente",
+          "esperado": "cliente.nome",
+          "obtido": [
+            "cliente.nome"
+          ],
+          "aprovado": true
+        },
+        {
+          "checagem": "erro.campos contém mensagem explicativa do campo",
+          "esperado": "mensagem não vazia",
+          "obtido": [
+            "Informe nome e sobrenome."
+          ],
+          "aprovado": true
+        },
+        {
+          "checagem": "pedido não criado",
+          "esperado": "ausência de numero",
+          "obtido": null,
+          "aprovado": true
+        }
+      ],
+      "resultado": "Aprovado",
+      "checagensReprovadas": []
+    },
+    {
+      "id": "CT-013-API-02",
+      "cenarioFonte": "docs/gherkin/api.feature",
+      "tipoExecucao": "Chamada HTTP pontual; sem Playwright",
+      "method": "POST",
+      "path": "/api/pedidos",
+      "observadoEmUTC": "2026-10-07T14:15:23.1544141Z",
+      "recebidoEmUTC": "2026-10-07T14:15:23.2525730Z",
+      "request": {
+        "itens": [
+          {
+            "produtoId": "P005",
+            "quantidade": 1
+          }
+        ],
+        "cliente": {
+          "nome": "Maria Silva",
+          "email": "invalido",
+          "cep": "01310-100"
+        }
+      },
+      "requestRaw": "{\"itens\":[{\"produtoId\":\"P005\",\"quantidade\":1}],\"cliente\":{\"nome\":\"Maria Silva\",\"email\":\"invalido\",\"cep\":\"01310-100\"}}",
+      "expectedHttpStatus": 422,
+      "esperado": {
+        "mensagem": "Dados inválidos e mensagem explicativa do campo e-mail",
+        "campo": "cliente.email",
+        "codigo": "DADOS_INVALIDOS"
+      },
+      "status": 422,
+      "responseContentType": "application/json; charset=utf-8",
+      "response": {
+        "erro": {
+          "codigo": "DADOS_INVALIDOS",
+          "mensagem": "Existem campos inválidos no pedido.",
+          "campos": [
+            {
+              "campo": "cliente.email",
+              "mensagem": "Informe um e-mail válido."
+            }
+          ]
+        }
+      },
+      "responseRaw": "{\"erro\":{\"codigo\":\"DADOS_INVALIDOS\",\"mensagem\":\"Existem campos inválidos no pedido.\",\"campos\":[{\"campo\":\"cliente.email\",\"mensagem\":\"Informe um e-mail válido.\"}]}}",
+      "erroTransporte": null,
+      "checagens": [
+        {
+          "checagem": "status HTTP",
+          "esperado": 422,
+          "obtido": 422,
+          "aprovado": true
+        },
+        {
+          "checagem": "corpo JSON válido do tipo objeto",
+          "esperado": true,
+          "obtido": true,
+          "aprovado": true
+        },
+        {
+          "checagem": "Content-Type da resposta indica JSON",
+          "esperado": "application/json",
+          "obtido": "application/json; charset=utf-8",
+          "aprovado": true
+        },
+        {
+          "checagem": "envelope erro do tipo objeto",
+          "esperado": true,
+          "obtido": true,
+          "aprovado": true
+        },
+        {
+          "checagem": "erro.codigo",
+          "esperado": "DADOS_INVALIDOS",
+          "obtido": "DADOS_INVALIDOS",
+          "aprovado": true
+        },
+        {
+          "checagem": "erro.mensagem não vazia",
+          "esperado": "texto explicativo",
+          "obtido": "Existem campos inválidos no pedido.",
+          "aprovado": true
+        },
+        {
+          "checagem": "erro.mensagem indica dados inválidos",
+          "esperado": "campos ou dados inválidos",
+          "obtido": "Existem campos inválidos no pedido.",
+          "aprovado": true
+        },
+        {
+          "checagem": "erro.campos contém o campo correspondente",
+          "esperado": "cliente.email",
+          "obtido": [
+            "cliente.email"
+          ],
+          "aprovado": true
+        },
+        {
+          "checagem": "erro.campos contém mensagem explicativa do campo",
+          "esperado": "mensagem não vazia",
+          "obtido": [
+            "Informe um e-mail válido."
+          ],
+          "aprovado": true
+        },
+        {
+          "checagem": "pedido não criado",
+          "esperado": "ausência de numero",
+          "obtido": null,
+          "aprovado": true
+        }
+      ],
+      "resultado": "Aprovado",
+      "checagensReprovadas": []
+    },
+    {
+      "id": "CT-013-API-03",
+      "cenarioFonte": "docs/gherkin/api.feature",
+      "tipoExecucao": "Chamada HTTP pontual; sem Playwright",
+      "method": "POST",
+      "path": "/api/pedidos",
+      "observadoEmUTC": "2026-10-07T14:15:23.2542114Z",
+      "recebidoEmUTC": "2026-10-07T14:15:23.3604726Z",
+      "request": {
+        "itens": [
+          {
+            "produtoId": "P005",
+            "quantidade": 1
+          }
+        ],
+        "cliente": {
+          "nome": "Maria Silva",
+          "email": "maria@example.com",
+          "cep": "123"
+        }
+      },
+      "requestRaw": "{\"itens\":[{\"produtoId\":\"P005\",\"quantidade\":1}],\"cliente\":{\"nome\":\"Maria Silva\",\"email\":\"maria@example.com\",\"cep\":\"123\"}}",
+      "expectedHttpStatus": 422,
+      "esperado": {
+        "mensagem": "Dados inválidos e mensagem explicativa do campo CEP",
+        "campo": "cliente.cep",
+        "codigo": "DADOS_INVALIDOS"
+      },
+      "status": 422,
+      "responseContentType": "application/json; charset=utf-8",
+      "response": {
+        "erro": {
+          "codigo": "DADOS_INVALIDOS",
+          "mensagem": "Existem campos inválidos no pedido.",
+          "campos": [
+            {
+              "campo": "cliente.cep",
+              "mensagem": "Informe um CEP com 8 dígitos."
+            }
+          ]
+        }
+      },
+      "responseRaw": "{\"erro\":{\"codigo\":\"DADOS_INVALIDOS\",\"mensagem\":\"Existem campos inválidos no pedido.\",\"campos\":[{\"campo\":\"cliente.cep\",\"mensagem\":\"Informe um CEP com 8 dígitos.\"}]}}",
+      "erroTransporte": null,
+      "checagens": [
+        {
+          "checagem": "status HTTP",
+          "esperado": 422,
+          "obtido": 422,
+          "aprovado": true
+        },
+        {
+          "checagem": "corpo JSON válido do tipo objeto",
+          "esperado": true,
+          "obtido": true,
+          "aprovado": true
+        },
+        {
+          "checagem": "Content-Type da resposta indica JSON",
+          "esperado": "application/json",
+          "obtido": "application/json; charset=utf-8",
+          "aprovado": true
+        },
+        {
+          "checagem": "envelope erro do tipo objeto",
+          "esperado": true,
+          "obtido": true,
+          "aprovado": true
+        },
+        {
+          "checagem": "erro.codigo",
+          "esperado": "DADOS_INVALIDOS",
+          "obtido": "DADOS_INVALIDOS",
+          "aprovado": true
+        },
+        {
+          "checagem": "erro.mensagem não vazia",
+          "esperado": "texto explicativo",
+          "obtido": "Existem campos inválidos no pedido.",
+          "aprovado": true
+        },
+        {
+          "checagem": "erro.mensagem indica dados inválidos",
+          "esperado": "campos ou dados inválidos",
+          "obtido": "Existem campos inválidos no pedido.",
+          "aprovado": true
+        },
+        {
+          "checagem": "erro.campos contém o campo correspondente",
+          "esperado": "cliente.cep",
+          "obtido": [
+            "cliente.cep"
+          ],
+          "aprovado": true
+        },
+        {
+          "checagem": "erro.campos contém mensagem explicativa do campo",
+          "esperado": "mensagem não vazia",
+          "obtido": [
+            "Informe um CEP com 8 dígitos."
+          ],
+          "aprovado": true
+        },
+        {
+          "checagem": "pedido não criado",
+          "esperado": "ausência de numero",
+          "obtido": null,
+          "aprovado": true
+        }
+      ],
+      "resultado": "Aprovado",
+      "checagensReprovadas": []
+    },
+    {
+      "id": "CT-013-API-04",
+      "cenarioFonte": "docs/gherkin/api.feature",
+      "tipoExecucao": "Chamada HTTP pontual; sem Playwright",
+      "method": "POST",
+      "path": "/api/pedidos",
+      "observadoEmUTC": "2026-10-07T14:15:23.3637678Z",
+      "recebidoEmUTC": "2026-10-07T14:15:23.4625924Z",
+      "request": {
+        "itens": [
+          {
+            "produtoId": "P005",
+            "quantidade": 1
+          }
+        ],
+        "cliente": {
+          "nome": "",
+          "email": "maria@example.com",
+          "cep": "01310-100"
+        }
+      },
+      "requestRaw": "{\"itens\":[{\"produtoId\":\"P005\",\"quantidade\":1}],\"cliente\":{\"nome\":\"\",\"email\":\"maria@example.com\",\"cep\":\"01310-100\"}}",
+      "expectedHttpStatus": 422,
+      "esperado": {
+        "mensagem": "Dados inválidos e mensagem explicativa do campo nome",
+        "campo": "cliente.nome",
+        "codigo": "DADOS_INVALIDOS"
+      },
+      "status": 422,
+      "responseContentType": "application/json; charset=utf-8",
+      "response": {
+        "erro": {
+          "codigo": "DADOS_INVALIDOS",
+          "mensagem": "Existem campos inválidos no pedido.",
+          "campos": [
+            {
+              "campo": "cliente.nome",
+              "mensagem": "Informe o nome completo."
+            }
+          ]
+        }
+      },
+      "responseRaw": "{\"erro\":{\"codigo\":\"DADOS_INVALIDOS\",\"mensagem\":\"Existem campos inválidos no pedido.\",\"campos\":[{\"campo\":\"cliente.nome\",\"mensagem\":\"Informe o nome completo.\"}]}}",
+      "erroTransporte": null,
+      "checagens": [
+        {
+          "checagem": "status HTTP",
+          "esperado": 422,
+          "obtido": 422,
+          "aprovado": true
+        },
+        {
+          "checagem": "corpo JSON válido do tipo objeto",
+          "esperado": true,
+          "obtido": true,
+          "aprovado": true
+        },
+        {
+          "checagem": "Content-Type da resposta indica JSON",
+          "esperado": "application/json",
+          "obtido": "application/json; charset=utf-8",
+          "aprovado": true
+        },
+        {
+          "checagem": "envelope erro do tipo objeto",
+          "esperado": true,
+          "obtido": true,
+          "aprovado": true
+        },
+        {
+          "checagem": "erro.codigo",
+          "esperado": "DADOS_INVALIDOS",
+          "obtido": "DADOS_INVALIDOS",
+          "aprovado": true
+        },
+        {
+          "checagem": "erro.mensagem não vazia",
+          "esperado": "texto explicativo",
+          "obtido": "Existem campos inválidos no pedido.",
+          "aprovado": true
+        },
+        {
+          "checagem": "erro.mensagem indica dados inválidos",
+          "esperado": "campos ou dados inválidos",
+          "obtido": "Existem campos inválidos no pedido.",
+          "aprovado": true
+        },
+        {
+          "checagem": "erro.campos contém o campo correspondente",
+          "esperado": "cliente.nome",
+          "obtido": [
+            "cliente.nome"
+          ],
+          "aprovado": true
+        },
+        {
+          "checagem": "erro.campos contém mensagem explicativa do campo",
+          "esperado": "mensagem não vazia",
+          "obtido": [
+            "Informe o nome completo."
+          ],
+          "aprovado": true
+        },
+        {
+          "checagem": "pedido não criado",
+          "esperado": "ausência de numero",
+          "obtido": null,
+          "aprovado": true
+        }
+      ],
+      "resultado": "Aprovado",
+      "checagensReprovadas": []
+    },
+    {
+      "id": "CT-013-API-05",
+      "cenarioFonte": "docs/gherkin/api.feature",
+      "tipoExecucao": "Chamada HTTP pontual; sem Playwright",
+      "method": "POST",
+      "path": "/api/pedidos",
+      "observadoEmUTC": "2026-10-07T14:15:23.4656578Z",
+      "recebidoEmUTC": "2026-10-07T14:15:23.5826981Z",
+      "request": {
+        "itens": [
+          {
+            "produtoId": "P005",
+            "quantidade": 1
+          }
+        ],
+        "cliente": {
+          "nome": "Maria Silva",
+          "email": "",
+          "cep": "01310-100"
+        }
+      },
+      "requestRaw": "{\"itens\":[{\"produtoId\":\"P005\",\"quantidade\":1}],\"cliente\":{\"nome\":\"Maria Silva\",\"email\":\"\",\"cep\":\"01310-100\"}}",
+      "expectedHttpStatus": 422,
+      "esperado": {
+        "mensagem": "Dados inválidos e mensagem explicativa do campo e-mail",
+        "campo": "cliente.email",
+        "codigo": "DADOS_INVALIDOS"
+      },
+      "status": 422,
+      "responseContentType": "application/json; charset=utf-8",
+      "response": {
+        "erro": {
+          "codigo": "DADOS_INVALIDOS",
+          "mensagem": "Existem campos inválidos no pedido.",
+          "campos": [
+            {
+              "campo": "cliente.email",
+              "mensagem": "Informe o e-mail."
+            }
+          ]
+        }
+      },
+      "responseRaw": "{\"erro\":{\"codigo\":\"DADOS_INVALIDOS\",\"mensagem\":\"Existem campos inválidos no pedido.\",\"campos\":[{\"campo\":\"cliente.email\",\"mensagem\":\"Informe o e-mail.\"}]}}",
+      "erroTransporte": null,
+      "checagens": [
+        {
+          "checagem": "status HTTP",
+          "esperado": 422,
+          "obtido": 422,
+          "aprovado": true
+        },
+        {
+          "checagem": "corpo JSON válido do tipo objeto",
+          "esperado": true,
+          "obtido": true,
+          "aprovado": true
+        },
+        {
+          "checagem": "Content-Type da resposta indica JSON",
+          "esperado": "application/json",
+          "obtido": "application/json; charset=utf-8",
+          "aprovado": true
+        },
+        {
+          "checagem": "envelope erro do tipo objeto",
+          "esperado": true,
+          "obtido": true,
+          "aprovado": true
+        },
+        {
+          "checagem": "erro.codigo",
+          "esperado": "DADOS_INVALIDOS",
+          "obtido": "DADOS_INVALIDOS",
+          "aprovado": true
+        },
+        {
+          "checagem": "erro.mensagem não vazia",
+          "esperado": "texto explicativo",
+          "obtido": "Existem campos inválidos no pedido.",
+          "aprovado": true
+        },
+        {
+          "checagem": "erro.mensagem indica dados inválidos",
+          "esperado": "campos ou dados inválidos",
+          "obtido": "Existem campos inválidos no pedido.",
+          "aprovado": true
+        },
+        {
+          "checagem": "erro.campos contém o campo correspondente",
+          "esperado": "cliente.email",
+          "obtido": [
+            "cliente.email"
+          ],
+          "aprovado": true
+        },
+        {
+          "checagem": "erro.campos contém mensagem explicativa do campo",
+          "esperado": "mensagem não vazia",
+          "obtido": [
+            "Informe o e-mail."
+          ],
+          "aprovado": true
+        },
+        {
+          "checagem": "pedido não criado",
+          "esperado": "ausência de numero",
+          "obtido": null,
+          "aprovado": true
+        }
+      ],
+      "resultado": "Aprovado",
+      "checagensReprovadas": []
+    },
+    {
+      "id": "CT-013-API-06",
+      "cenarioFonte": "docs/gherkin/api.feature",
+      "tipoExecucao": "Chamada HTTP pontual; sem Playwright",
+      "method": "POST",
+      "path": "/api/pedidos",
+      "observadoEmUTC": "2026-10-07T14:15:23.5848067Z",
+      "recebidoEmUTC": "2026-10-07T14:15:23.6976183Z",
+      "request": {
+        "itens": [
+          {
+            "produtoId": "P005",
+            "quantidade": 1
+          }
+        ],
+        "cliente": {
+          "nome": "Maria Silva",
+          "email": "maria@example.com",
+          "cep": ""
+        }
+      },
+      "requestRaw": "{\"itens\":[{\"produtoId\":\"P005\",\"quantidade\":1}],\"cliente\":{\"nome\":\"Maria Silva\",\"email\":\"maria@example.com\",\"cep\":\"\"}}",
+      "expectedHttpStatus": 422,
+      "esperado": {
+        "mensagem": "Dados inválidos e mensagem explicativa do campo CEP",
+        "campo": "cliente.cep",
+        "codigo": "DADOS_INVALIDOS"
+      },
+      "status": 422,
+      "responseContentType": "application/json; charset=utf-8",
+      "response": {
+        "erro": {
+          "codigo": "DADOS_INVALIDOS",
+          "mensagem": "Existem campos inválidos no pedido.",
+          "campos": [
+            {
+              "campo": "cliente.cep",
+              "mensagem": "Informe o CEP."
+            }
+          ]
+        }
+      },
+      "responseRaw": "{\"erro\":{\"codigo\":\"DADOS_INVALIDOS\",\"mensagem\":\"Existem campos inválidos no pedido.\",\"campos\":[{\"campo\":\"cliente.cep\",\"mensagem\":\"Informe o CEP.\"}]}}",
+      "erroTransporte": null,
+      "checagens": [
+        {
+          "checagem": "status HTTP",
+          "esperado": 422,
+          "obtido": 422,
+          "aprovado": true
+        },
+        {
+          "checagem": "corpo JSON válido do tipo objeto",
+          "esperado": true,
+          "obtido": true,
+          "aprovado": true
+        },
+        {
+          "checagem": "Content-Type da resposta indica JSON",
+          "esperado": "application/json",
+          "obtido": "application/json; charset=utf-8",
+          "aprovado": true
+        },
+        {
+          "checagem": "envelope erro do tipo objeto",
+          "esperado": true,
+          "obtido": true,
+          "aprovado": true
+        },
+        {
+          "checagem": "erro.codigo",
+          "esperado": "DADOS_INVALIDOS",
+          "obtido": "DADOS_INVALIDOS",
+          "aprovado": true
+        },
+        {
+          "checagem": "erro.mensagem não vazia",
+          "esperado": "texto explicativo",
+          "obtido": "Existem campos inválidos no pedido.",
+          "aprovado": true
+        },
+        {
+          "checagem": "erro.mensagem indica dados inválidos",
+          "esperado": "campos ou dados inválidos",
+          "obtido": "Existem campos inválidos no pedido.",
+          "aprovado": true
+        },
+        {
+          "checagem": "erro.campos contém o campo correspondente",
+          "esperado": "cliente.cep",
+          "obtido": [
+            "cliente.cep"
+          ],
+          "aprovado": true
+        },
+        {
+          "checagem": "erro.campos contém mensagem explicativa do campo",
+          "esperado": "mensagem não vazia",
+          "obtido": [
+            "Informe o CEP."
+          ],
+          "aprovado": true
+        },
+        {
+          "checagem": "pedido não criado",
+          "esperado": "ausência de numero",
+          "obtido": null,
+          "aprovado": true
+        }
+      ],
+      "resultado": "Aprovado",
+      "checagensReprovadas": []
+    },
+    {
+      "id": "CT-015-API-01",
+      "cenarioFonte": "docs/gherkin/api.feature",
+      "tipoExecucao": "Chamada HTTP pontual; sem Playwright",
+      "method": "POST",
+      "path": "/api/carrinho/calcular",
+      "observadoEmUTC": "2026-10-07T14:15:23.7030348Z",
+      "recebidoEmUTC": "2026-10-07T14:15:23.8122065Z",
+      "request": {},
+      "requestRaw": "{}",
+      "expectedHttpStatus": 422,
+      "esperado": {
+        "mensagem": "Itens obrigatórios",
+        "campoSePresente": "itens",
+        "codigo": "ITENS_OBRIGATORIOS"
+      },
+      "status": 422,
+      "responseContentType": "application/json; charset=utf-8",
+      "response": {
+        "erro": {
+          "codigo": "ITENS_OBRIGATORIOS",
+          "mensagem": "Informe ao menos um item.",
+          "campo": "itens"
+        }
+      },
+      "responseRaw": "{\"erro\":{\"codigo\":\"ITENS_OBRIGATORIOS\",\"mensagem\":\"Informe ao menos um item.\",\"campo\":\"itens\"}}",
+      "erroTransporte": null,
+      "checagens": [
+        {
+          "checagem": "status HTTP",
+          "esperado": 422,
+          "obtido": 422,
+          "aprovado": true
+        },
+        {
+          "checagem": "corpo JSON válido do tipo objeto",
+          "esperado": true,
+          "obtido": true,
+          "aprovado": true
+        },
+        {
+          "checagem": "Content-Type da resposta indica JSON",
+          "esperado": "application/json",
+          "obtido": "application/json; charset=utf-8",
+          "aprovado": true
+        },
+        {
+          "checagem": "envelope erro do tipo objeto",
+          "esperado": true,
+          "obtido": true,
+          "aprovado": true
+        },
+        {
+          "checagem": "erro.codigo",
+          "esperado": "ITENS_OBRIGATORIOS",
+          "obtido": "ITENS_OBRIGATORIOS",
+          "aprovado": true
+        },
+        {
+          "checagem": "erro.mensagem não vazia",
+          "esperado": "texto explicativo",
+          "obtido": "Informe ao menos um item.",
+          "aprovado": true
+        },
+        {
+          "checagem": "mensagem corresponde ao motivo da rejeição",
+          "esperado": "Itens obrigatórios",
+          "obtido": "Informe ao menos um item.",
+          "aprovado": true
+        },
+        {
+          "checagem": "erro.campo quando presente",
+          "esperado": "itens",
+          "obtido": "itens",
+          "aprovado": true
+        }
+      ],
+      "resultado": "Aprovado",
+      "checagensReprovadas": []
+    },
+    {
+      "id": "CT-015-API-02",
+      "cenarioFonte": "docs/gherkin/api.feature",
+      "tipoExecucao": "Chamada HTTP pontual; sem Playwright",
+      "method": "POST",
+      "path": "/api/carrinho/calcular",
+      "observadoEmUTC": "2026-10-07T14:15:23.8174193Z",
+      "recebidoEmUTC": "2026-10-07T14:15:23.9258905Z",
+      "request": {
+        "itens": []
+      },
+      "requestRaw": "{\"itens\":[]}",
+      "expectedHttpStatus": 422,
+      "esperado": {
+        "mensagem": "Itens obrigatórios",
+        "campoSePresente": "itens",
+        "codigo": "ITENS_OBRIGATORIOS"
+      },
+      "status": 422,
+      "responseContentType": "application/json; charset=utf-8",
+      "response": {
+        "erro": {
+          "codigo": "ITENS_OBRIGATORIOS",
+          "mensagem": "Informe ao menos um item.",
+          "campo": "itens"
+        }
+      },
+      "responseRaw": "{\"erro\":{\"codigo\":\"ITENS_OBRIGATORIOS\",\"mensagem\":\"Informe ao menos um item.\",\"campo\":\"itens\"}}",
+      "erroTransporte": null,
+      "checagens": [
+        {
+          "checagem": "status HTTP",
+          "esperado": 422,
+          "obtido": 422,
+          "aprovado": true
+        },
+        {
+          "checagem": "corpo JSON válido do tipo objeto",
+          "esperado": true,
+          "obtido": true,
+          "aprovado": true
+        },
+        {
+          "checagem": "Content-Type da resposta indica JSON",
+          "esperado": "application/json",
+          "obtido": "application/json; charset=utf-8",
+          "aprovado": true
+        },
+        {
+          "checagem": "envelope erro do tipo objeto",
+          "esperado": true,
+          "obtido": true,
+          "aprovado": true
+        },
+        {
+          "checagem": "erro.codigo",
+          "esperado": "ITENS_OBRIGATORIOS",
+          "obtido": "ITENS_OBRIGATORIOS",
+          "aprovado": true
+        },
+        {
+          "checagem": "erro.mensagem não vazia",
+          "esperado": "texto explicativo",
+          "obtido": "Informe ao menos um item.",
+          "aprovado": true
+        },
+        {
+          "checagem": "mensagem corresponde ao motivo da rejeição",
+          "esperado": "Itens obrigatórios",
+          "obtido": "Informe ao menos um item.",
+          "aprovado": true
+        },
+        {
+          "checagem": "erro.campo quando presente",
+          "esperado": "itens",
+          "obtido": "itens",
+          "aprovado": true
+        }
+      ],
+      "resultado": "Aprovado",
+      "checagensReprovadas": []
+    },
+    {
+      "id": "CT-015-API-03",
+      "cenarioFonte": "docs/gherkin/api.feature",
+      "tipoExecucao": "Chamada HTTP pontual; sem Playwright",
+      "method": "POST",
+      "path": "/api/carrinho/calcular",
+      "observadoEmUTC": "2026-10-07T14:15:23.9278368Z",
+      "recebidoEmUTC": "2026-10-07T14:15:24.0308277Z",
+      "request": {
+        "itens": [
+          null
+        ]
+      },
+      "requestRaw": "{\"itens\":[null]}",
+      "expectedHttpStatus": 422,
+      "esperado": {
+        "mensagem": "Item inválido ou estrutura inválida",
+        "campoSePresente": "itens[0]",
+        "codigo": "ITEM_INVALIDO"
+      },
+      "status": 422,
+      "responseContentType": "application/json; charset=utf-8",
+      "response": {
+        "erro": {
+          "codigo": "ITEM_INVALIDO",
+          "mensagem": "Cada item deve ser um objeto com produtoId e quantidade.",
+          "campo": "itens[0]"
+        }
+      },
+      "responseRaw": "{\"erro\":{\"codigo\":\"ITEM_INVALIDO\",\"mensagem\":\"Cada item deve ser um objeto com produtoId e quantidade.\",\"campo\":\"itens[0]\"}}",
+      "erroTransporte": null,
+      "checagens": [
+        {
+          "checagem": "status HTTP",
+          "esperado": 422,
+          "obtido": 422,
+          "aprovado": true
+        },
+        {
+          "checagem": "corpo JSON válido do tipo objeto",
+          "esperado": true,
+          "obtido": true,
+          "aprovado": true
+        },
+        {
+          "checagem": "Content-Type da resposta indica JSON",
+          "esperado": "application/json",
+          "obtido": "application/json; charset=utf-8",
+          "aprovado": true
+        },
+        {
+          "checagem": "envelope erro do tipo objeto",
+          "esperado": true,
+          "obtido": true,
+          "aprovado": true
+        },
+        {
+          "checagem": "erro.codigo",
+          "esperado": "ITEM_INVALIDO",
+          "obtido": "ITEM_INVALIDO",
+          "aprovado": true
+        },
+        {
+          "checagem": "erro.mensagem não vazia",
+          "esperado": "texto explicativo",
+          "obtido": "Cada item deve ser um objeto com produtoId e quantidade.",
+          "aprovado": true
+        },
+        {
+          "checagem": "mensagem corresponde ao motivo da rejeição",
+          "esperado": "Item inválido ou estrutura inválida",
+          "obtido": "Cada item deve ser um objeto com produtoId e quantidade.",
+          "aprovado": true
+        },
+        {
+          "checagem": "erro.campo quando presente",
+          "esperado": "itens[0]",
+          "obtido": "itens[0]",
+          "aprovado": true
+        }
+      ],
+      "resultado": "Aprovado",
+      "checagensReprovadas": []
+    },
+    {
+      "id": "CT-015-API-04",
+      "cenarioFonte": "docs/gherkin/api.feature",
+      "tipoExecucao": "Chamada HTTP pontual; sem Playwright",
+      "method": "POST",
+      "path": "/api/carrinho/calcular",
+      "observadoEmUTC": "2026-10-07T14:15:24.0325557Z",
+      "recebidoEmUTC": "2026-10-07T14:15:24.1356723Z",
+      "request": {
+        "itens": [
+          {
+            "produtoId": "P999",
+            "quantidade": 1
+          }
+        ]
+      },
+      "requestRaw": "{\"itens\":[{\"produtoId\":\"P999\",\"quantidade\":1}]}",
+      "expectedHttpStatus": 422,
+      "esperado": {
+        "mensagem": "Produto não encontrado",
+        "campoSePresente": "itens[0].produtoId",
+        "codigo": "PRODUTO_NAO_ENCONTRADO"
+      },
+      "status": 422,
+      "responseContentType": "application/json; charset=utf-8",
+      "response": {
+        "erro": {
+          "codigo": "PRODUTO_NAO_ENCONTRADO",
+          "mensagem": "Produto P999 não encontrado.",
+          "campo": "itens[0].produtoId"
+        }
+      },
+      "responseRaw": "{\"erro\":{\"codigo\":\"PRODUTO_NAO_ENCONTRADO\",\"mensagem\":\"Produto P999 não encontrado.\",\"campo\":\"itens[0].produtoId\"}}",
+      "erroTransporte": null,
+      "checagens": [
+        {
+          "checagem": "status HTTP",
+          "esperado": 422,
+          "obtido": 422,
+          "aprovado": true
+        },
+        {
+          "checagem": "corpo JSON válido do tipo objeto",
+          "esperado": true,
+          "obtido": true,
+          "aprovado": true
+        },
+        {
+          "checagem": "Content-Type da resposta indica JSON",
+          "esperado": "application/json",
+          "obtido": "application/json; charset=utf-8",
+          "aprovado": true
+        },
+        {
+          "checagem": "envelope erro do tipo objeto",
+          "esperado": true,
+          "obtido": true,
+          "aprovado": true
+        },
+        {
+          "checagem": "erro.codigo",
+          "esperado": "PRODUTO_NAO_ENCONTRADO",
+          "obtido": "PRODUTO_NAO_ENCONTRADO",
+          "aprovado": true
+        },
+        {
+          "checagem": "erro.mensagem não vazia",
+          "esperado": "texto explicativo",
+          "obtido": "Produto P999 não encontrado.",
+          "aprovado": true
+        },
+        {
+          "checagem": "mensagem corresponde ao motivo da rejeição",
+          "esperado": "Produto não encontrado",
+          "obtido": "Produto P999 não encontrado.",
+          "aprovado": true
+        },
+        {
+          "checagem": "erro.campo quando presente",
+          "esperado": "itens[0].produtoId",
+          "obtido": "itens[0].produtoId",
+          "aprovado": true
+        }
+      ],
+      "resultado": "Aprovado",
+      "checagensReprovadas": []
+    },
+    {
+      "id": "CT-015-API-07",
+      "cenarioFonte": "docs/gherkin/api.feature",
+      "tipoExecucao": "Chamada HTTP pontual; sem Playwright",
+      "method": "POST",
+      "path": "/api/carrinho/calcular",
+      "observadoEmUTC": "2026-10-07T14:15:24.1371652Z",
+      "recebidoEmUTC": "2026-10-07T14:15:24.2293017Z",
+      "request": {
+        "itens": [
+          {
+            "produtoId": "P005",
+            "quantidade": -1
+          }
+        ]
+      },
+      "requestRaw": "{\"itens\":[{\"produtoId\":\"P005\",\"quantidade\":-1}]}",
+      "expectedHttpStatus": 422,
+      "esperado": {
+        "mensagem": "A quantidade deve ser um número inteiro maior ou igual a 1.",
+        "campo": "itens[0].quantidade",
+        "codigo": "QUANTIDADE_INVALIDA"
+      },
+      "status": 422,
+      "responseContentType": "application/json; charset=utf-8",
+      "response": {
+        "erro": {
+          "codigo": "QUANTIDADE_INVALIDA",
+          "mensagem": "A quantidade deve ser um número inteiro maior ou igual a 1.",
+          "campo": "itens[0].quantidade"
+        }
+      },
+      "responseRaw": "{\"erro\":{\"codigo\":\"QUANTIDADE_INVALIDA\",\"mensagem\":\"A quantidade deve ser um número inteiro maior ou igual a 1.\",\"campo\":\"itens[0].quantidade\"}}",
+      "erroTransporte": null,
+      "checagens": [
+        {
+          "checagem": "status HTTP",
+          "esperado": 422,
+          "obtido": 422,
+          "aprovado": true
+        },
+        {
+          "checagem": "corpo JSON válido do tipo objeto",
+          "esperado": true,
+          "obtido": true,
+          "aprovado": true
+        },
+        {
+          "checagem": "Content-Type da resposta indica JSON",
+          "esperado": "application/json",
+          "obtido": "application/json; charset=utf-8",
+          "aprovado": true
+        },
+        {
+          "checagem": "envelope erro do tipo objeto",
+          "esperado": true,
+          "obtido": true,
+          "aprovado": true
+        },
+        {
+          "checagem": "erro.codigo",
+          "esperado": "QUANTIDADE_INVALIDA",
+          "obtido": "QUANTIDADE_INVALIDA",
+          "aprovado": true
+        },
+        {
+          "checagem": "erro.mensagem não vazia",
+          "esperado": "texto explicativo",
+          "obtido": "A quantidade deve ser um número inteiro maior ou igual a 1.",
+          "aprovado": true
+        },
+        {
+          "checagem": "erro.mensagem indica inteiro maior ou igual a 1",
+          "esperado": "A quantidade deve ser um número inteiro maior ou igual a 1.",
+          "obtido": "A quantidade deve ser um número inteiro maior ou igual a 1.",
+          "aprovado": true
+        },
+        {
+          "checagem": "erro.campo",
+          "esperado": "itens[0].quantidade",
+          "obtido": "itens[0].quantidade",
+          "aprovado": true
+        }
+      ],
+      "resultado": "Aprovado",
+      "checagensReprovadas": []
+    },
+    {
+      "id": "CT-015-API-08",
+      "cenarioFonte": "docs/gherkin/api.feature",
+      "tipoExecucao": "Chamada HTTP pontual; sem Playwright",
+      "method": "POST",
+      "path": "/api/carrinho/calcular",
+      "observadoEmUTC": "2026-10-07T14:15:24.2306557Z",
+      "recebidoEmUTC": "2026-10-07T14:15:24.3457958Z",
+      "request": {
+        "itens": [
+          {
+            "produtoId": "P005",
+            "quantidade": 1.5
+          }
+        ]
+      },
+      "requestRaw": "{\"itens\":[{\"produtoId\":\"P005\",\"quantidade\":1.5}]}",
+      "expectedHttpStatus": 422,
+      "esperado": {
+        "mensagem": "A quantidade deve ser um número inteiro maior ou igual a 1.",
+        "campo": "itens[0].quantidade",
+        "codigo": "QUANTIDADE_INVALIDA"
+      },
+      "status": 422,
+      "responseContentType": "application/json; charset=utf-8",
+      "response": {
+        "erro": {
+          "codigo": "QUANTIDADE_INVALIDA",
+          "mensagem": "A quantidade deve ser um número inteiro maior ou igual a 1.",
+          "campo": "itens[0].quantidade"
+        }
+      },
+      "responseRaw": "{\"erro\":{\"codigo\":\"QUANTIDADE_INVALIDA\",\"mensagem\":\"A quantidade deve ser um número inteiro maior ou igual a 1.\",\"campo\":\"itens[0].quantidade\"}}",
+      "erroTransporte": null,
+      "checagens": [
+        {
+          "checagem": "status HTTP",
+          "esperado": 422,
+          "obtido": 422,
+          "aprovado": true
+        },
+        {
+          "checagem": "corpo JSON válido do tipo objeto",
+          "esperado": true,
+          "obtido": true,
+          "aprovado": true
+        },
+        {
+          "checagem": "Content-Type da resposta indica JSON",
+          "esperado": "application/json",
+          "obtido": "application/json; charset=utf-8",
+          "aprovado": true
+        },
+        {
+          "checagem": "envelope erro do tipo objeto",
+          "esperado": true,
+          "obtido": true,
+          "aprovado": true
+        },
+        {
+          "checagem": "erro.codigo",
+          "esperado": "QUANTIDADE_INVALIDA",
+          "obtido": "QUANTIDADE_INVALIDA",
+          "aprovado": true
+        },
+        {
+          "checagem": "erro.mensagem não vazia",
+          "esperado": "texto explicativo",
+          "obtido": "A quantidade deve ser um número inteiro maior ou igual a 1.",
+          "aprovado": true
+        },
+        {
+          "checagem": "erro.mensagem indica inteiro maior ou igual a 1",
+          "esperado": "A quantidade deve ser um número inteiro maior ou igual a 1.",
+          "obtido": "A quantidade deve ser um número inteiro maior ou igual a 1.",
+          "aprovado": true
+        },
+        {
+          "checagem": "erro.campo",
+          "esperado": "itens[0].quantidade",
+          "obtido": "itens[0].quantidade",
+          "aprovado": true
+        }
+      ],
+      "resultado": "Aprovado",
+      "checagensReprovadas": []
+    },
+    {
+      "id": "CT-015-API-09",
+      "cenarioFonte": "docs/gherkin/api.feature",
+      "tipoExecucao": "Chamada HTTP pontual; sem Playwright",
+      "method": "POST",
+      "path": "/api/carrinho/calcular",
+      "observadoEmUTC": "2026-10-07T14:15:24.3473218Z",
+      "recebidoEmUTC": "2026-10-07T14:15:24.4581887Z",
+      "request": {
+        "itens": [
+          {
+            "produtoId": "P005",
+            "quantidade": "abc"
+          }
+        ]
+      },
+      "requestRaw": "{\"itens\":[{\"produtoId\":\"P005\",\"quantidade\":\"abc\"}]}",
+      "expectedHttpStatus": 422,
+      "esperado": {
+        "mensagem": "A quantidade deve ser um número inteiro maior ou igual a 1.",
+        "campo": "itens[0].quantidade",
+        "codigo": "QUANTIDADE_INVALIDA"
+      },
+      "status": 422,
+      "responseContentType": "application/json; charset=utf-8",
+      "response": {
+        "erro": {
+          "codigo": "QUANTIDADE_INVALIDA",
+          "mensagem": "A quantidade deve ser um número inteiro maior ou igual a 1.",
+          "campo": "itens[0].quantidade"
+        }
+      },
+      "responseRaw": "{\"erro\":{\"codigo\":\"QUANTIDADE_INVALIDA\",\"mensagem\":\"A quantidade deve ser um número inteiro maior ou igual a 1.\",\"campo\":\"itens[0].quantidade\"}}",
+      "erroTransporte": null,
+      "checagens": [
+        {
+          "checagem": "status HTTP",
+          "esperado": 422,
+          "obtido": 422,
+          "aprovado": true
+        },
+        {
+          "checagem": "corpo JSON válido do tipo objeto",
+          "esperado": true,
+          "obtido": true,
+          "aprovado": true
+        },
+        {
+          "checagem": "Content-Type da resposta indica JSON",
+          "esperado": "application/json",
+          "obtido": "application/json; charset=utf-8",
+          "aprovado": true
+        },
+        {
+          "checagem": "envelope erro do tipo objeto",
+          "esperado": true,
+          "obtido": true,
+          "aprovado": true
+        },
+        {
+          "checagem": "erro.codigo",
+          "esperado": "QUANTIDADE_INVALIDA",
+          "obtido": "QUANTIDADE_INVALIDA",
+          "aprovado": true
+        },
+        {
+          "checagem": "erro.mensagem não vazia",
+          "esperado": "texto explicativo",
+          "obtido": "A quantidade deve ser um número inteiro maior ou igual a 1.",
+          "aprovado": true
+        },
+        {
+          "checagem": "erro.mensagem indica inteiro maior ou igual a 1",
+          "esperado": "A quantidade deve ser um número inteiro maior ou igual a 1.",
+          "obtido": "A quantidade deve ser um número inteiro maior ou igual a 1.",
+          "aprovado": true
+        },
+        {
+          "checagem": "erro.campo",
+          "esperado": "itens[0].quantidade",
+          "obtido": "itens[0].quantidade",
+          "aprovado": true
+        }
+      ],
+      "resultado": "Aprovado",
+      "checagensReprovadas": []
+    },
+    {
+      "id": "CT-015-API-10",
+      "cenarioFonte": "docs/gherkin/api.feature",
+      "tipoExecucao": "Chamada HTTP pontual; sem Playwright",
+      "method": "POST",
+      "path": "/api/carrinho/calcular",
+      "observadoEmUTC": "2026-10-07T14:15:24.4603446Z",
+      "recebidoEmUTC": "2026-10-07T14:15:24.6153910Z",
+      "request": {
+        "itens": [
+          {
+            "produtoId": "P005",
+            "quantidade": null
+          }
+        ]
+      },
+      "requestRaw": "{\"itens\":[{\"produtoId\":\"P005\",\"quantidade\":null}]}",
+      "expectedHttpStatus": 422,
+      "esperado": {
+        "mensagem": "A quantidade deve ser um número inteiro maior ou igual a 1.",
+        "campo": "itens[0].quantidade",
+        "codigo": "QUANTIDADE_INVALIDA"
+      },
+      "status": 422,
+      "responseContentType": "application/json; charset=utf-8",
+      "response": {
+        "erro": {
+          "codigo": "QUANTIDADE_INVALIDA",
+          "mensagem": "A quantidade deve ser um número inteiro maior ou igual a 1.",
+          "campo": "itens[0].quantidade"
+        }
+      },
+      "responseRaw": "{\"erro\":{\"codigo\":\"QUANTIDADE_INVALIDA\",\"mensagem\":\"A quantidade deve ser um número inteiro maior ou igual a 1.\",\"campo\":\"itens[0].quantidade\"}}",
+      "erroTransporte": null,
+      "checagens": [
+        {
+          "checagem": "status HTTP",
+          "esperado": 422,
+          "obtido": 422,
+          "aprovado": true
+        },
+        {
+          "checagem": "corpo JSON válido do tipo objeto",
+          "esperado": true,
+          "obtido": true,
+          "aprovado": true
+        },
+        {
+          "checagem": "Content-Type da resposta indica JSON",
+          "esperado": "application/json",
+          "obtido": "application/json; charset=utf-8",
+          "aprovado": true
+        },
+        {
+          "checagem": "envelope erro do tipo objeto",
+          "esperado": true,
+          "obtido": true,
+          "aprovado": true
+        },
+        {
+          "checagem": "erro.codigo",
+          "esperado": "QUANTIDADE_INVALIDA",
+          "obtido": "QUANTIDADE_INVALIDA",
+          "aprovado": true
+        },
+        {
+          "checagem": "erro.mensagem não vazia",
+          "esperado": "texto explicativo",
+          "obtido": "A quantidade deve ser um número inteiro maior ou igual a 1.",
+          "aprovado": true
+        },
+        {
+          "checagem": "erro.mensagem indica inteiro maior ou igual a 1",
+          "esperado": "A quantidade deve ser um número inteiro maior ou igual a 1.",
+          "obtido": "A quantidade deve ser um número inteiro maior ou igual a 1.",
+          "aprovado": true
+        },
+        {
+          "checagem": "erro.campo",
+          "esperado": "itens[0].quantidade",
+          "obtido": "itens[0].quantidade",
+          "aprovado": true
+        }
+      ],
+      "resultado": "Aprovado",
+      "checagensReprovadas": []
+    },
+    {
+      "id": "CT-015-API-11",
+      "cenarioFonte": "docs/gherkin/api.feature",
+      "tipoExecucao": "Chamada HTTP pontual; sem Playwright",
+      "method": "POST",
+      "path": "/api/carrinho/calcular",
+      "observadoEmUTC": "2026-10-07T14:15:24.6177378Z",
+      "recebidoEmUTC": "2026-10-07T14:15:24.7142157Z",
+      "request": {
+        "itens": [
+          {
+            "produtoId": "P005",
+            "quantidade": true
+          }
+        ]
+      },
+      "requestRaw": "{\"itens\":[{\"produtoId\":\"P005\",\"quantidade\":true}]}",
+      "expectedHttpStatus": 422,
+      "esperado": {
+        "mensagem": "A quantidade deve ser um número inteiro maior ou igual a 1.",
+        "campo": "itens[0].quantidade",
+        "codigo": "QUANTIDADE_INVALIDA"
+      },
+      "status": 422,
+      "responseContentType": "application/json; charset=utf-8",
+      "response": {
+        "erro": {
+          "codigo": "QUANTIDADE_INVALIDA",
+          "mensagem": "A quantidade deve ser um número inteiro maior ou igual a 1.",
+          "campo": "itens[0].quantidade"
+        }
+      },
+      "responseRaw": "{\"erro\":{\"codigo\":\"QUANTIDADE_INVALIDA\",\"mensagem\":\"A quantidade deve ser um número inteiro maior ou igual a 1.\",\"campo\":\"itens[0].quantidade\"}}",
+      "erroTransporte": null,
+      "checagens": [
+        {
+          "checagem": "status HTTP",
+          "esperado": 422,
+          "obtido": 422,
+          "aprovado": true
+        },
+        {
+          "checagem": "corpo JSON válido do tipo objeto",
+          "esperado": true,
+          "obtido": true,
+          "aprovado": true
+        },
+        {
+          "checagem": "Content-Type da resposta indica JSON",
+          "esperado": "application/json",
+          "obtido": "application/json; charset=utf-8",
+          "aprovado": true
+        },
+        {
+          "checagem": "envelope erro do tipo objeto",
+          "esperado": true,
+          "obtido": true,
+          "aprovado": true
+        },
+        {
+          "checagem": "erro.codigo",
+          "esperado": "QUANTIDADE_INVALIDA",
+          "obtido": "QUANTIDADE_INVALIDA",
+          "aprovado": true
+        },
+        {
+          "checagem": "erro.mensagem não vazia",
+          "esperado": "texto explicativo",
+          "obtido": "A quantidade deve ser um número inteiro maior ou igual a 1.",
+          "aprovado": true
+        },
+        {
+          "checagem": "erro.mensagem indica inteiro maior ou igual a 1",
+          "esperado": "A quantidade deve ser um número inteiro maior ou igual a 1.",
+          "obtido": "A quantidade deve ser um número inteiro maior ou igual a 1.",
+          "aprovado": true
+        },
+        {
+          "checagem": "erro.campo",
+          "esperado": "itens[0].quantidade",
+          "obtido": "itens[0].quantidade",
+          "aprovado": true
+        }
+      ],
+      "resultado": "Aprovado",
+      "checagensReprovadas": []
+    },
+    {
+      "id": "CT-015-API-12",
+      "cenarioFonte": "docs/gherkin/api.feature",
+      "tipoExecucao": "Chamada HTTP pontual; sem Playwright",
+      "method": "POST",
+      "path": "/api/carrinho/calcular",
+      "observadoEmUTC": "2026-10-07T14:15:24.7156164Z",
+      "recebidoEmUTC": "2026-10-07T14:15:24.8470091Z",
+      "request": {
+        "itens": [
+          {
+            "produtoId": "P005",
+            "quantidade": "1"
+          }
+        ]
+      },
+      "requestRaw": "{\"itens\":[{\"produtoId\":\"P005\",\"quantidade\":\"1\"}]}",
+      "expectedHttpStatus": 422,
+      "esperado": {
+        "mensagem": "A quantidade deve ser um número inteiro maior ou igual a 1.",
+        "campo": "itens[0].quantidade",
+        "codigo": "QUANTIDADE_INVALIDA"
+      },
+      "status": 422,
+      "responseContentType": "application/json; charset=utf-8",
+      "response": {
+        "erro": {
+          "codigo": "QUANTIDADE_INVALIDA",
+          "mensagem": "A quantidade deve ser um número inteiro maior ou igual a 1.",
+          "campo": "itens[0].quantidade"
+        }
+      },
+      "responseRaw": "{\"erro\":{\"codigo\":\"QUANTIDADE_INVALIDA\",\"mensagem\":\"A quantidade deve ser um número inteiro maior ou igual a 1.\",\"campo\":\"itens[0].quantidade\"}}",
+      "erroTransporte": null,
+      "checagens": [
+        {
+          "checagem": "status HTTP",
+          "esperado": 422,
+          "obtido": 422,
+          "aprovado": true
+        },
+        {
+          "checagem": "corpo JSON válido do tipo objeto",
+          "esperado": true,
+          "obtido": true,
+          "aprovado": true
+        },
+        {
+          "checagem": "Content-Type da resposta indica JSON",
+          "esperado": "application/json",
+          "obtido": "application/json; charset=utf-8",
+          "aprovado": true
+        },
+        {
+          "checagem": "envelope erro do tipo objeto",
+          "esperado": true,
+          "obtido": true,
+          "aprovado": true
+        },
+        {
+          "checagem": "erro.codigo",
+          "esperado": "QUANTIDADE_INVALIDA",
+          "obtido": "QUANTIDADE_INVALIDA",
+          "aprovado": true
+        },
+        {
+          "checagem": "erro.mensagem não vazia",
+          "esperado": "texto explicativo",
+          "obtido": "A quantidade deve ser um número inteiro maior ou igual a 1.",
+          "aprovado": true
+        },
+        {
+          "checagem": "erro.mensagem indica inteiro maior ou igual a 1",
+          "esperado": "A quantidade deve ser um número inteiro maior ou igual a 1.",
+          "obtido": "A quantidade deve ser um número inteiro maior ou igual a 1.",
+          "aprovado": true
+        },
+        {
+          "checagem": "erro.campo",
+          "esperado": "itens[0].quantidade",
+          "obtido": "itens[0].quantidade",
+          "aprovado": true
+        }
+      ],
+      "resultado": "Aprovado",
+      "checagensReprovadas": []
+    }
+  ],
+  "validacaoLocal": "Corpos JSON brutos reabertos e datas ISO conferidas sem novas requisições; os resultados não representam testes Playwright.",
+  "validadoEmUTC": "2026-10-07T14:16:11.815703+00:00"
+}

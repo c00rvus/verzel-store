@@ -1,0 +1,53 @@
+{
+  "caseId": "CT-013-API-tres-campos",
+  "group": "CT-013",
+  "layer": "API",
+  "input": "POST /api/pedidos; cliente {\"nome\":\"Maria\",\"email\":\"invalido\",\"cep\":\"123\"}",
+  "date": "06/10 14:07:12",
+  "expected": "422 DADOS_INVALIDOS",
+  "actual": "422 DADOS_INVALIDOS; cliente.nome: Informe nome e sobrenome., cliente.email: Informe um e-mail válido., cliente.cep: Informe um CEP com 8 dígitos.",
+  "status": "Aprovado",
+  "evidenceId": "EV-006",
+  "bugIds": [],
+  "method": "POST",
+  "path": "/api/pedidos",
+  "request": {
+    "itens": [
+      {
+        "produtoId": "P005",
+        "quantidade": 1
+      }
+    ],
+    "cliente": {
+      "nome": "Maria",
+      "email": "invalido",
+      "cep": "123"
+    }
+  },
+  "response": {
+    "erro": {
+      "codigo": "DADOS_INVALIDOS",
+      "mensagem": "Existem campos inválidos no pedido.",
+      "campos": [
+        {
+          "campo": "cliente.nome",
+          "mensagem": "Informe nome e sobrenome."
+        },
+        {
+          "campo": "cliente.email",
+          "mensagem": "Informe um e-mail válido."
+        },
+        {
+          "campo": "cliente.cep",
+          "mensagem": "Informe um CEP com 8 dígitos."
+        }
+      ]
+    }
+  },
+  "httpStatus": 422,
+  "sourcePath": "evidencias/revisao-ambiente/api-observacoes-powershell.json",
+  "sourceId": "CT-013-A",
+  "recordedAtUTC": "2026-10-06T18:07:12.9818478Z",
+  "images": [],
+  "pairs": []
+}

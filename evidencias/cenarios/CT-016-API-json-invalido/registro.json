@@ -1,0 +1,27 @@
+{
+  "caseId": "CT-016-API-json-invalido",
+  "group": "CT-016",
+  "layer": "API",
+  "input": "POST /api/carrinho/calcular; {\"itens\":",
+  "date": "06/10 14:07:13",
+  "expected": "400 JSON_INVALIDO",
+  "actual": "400 JSON_INVALIDO; O corpo da requisição deve ser um objeto JSON válido.",
+  "status": "Aprovado",
+  "evidenceId": "EV-006",
+  "bugIds": [],
+  "method": "POST",
+  "path": "/api/carrinho/calcular",
+  "request": "{\"itens\":",
+  "response": {
+    "erro": {
+      "codigo": "JSON_INVALIDO",
+      "mensagem": "O corpo da requisição deve ser um objeto JSON válido."
+    }
+  },
+  "httpStatus": 400,
+  "sourcePath": "evidencias/revisao-ambiente/api-observacoes-powershell.json",
+  "sourceId": "CT-016-A",
+  "recordedAtUTC": "2026-10-06T18:07:13.6890126Z",
+  "images": [],
+  "pairs": []
+}

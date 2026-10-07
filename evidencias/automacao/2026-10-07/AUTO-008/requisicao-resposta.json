@@ -1,0 +1,35 @@
+{
+  "metodo": "POST",
+  "rota": "/api/carrinho/calcular",
+  "requisicao": {
+    "itens": [
+      {
+        "produtoId": "P005",
+        "quantidade": 6
+      }
+    ]
+  },
+  "esperado": {
+    "statusHTTP": 422,
+    "codigo": "QUANTIDADE_MAXIMA_EXCEDIDA"
+  },
+  "statusHTTP": 200,
+  "resposta": {
+    "itens": [
+      {
+        "produtoId": "P005",
+        "nome": "Mochila Urbana 20L",
+        "precoUnitario": 100,
+        "quantidade": 6,
+        "total": 600
+      }
+    ],
+    "subtotal": 600,
+    "desconto": 0,
+    "frete": 0,
+    "freteGratis": true,
+    "valorFaltanteFreteGratis": 0,
+    "total": 600,
+    "cupom": null
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "caseId": "CT-012-API-02",
+  "group": "CT-012",
+  "layer": "API",
+  "input": "POST /api/pedidos; P005 ×1; BEMVINDO10; CEP 01310100",
+  "date": "06/10 14:07:12",
+  "expected": "201; 100,00 / 10,00 / 19,90 / 109,90; número VZ- + 6 dígitos; criadoEm ISO8601",
+  "actual": "201; 100,00 / 10,00 / 19,90 / 109,90; VZ-070557; data e cliente corretos",
+  "status": "Aprovado",
+  "evidenceId": "EV-006",
+  "bugIds": [],
+  "method": "POST",
+  "path": "/api/pedidos",
+  "request": {
+    "cliente": {
+      "nome": "Maria Silva",
+      "email": "maria@example.com",
+      "cep": "01310100"
+    },
+    "cupom": "BEMVINDO10",
+    "itens": [
+      {
+        "produtoId": "P005",
+        "quantidade": 1
+      }
+    ]
+  },
+  "response": {
+    "numero": "VZ-070557",
+    "criadoEm": "2026-10-06T18:07:18.605Z",
+    "cliente": {
+      "nome": "Maria Silva",
+      "email": "maria@example.com",
+      "cep": "01310100"
+    },
+    "itens": [
+      {
+        "produtoId": "P005",
+        "nome": "Mochila Urbana 20L",
+        "precoUnitario": 100,
+        "quantidade": 1,
+        "total": 100
+      }
+    ],
+    "subtotal": 100,
+    "desconto": 10,
+    "frete": 19.9,
+    "freteGratis": false,
+    "valorFaltanteFreteGratis": 100,
+    "total": 109.9,
+    "cupom": {
+      "codigo": "BEMVINDO10",
+      "aplicado": true,
+      "mensagem": "Cupom aplicado: 10% de desconto nos produtos."
+    }
+  },
+  "httpStatus": 201,
+  "sourcePath": "evidencias/revisao-ambiente/api-observacoes-powershell.json",
+  "sourceId": "CT-012-B",
+  "recordedAtUTC": "2026-10-06T18:07:12.7953207Z",
+  "images": [],
+  "pairs": []
+}

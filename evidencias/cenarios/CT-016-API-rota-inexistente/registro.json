@@ -1,0 +1,27 @@
+{
+  "caseId": "CT-016-API-rota-inexistente",
+  "group": "CT-016",
+  "layer": "API",
+  "input": "GET /api/rota-inexistente",
+  "date": "06/10 14:07:13",
+  "expected": "404 ROTA_NAO_ENCONTRADA",
+  "actual": "404 ROTA_NAO_ENCONTRADA; Rota não encontrada.",
+  "status": "Aprovado",
+  "evidenceId": "EV-006",
+  "bugIds": [],
+  "method": "GET",
+  "path": "/api/rota-inexistente",
+  "request": null,
+  "response": {
+    "erro": {
+      "codigo": "ROTA_NAO_ENCONTRADA",
+      "mensagem": "Rota não encontrada."
+    }
+  },
+  "httpStatus": 404,
+  "sourcePath": "evidencias/revisao-ambiente/api-observacoes-powershell.json",
+  "sourceId": "CT-016-B",
+  "recordedAtUTC": "2026-10-06T18:07:13.8667412Z",
+  "images": [],
+  "pairs": []
+}

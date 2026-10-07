@@ -1,0 +1,74 @@
+{
+  "caseId": "CT-004-UI",
+  "group": "CT-004",
+  "layer": "UI",
+  "input": "Cupom \"VERAO2026\"",
+  "date": "07/10 10:17:52",
+  "expected": "Cupom expirado. 100,00 / 0,00 / 19,90 / 119,90",
+  "actual": "Cupom expirado. 100,00 / 0,00 / 19,90 / 119,90",
+  "status": "Aprovado",
+  "evidenceId": "EV-019",
+  "bugIds": [],
+  "evidenceRecord": {
+    "sourcePath": "evidencias/execucao-2026-10-07/ui-resultados.json",
+    "sourceId": "CT-004-UI",
+    "recordedAtUTC": "2026-10-07T14:17:52.958Z",
+    "dados": {
+      "produto": "P005",
+      "quantidade": 1,
+      "cupom": "VERAO2026"
+    },
+    "esperado": {
+      "mensagem": "Cupom expirado.",
+      "subtotal": 100,
+      "desconto": 0,
+      "frete": 19.9,
+      "total": 119.9
+    },
+    "obtido": "- note:\n  - paragraph:\n    - text: Ambiente de teste técnico do processo seletivo de QA da Verzel.\n    - link \"Leia a documentação antes de começar.\":\n      - /url: /documentacao\n- banner:\n  - link \"Verzel Store, página inicial\":\n    - /url: /\n    - generic: verzel\n    - generic: store\n  - navigation \"Principal\":\n    - link \"Produtos\":\n      - /url: /\n    - link \"Documentação\":\n      - /url: /documentacao\n    - link \"Carrinho 1 itens no carrinho\":\n      - /url: /carrinho\n      - text: Carrinho\n      - generic \"1 itens no carrinho\": \"1\"\n- main:\n  - heading \"Carrinho\" [level=1]\n  - button \"Esvaziar carrinho\"\n  - list:\n    - heading \"Mochila Urbana 20L\" [level=3]\n    - paragraph: R$ 100,00 cada\n    - group \"Quantidade de Mochila Urbana 20L\":\n      - button \"Diminuir quantidade de Mochila Urbana 20L\" [disabled]: \"-\"\n      - status \"Quantidade de Mochila Urbana 20L\": \"1\"\n      - button \"Aumentar quantidade de Mochila Urbana 20L\": +\n    - paragraph: R$ 100,00\n    - button \"Remover Mochila Urbana 20L do carrinho\": Remover\n  - generic: Cupom de desconto\n  - textbox \"Cupom de desconto\": VERAO2026\n  - button \"Aplicar cupom\"\n  - alert: Cupom expirado.\n  - region \"Resumo do pedido\":\n    - heading \"Resumo do pedido\" [level=2]\n    - term: Subtotal\n    - definition: R$ 100,00\n    - term: Desconto\n    - definition: R$ 0,00\n    - term: Frete\n    - definition: R$ 19,90\n    - term: Total\n    - definition: R$ 119,90\n    - paragraph: Faltam R$ 100,00 para o frete grátis.\n    - link \"Finalizar compra\":\n      - /url: /checkout\n- contentinfo:\n  - paragraph: Verzel Store é um ambiente fictício criado para o teste técnico do processo seletivo de QA da Verzel. Nenhuma compra é real.",
+    "status": "Aprovado",
+    "arquivos": [
+      "evidencias/execucao-2026-10-07/CT-004-cupom-antes.png",
+      "evidencias/execucao-2026-10-07/CT-004-cupom-preenchido.png",
+      "evidencias/execucao-2026-10-07/CT-004-cupom-depois.png"
+    ]
+  },
+  "dados": {
+    "produto": "P005",
+    "quantidade": 1,
+    "cupom": "VERAO2026"
+  },
+  "sourcePath": "evidencias/execucao-2026-10-07/ui-resultados.json",
+  "sourceId": "CT-004-UI",
+  "recordedAtUTC": "2026-10-07T14:17:52.958Z",
+  "images": [
+    {
+      "path": "evidencias/execucao-2026-10-07/CT-004-cupom-antes.png",
+      "label": "Carrinho sem cupom expirado",
+      "stage": "Carrinho sem cupom expirado",
+      "time": "2026-10-07T14:17:50.324Z",
+      "phase": "before"
+    },
+    {
+      "path": "evidencias/execucao-2026-10-07/CT-004-cupom-preenchido.png",
+      "label": "VERAO2026 antes de aplicar",
+      "stage": "VERAO2026 antes de aplicar",
+      "time": "2026-10-07T14:17:51.510Z",
+      "phase": "input"
+    },
+    {
+      "path": "evidencias/execucao-2026-10-07/CT-004-cupom-depois.png",
+      "label": "Cupom expirado rejeitado",
+      "stage": "Cupom expirado rejeitado",
+      "time": "2026-10-07T14:17:52.938Z",
+      "phase": "after"
+    }
+  ],
+  "pairs": [
+    {
+      "label": "Aplicação do cupom",
+      "beforePath": "evidencias/execucao-2026-10-07/CT-004-cupom-antes.png",
+      "afterPath": "evidencias/execucao-2026-10-07/CT-004-cupom-depois.png"
+    }
+  ]
+}

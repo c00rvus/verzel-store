@@ -1,0 +1,35 @@
+{
+  "caseId": "CT-015-API-12",
+  "group": "CT-015",
+  "layer": "API",
+  "input": "POST /api/carrinho/calcular; {\"itens\":[{\"produtoId\":\"P005\",\"quantidade\":\"1\"}]}",
+  "date": "07/10 10:15:24",
+  "expected": "422 QUANTIDADE_INVALIDA",
+  "actual": "422 QUANTIDADE_INVALIDA; campo itens[0].quantidade; A quantidade deve ser um número inteiro maior ou igual a 1.",
+  "status": "Aprovado",
+  "evidenceId": "EV-035",
+  "bugIds": [],
+  "method": "POST",
+  "path": "/api/carrinho/calcular",
+  "request": {
+    "itens": [
+      {
+        "produtoId": "P005",
+        "quantidade": "1"
+      }
+    ]
+  },
+  "response": {
+    "erro": {
+      "codigo": "QUANTIDADE_INVALIDA",
+      "mensagem": "A quantidade deve ser um número inteiro maior ou igual a 1.",
+      "campo": "itens[0].quantidade"
+    }
+  },
+  "httpStatus": 422,
+  "sourcePath": "evidencias/execucao-2026-10-07/api-pendentes.json",
+  "sourceId": "CT-015-API-12",
+  "recordedAtUTC": "2026-10-07T14:15:24.7156164Z",
+  "images": [],
+  "pairs": []
+}

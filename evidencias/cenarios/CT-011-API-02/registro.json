@@ -1,0 +1,51 @@
+{
+  "caseId": "CT-011-API-02",
+  "group": "CT-011",
+  "layer": "API",
+  "input": "POST /api/carrinho/calcular; P007 ×1; BEMVINDO10",
+  "date": "07/10 10:15:22",
+  "expected": "200; 229,90 / 22,99 / 0,00 / 206,91",
+  "actual": "200; 229,90 / 22,99 / 0,00 / 206,91; faltante 0,00",
+  "status": "Aprovado",
+  "evidenceId": "EV-035",
+  "bugIds": [],
+  "method": "POST",
+  "path": "/api/carrinho/calcular",
+  "request": {
+    "itens": [
+      {
+        "produtoId": "P007",
+        "quantidade": 1
+      }
+    ],
+    "cupom": "BEMVINDO10"
+  },
+  "response": {
+    "itens": [
+      {
+        "produtoId": "P007",
+        "nome": "Jaqueta Corta-Vento",
+        "precoUnitario": 229.9,
+        "quantidade": 1,
+        "total": 229.9
+      }
+    ],
+    "subtotal": 229.9,
+    "desconto": 22.99,
+    "frete": 0,
+    "freteGratis": true,
+    "valorFaltanteFreteGratis": 0,
+    "total": 206.91,
+    "cupom": {
+      "codigo": "BEMVINDO10",
+      "aplicado": true,
+      "mensagem": "Cupom aplicado: 10% de desconto nos produtos."
+    }
+  },
+  "httpStatus": 200,
+  "sourcePath": "evidencias/execucao-2026-10-07/api-pendentes.json",
+  "sourceId": "CT-011-API-02",
+  "recordedAtUTC": "2026-10-07T14:15:22.8714827Z",
+  "images": [],
+  "pairs": []
+}

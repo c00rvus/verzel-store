@@ -1,0 +1,27 @@
+{
+  "caseId": "CT-014-API-P999",
+  "group": "CT-014",
+  "layer": "API",
+  "input": "GET /api/produtos/P999",
+  "date": "06/10 14:07:11",
+  "expected": "404 PRODUTO_NAO_ENCONTRADO",
+  "actual": "404 PRODUTO_NAO_ENCONTRADO; Produto P999 não encontrado.",
+  "status": "Aprovado",
+  "evidenceId": "EV-006",
+  "bugIds": [],
+  "method": "GET",
+  "path": "/api/produtos/P999",
+  "request": null,
+  "response": {
+    "erro": {
+      "codigo": "PRODUTO_NAO_ENCONTRADO",
+      "mensagem": "Produto P999 não encontrado."
+    }
+  },
+  "httpStatus": 404,
+  "sourcePath": "evidencias/revisao-ambiente/api-observacoes-powershell.json",
+  "sourceId": "CT-014-C",
+  "recordedAtUTC": "2026-10-06T18:07:11.0109713Z",
+  "images": [],
+  "pairs": []
+}

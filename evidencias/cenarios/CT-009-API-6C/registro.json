@@ -1,0 +1,48 @@
+{
+  "caseId": "CT-009-API-6C",
+  "group": "CT-009",
+  "layer": "API",
+  "input": "POST /api/carrinho/calcular; P005 ×6",
+  "date": "06/10 14:07:12",
+  "expected": "422 QUANTIDADE_MAXIMA_EXCEDIDA",
+  "actual": "200; 6 unidades; total 600,00; BUG-002",
+  "status": "Reprovado",
+  "evidenceId": "EV-006",
+  "bugIds": [
+    "BUG-002"
+  ],
+  "method": "POST",
+  "path": "/api/carrinho/calcular",
+  "request": {
+    "itens": [
+      {
+        "produtoId": "P005",
+        "quantidade": 6
+      }
+    ]
+  },
+  "response": {
+    "itens": [
+      {
+        "produtoId": "P005",
+        "nome": "Mochila Urbana 20L",
+        "precoUnitario": 100,
+        "quantidade": 6,
+        "total": 600
+      }
+    ],
+    "subtotal": 600,
+    "desconto": 0,
+    "frete": 0,
+    "freteGratis": true,
+    "valorFaltanteFreteGratis": 0,
+    "total": 600,
+    "cupom": null
+  },
+  "httpStatus": 200,
+  "sourcePath": "evidencias/revisao-ambiente/api-observacoes-powershell.json",
+  "sourceId": "CT-009-B",
+  "recordedAtUTC": "2026-10-06T18:07:12.2930480Z",
+  "images": [],
+  "pairs": []
+}

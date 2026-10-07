@@ -1,0 +1,32 @@
+{
+  "caseId": "CT-005",
+  "group": "CT-005",
+  "layer": "UI",
+  "input": "P005 ×1; remover e reaplicar BEMVINDO10",
+  "date": "06/10 16:05",
+  "expected": "Remover: 100,00 / 0,00 / 19,90 / 119,90; reaplicar: 100,00 / 10,00 / 19,90 / 109,90",
+  "actual": "Valores corretos; campo vazio ao remover; um cupom ativo ao reaplicar",
+  "status": "Aprovado",
+  "evidenceId": "EV-010",
+  "bugIds": [],
+  "dados": null,
+  "sourcePath": "docs/execucao.md",
+  "sourceId": "CT-005",
+  "recordedAtUTC": null,
+  "images": [
+    {
+      "path": "evidencias/CT-005-remover-reaplicar.png",
+      "label": "Montagem",
+      "stage": "16:05; total R$ 119,90 sem cupom e R$ 109,90 após reaplicar.",
+      "time": "06/10/2026 16:05 (Brasília, UTC-03:00)",
+      "phase": "after"
+    }
+  ],
+  "pairs": [
+    {
+      "label": "Comparativo em montagem",
+      "mode": "montage",
+      "montagePath": "evidencias/CT-005-remover-reaplicar.png"
+    }
+  ]
+}

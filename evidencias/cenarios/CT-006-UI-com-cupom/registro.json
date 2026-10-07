@@ -1,0 +1,89 @@
+{
+  "caseId": "CT-006-UI-com-cupom",
+  "group": "CT-006",
+  "layer": "UI",
+  "input": "P005 ×2; BEMVINDO10",
+  "date": "07/10 11:20:00",
+  "expected": "200,00 / 20,00 / 0,00 / 180,00",
+  "actual": "200,00 / 20,00 / 19,90 / 199,90; faltante 0,00",
+  "status": "Reprovado",
+  "evidenceId": "EV-039",
+  "bugIds": [
+    "BUG-001"
+  ],
+  "originalRecord": {
+    "id": "CT-006-UI-com-cupom",
+    "layer": "UI",
+    "group": "CT-006",
+    "input": "P005 ×2; BEMVINDO10",
+    "date": "07/10 11:20:00",
+    "expected": "200,00 / 20,00 / 0,00 / 180,00",
+    "actual": "200,00 / 20,00 / 19,90 / 199,90; BUG-001",
+    "status": "Reprovado",
+    "evidenceId": "EV-039",
+    "bugIds": [
+      "BUG-001"
+    ]
+  },
+  "evidenceRecord": {
+    "sourcePath": "evidencias/revisao-2026-10-07/ui-complementos.json",
+    "sourceId": "CT-006-UI-com-cupom",
+    "recordedAtUTC": "2026-10-07T15:20:00.213Z",
+    "dados": {
+      "produto": "P005",
+      "quantidade": 2,
+      "cupom": "BEMVINDO10"
+    },
+    "esperado": {
+      "subtotal": 200,
+      "desconto": 20,
+      "frete": 0,
+      "total": 180
+    },
+    "obtido": "Resumo do pedido\nSubtotal\nR$ 200,00\nDesconto (BEMVINDO10)\n- R$ 20,00\nFrete\nR$ 19,90\nTotal\nR$ 199,90\n\nFaltam R$ 0,00 para o frete grátis.\n\nFinalizar compra",
+    "status": "Reprovado",
+    "arquivos": [
+      "evidencias/revisao-2026-10-07/CT-006-UI-com-cupom-antes.png",
+      "evidencias/revisao-2026-10-07/CT-006-UI-com-cupom-preenchido.png",
+      "evidencias/revisao-2026-10-07/CT-006-UI-com-cupom-depois.png"
+    ]
+  },
+  "dados": {
+    "produto": "P005",
+    "quantidade": 2,
+    "cupom": "BEMVINDO10"
+  },
+  "sourcePath": "evidencias/revisao-2026-10-07/ui-complementos.json",
+  "sourceId": "CT-006-UI-com-cupom",
+  "recordedAtUTC": "2026-10-07T15:20:00.213Z",
+  "images": [
+    {
+      "path": "evidencias/revisao-2026-10-07/CT-006-UI-com-cupom-antes.png",
+      "label": "Subtotal 200,00 antes de aplicar cupom",
+      "stage": "Subtotal 200,00 antes de aplicar cupom",
+      "time": "2026-10-07T15:19:59.571Z",
+      "phase": "before"
+    },
+    {
+      "path": "evidencias/revisao-2026-10-07/CT-006-UI-com-cupom-preenchido.png",
+      "label": "BEMVINDO10 preenchido",
+      "stage": "BEMVINDO10 preenchido",
+      "time": "2026-10-07T15:19:59.730Z",
+      "phase": "input"
+    },
+    {
+      "path": "evidencias/revisao-2026-10-07/CT-006-UI-com-cupom-depois.png",
+      "label": "Subtotal 200,00 com cupom; frete cobrado",
+      "stage": "Subtotal 200,00 com cupom; frete cobrado",
+      "time": "2026-10-07T15:20:00.192Z",
+      "phase": "after"
+    }
+  ],
+  "pairs": [
+    {
+      "label": "UI com cupom",
+      "beforePath": "evidencias/revisao-2026-10-07/CT-006-UI-com-cupom-antes.png",
+      "afterPath": "evidencias/revisao-2026-10-07/CT-006-UI-com-cupom-depois.png"
+    }
+  ]
+}

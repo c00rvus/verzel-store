@@ -1,0 +1,47 @@
+{
+  "metodo": "POST",
+  "rota": "/api/pedidos",
+  "requisicao": {
+    "itens": [
+      {
+        "produtoId": "P005",
+        "quantidade": 6
+      }
+    ],
+    "cliente": {
+      "nome": "Maria Silva",
+      "email": "maria@example.com",
+      "cep": "01310-100"
+    }
+  },
+  "esperado": {
+    "statusHTTP": 422,
+    "codigo": "QUANTIDADE_MAXIMA_EXCEDIDA"
+  },
+  "statusHTTP": 201,
+  "resposta": {
+    "numero": "VZ-974869",
+    "criadoEm": "2026-10-07T17:32:48.282Z",
+    "cliente": {
+      "nome": "Maria Silva",
+      "email": "maria@example.com",
+      "cep": "01310100"
+    },
+    "itens": [
+      {
+        "produtoId": "P005",
+        "nome": "Mochila Urbana 20L",
+        "precoUnitario": 100,
+        "quantidade": 6,
+        "total": 600
+      }
+    ],
+    "subtotal": 600,
+    "desconto": 0,
+    "frete": 0,
+    "freteGratis": true,
+    "valorFaltanteFreteGratis": 0,
+    "total": 600,
+    "cupom": null
+  }
+}

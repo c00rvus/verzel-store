@@ -1,0 +1,193 @@
+{
+  "caseId": "EXP-01",
+  "sourcePath": "evidencias/execucao-2026-10-07/exploratoria.json",
+  "id": "EXP-01",
+  "objetivo": "Verificar recuperação após erros, limpeza de cupom e isolamento do carrinho por aba",
+  "inicioEmUTC": "2026-10-07T14:28:28.627Z",
+  "fimEmUTC": "2026-10-07T14:30:09.399Z",
+  "duracaoSegundos": 101,
+  "acoes": [
+    {
+      "acao": "Aplicar BEMVINDO10 e esvaziar carrinho",
+      "resultado": "Carrinho vazio; ao readicionar uma mochila, cupom ausente e total 119,90"
+    },
+    {
+      "acao": "Abrir outra aba e adicionar uma garrafa",
+      "resultado": "Nova aba: garrafa total 69,90; aba original: mochila total 119,90"
+    },
+    {
+      "acao": "Rejeitar e-mail e CEP vazios, corrigir e reenviar",
+      "resultado": "- note:\n  - paragraph:\n    - text: Ambiente de teste técnico do processo seletivo de QA da Verzel.\n    - link \"Leia a documentação antes de começar.\":\n      - /url: /documentacao\n- banner:\n  - link \"Verzel Store, página inicial\":\n    - /url: /\n    - generic: verzel\n    - generic: store\n  - navigation \"Principal\":\n    - link \"Produtos\":\n      - /url: /\n    - link \"Documentação\":\n      - /url: /documentacao\n    - link \"Carrinho 0 itens no carrinho\":\n      - /url: /carrinho\n      - text: Carrinho\n      - generic \"0 itens no carrinho\": \"0\"\n- main:\n  - paragraph: Pedido confirmado\n  - heading \"Pedido VZ-815848\" [level=1]\n  - paragraph: Obrigado, Maria. Seu pedido foi registrado e o pagamento será feito na entrega.\n  - region \"Itens do pedido\":\n    - heading \"Itens do pedido\" [level=2]\n    - term: Subtotal\n    - definition: R$ 100,00\n    - term: Desconto\n    - definition: R$ 0,00\n    - term: Frete\n    - definition: R$ 19,90\n    - term: Total\n    - definition: R$ 119,90\n    - list:\n      - generic: 1x Mochila Urbana 20L\n      - generic: R$ 100,00\n  - link \"Continuar comprando\":\n    - /url: /\n- contentinfo:\n  - paragraph: Verzel Store é um ambiente fictício criado para o teste técnico do processo seletivo de QA da Verzel. Nenhuma compra é real."
+    }
+  ],
+  "novosBugs": [],
+  "arquivos": [
+    "EXP-01-carrinho-antes-cupom.png",
+    "EXP-01-cupom-preenchido.png",
+    "EXP-01-carrinho-depois-cupom.png",
+    "EXP-01-antes-esvaziar.png",
+    "EXP-01-depois-esvaziar.png",
+    "EXP-01-vitrine-antes-readicionar.png",
+    "EXP-01-vitrine-depois-readicionar.png",
+    "EXP-01-depois-readicionar.png",
+    "EXP-01-aba-original-antes.png",
+    "EXP-01-aba-nova-antes.png",
+    "EXP-01-aba-nova-vitrine-antes.png",
+    "EXP-01-aba-nova-vitrine-depois.png",
+    "EXP-01-aba-nova-depois.png",
+    "EXP-01-aba-original-depois.png",
+    "EXP-01-checkout-antes-reenviar.png",
+    "EXP-01-checkout-depois-reenviar.png"
+  ],
+  "images": [
+    {
+      "path": "evidencias/execucao-2026-10-07/EXP-01-carrinho-antes-cupom.png",
+      "label": "Exploração: carrinho com uma mochila, sem cupom",
+      "stage": "Exploração: carrinho com uma mochila, sem cupom",
+      "time": "2026-10-07T14:28:28.942Z",
+      "phase": "before"
+    },
+    {
+      "path": "evidencias/execucao-2026-10-07/EXP-01-cupom-preenchido.png",
+      "label": "Exploração: cupom preenchido antes de aplicar",
+      "stage": "Exploração: cupom preenchido antes de aplicar",
+      "time": "2026-10-07T14:28:29.106Z",
+      "phase": "input"
+    },
+    {
+      "path": "evidencias/execucao-2026-10-07/EXP-01-carrinho-depois-cupom.png",
+      "label": "Exploração: cupom aplicado",
+      "stage": "Exploração: cupom aplicado",
+      "time": "2026-10-07T14:28:29.615Z",
+      "phase": "after"
+    },
+    {
+      "path": "evidencias/execucao-2026-10-07/EXP-01-antes-esvaziar.png",
+      "label": "Exploração: carrinho com cupom antes de esvaziar",
+      "stage": "Exploração: carrinho com cupom antes de esvaziar",
+      "time": "2026-10-07T14:28:39.859Z",
+      "phase": "before"
+    },
+    {
+      "path": "evidencias/execucao-2026-10-07/EXP-01-depois-esvaziar.png",
+      "label": "Exploração: carrinho vazio após limpar",
+      "stage": "Exploração: carrinho vazio após limpar",
+      "time": "2026-10-07T14:28:40.304Z",
+      "phase": "after"
+    },
+    {
+      "path": "evidencias/execucao-2026-10-07/EXP-01-vitrine-antes-readicionar.png",
+      "label": "Exploração: vitrine antes de readicionar produto",
+      "stage": "Exploração: vitrine antes de readicionar produto",
+      "time": "2026-10-07T14:28:41.633Z",
+      "phase": "before"
+    },
+    {
+      "path": "evidencias/execucao-2026-10-07/EXP-01-vitrine-depois-readicionar.png",
+      "label": "Exploração: produto readicionado",
+      "stage": "Exploração: produto readicionado",
+      "time": "2026-10-07T14:28:43.117Z",
+      "phase": "after"
+    },
+    {
+      "path": "evidencias/execucao-2026-10-07/EXP-01-depois-readicionar.png",
+      "label": "Exploração: produto readicionado sem cupom residual",
+      "stage": "Exploração: produto readicionado sem cupom residual",
+      "time": "2026-10-07T14:28:43.762Z",
+      "phase": "after"
+    },
+    {
+      "path": "evidencias/execucao-2026-10-07/EXP-01-aba-original-antes.png",
+      "label": "Exploração: aba original com uma mochila",
+      "stage": "Exploração: aba original com uma mochila",
+      "time": "2026-10-07T14:28:49.176Z",
+      "phase": "before"
+    },
+    {
+      "path": "evidencias/execucao-2026-10-07/EXP-01-aba-nova-antes.png",
+      "label": "Exploração: nova aba com carrinho vazio",
+      "stage": "Exploração: nova aba com carrinho vazio",
+      "time": "2026-10-07T14:29:05.520Z",
+      "phase": "before"
+    },
+    {
+      "path": "evidencias/execucao-2026-10-07/EXP-01-aba-nova-vitrine-antes.png",
+      "label": "Exploração: nova aba antes de adicionar garrafa",
+      "stage": "Exploração: nova aba antes de adicionar garrafa",
+      "time": "2026-10-07T14:29:05.937Z",
+      "phase": "before"
+    },
+    {
+      "path": "evidencias/execucao-2026-10-07/EXP-01-aba-nova-vitrine-depois.png",
+      "label": "Exploração: garrafa adicionada somente na nova aba",
+      "stage": "Exploração: garrafa adicionada somente na nova aba",
+      "time": "2026-10-07T14:29:06.571Z",
+      "phase": "after"
+    },
+    {
+      "path": "evidencias/execucao-2026-10-07/EXP-01-aba-nova-depois.png",
+      "label": "Exploração: nova aba com garrafa e total 69,90",
+      "stage": "Exploração: nova aba com garrafa e total 69,90",
+      "time": "2026-10-07T14:29:07.196Z",
+      "phase": "after"
+    },
+    {
+      "path": "evidencias/execucao-2026-10-07/EXP-01-aba-original-depois.png",
+      "label": "Exploração: aba original preserva mochila e total 119,90",
+      "stage": "Exploração: aba original preserva mochila e total 119,90",
+      "time": "2026-10-07T14:29:07.390Z",
+      "phase": "after"
+    },
+    {
+      "path": "evidencias/execucao-2026-10-07/EXP-01-checkout-antes-reenviar.png",
+      "label": "Exploração: dados corrigidos antes de reenviar",
+      "stage": "Exploração: dados corrigidos antes de reenviar",
+      "time": "2026-10-07T14:30:09.078Z",
+      "phase": "before"
+    },
+    {
+      "path": "evidencias/execucao-2026-10-07/EXP-01-checkout-depois-reenviar.png",
+      "label": "Exploração: confirmação após corrigir CEP",
+      "stage": "Exploração: confirmação após corrigir CEP",
+      "time": "2026-10-07T14:30:09.397Z",
+      "phase": "after"
+    }
+  ],
+  "pairs": [
+    {
+      "label": "carrinho cupom",
+      "beforePath": "evidencias/execucao-2026-10-07/EXP-01-carrinho-antes-cupom.png",
+      "afterPath": "evidencias/execucao-2026-10-07/EXP-01-carrinho-depois-cupom.png"
+    },
+    {
+      "label": "esvaziar",
+      "beforePath": "evidencias/execucao-2026-10-07/EXP-01-antes-esvaziar.png",
+      "afterPath": "evidencias/execucao-2026-10-07/EXP-01-depois-esvaziar.png"
+    },
+    {
+      "label": "vitrine readicionar",
+      "beforePath": "evidencias/execucao-2026-10-07/EXP-01-vitrine-antes-readicionar.png",
+      "afterPath": "evidencias/execucao-2026-10-07/EXP-01-vitrine-depois-readicionar.png"
+    },
+    {
+      "label": "aba original",
+      "beforePath": "evidencias/execucao-2026-10-07/EXP-01-aba-original-antes.png",
+      "afterPath": "evidencias/execucao-2026-10-07/EXP-01-aba-original-depois.png"
+    },
+    {
+      "label": "aba nova",
+      "beforePath": "evidencias/execucao-2026-10-07/EXP-01-aba-nova-antes.png",
+      "afterPath": "evidencias/execucao-2026-10-07/EXP-01-aba-nova-depois.png"
+    },
+    {
+      "label": "aba nova vitrine",
+      "beforePath": "evidencias/execucao-2026-10-07/EXP-01-aba-nova-vitrine-antes.png",
+      "afterPath": "evidencias/execucao-2026-10-07/EXP-01-aba-nova-vitrine-depois.png"
+    },
+    {
+      "label": "checkout reenviar",
+      "beforePath": "evidencias/execucao-2026-10-07/EXP-01-checkout-antes-reenviar.png",
+      "afterPath": "evidencias/execucao-2026-10-07/EXP-01-checkout-depois-reenviar.png"
+    }
+  ]
+}

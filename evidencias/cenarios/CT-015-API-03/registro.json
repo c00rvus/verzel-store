@@ -1,0 +1,32 @@
+{
+  "caseId": "CT-015-API-03",
+  "group": "CT-015",
+  "layer": "API",
+  "input": "POST /api/carrinho/calcular; {\"itens\":[null]}",
+  "date": "07/10 10:15:23",
+  "expected": "422 ITEM_INVALIDO",
+  "actual": "422 ITEM_INVALIDO; campo itens[0]; Cada item deve ser um objeto com produtoId e quantidade.",
+  "status": "Aprovado",
+  "evidenceId": "EV-035",
+  "bugIds": [],
+  "method": "POST",
+  "path": "/api/carrinho/calcular",
+  "request": {
+    "itens": [
+      null
+    ]
+  },
+  "response": {
+    "erro": {
+      "codigo": "ITEM_INVALIDO",
+      "mensagem": "Cada item deve ser um objeto com produtoId e quantidade.",
+      "campo": "itens[0]"
+    }
+  },
+  "httpStatus": 422,
+  "sourcePath": "evidencias/execucao-2026-10-07/api-pendentes.json",
+  "sourceId": "CT-015-API-03",
+  "recordedAtUTC": "2026-10-07T14:15:23.9278368Z",
+  "images": [],
+  "pairs": []
+}

@@ -1,0 +1,102 @@
+{
+  "caseId": "CT-008-UI",
+  "group": "CT-008",
+  "layer": "UI",
+  "input": "P004 ×1 + P008 ×3; BEMVINDO10",
+  "date": "07/10 11:21:32",
+  "expected": "199,90 / 19,99 / 19,90 / 199,81; faltante 0,10",
+  "actual": "199,90 / 19,99 / 19,90 / 199,81; faltante 0,10",
+  "status": "Aprovado",
+  "evidenceId": "EV-042",
+  "bugIds": [],
+  "originalRecord": {
+    "id": "CT-008-UI",
+    "layer": "UI",
+    "group": "CT-008",
+    "input": "P004 ×1 + P008 ×3; BEMVINDO10",
+    "date": "07/10 11:21:32",
+    "expected": "199,90 / 19,99 / 19,90 / 199,81; faltante 0,10",
+    "actual": "Valores e mensagem corretos",
+    "status": "Aprovado",
+    "evidenceId": "EV-042",
+    "bugIds": []
+  },
+  "evidenceRecord": {
+    "sourcePath": "evidencias/revisao-2026-10-07/ui-complementos.json",
+    "sourceId": "CT-008-UI",
+    "recordedAtUTC": "2026-10-07T15:21:32.580Z",
+    "dados": {
+      "produtos": [
+        {
+          "id": "P004",
+          "quantidade": 1
+        },
+        {
+          "id": "P008",
+          "quantidade": 3
+        }
+      ],
+      "cupom": "BEMVINDO10"
+    },
+    "esperado": {
+      "subtotal": 199.9,
+      "desconto": 19.99,
+      "frete": 19.9,
+      "total": 199.81,
+      "faltante": 0.1
+    },
+    "obtido": "Resumo do pedido\nSubtotal\nR$ 199,90\nDesconto (BEMVINDO10)\n- R$ 19,99\nFrete\nR$ 19,90\nTotal\nR$ 199,81\n\nFaltam R$ 0,10 para o frete grátis.\n\nFinalizar compra",
+    "status": "Aprovado",
+    "arquivos": [
+      "evidencias/revisao-2026-10-07/CT-008-UI-antes.png",
+      "evidencias/revisao-2026-10-07/CT-008-UI-preenchido.png",
+      "evidencias/revisao-2026-10-07/CT-008-UI-depois.png"
+    ]
+  },
+  "dados": {
+    "produtos": [
+      {
+        "id": "P004",
+        "quantidade": 1
+      },
+      {
+        "id": "P008",
+        "quantidade": 3
+      }
+    ],
+    "cupom": "BEMVINDO10"
+  },
+  "sourcePath": "evidencias/revisao-2026-10-07/ui-complementos.json",
+  "sourceId": "CT-008-UI",
+  "recordedAtUTC": "2026-10-07T15:21:32.580Z",
+  "images": [
+    {
+      "path": "evidencias/revisao-2026-10-07/CT-008-UI-antes.png",
+      "label": "Subtotal 199,90 sem cupom",
+      "stage": "Subtotal 199,90 sem cupom",
+      "time": "2026-10-07T15:21:31.983Z",
+      "phase": "before"
+    },
+    {
+      "path": "evidencias/revisao-2026-10-07/CT-008-UI-preenchido.png",
+      "label": "BEMVINDO10 preenchido",
+      "stage": "BEMVINDO10 preenchido",
+      "time": "2026-10-07T15:21:32.139Z",
+      "phase": "input"
+    },
+    {
+      "path": "evidencias/revisao-2026-10-07/CT-008-UI-depois.png",
+      "label": "Frete 19,90; faltante 0,10",
+      "stage": "Frete 19,90; faltante 0,10",
+      "time": "2026-10-07T15:21:32.564Z",
+      "phase": "after"
+    }
+  ],
+  "pairs": [
+    {
+      "label": "UI",
+      "beforePath": "evidencias/revisao-2026-10-07/CT-008-UI-antes.png",
+      "afterPath": "evidencias/revisao-2026-10-07/CT-008-UI-depois.png"
+    }
+  ]
+}

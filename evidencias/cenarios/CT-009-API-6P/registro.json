@@ -1,0 +1,60 @@
+{
+  "caseId": "CT-009-API-6P",
+  "group": "CT-009",
+  "layer": "API",
+  "input": "POST /api/pedidos; P005 ×6; CEP 01310-100",
+  "date": "07/10 10:15:22",
+  "expected": "422 QUANTIDADE_MAXIMA_EXCEDIDA",
+  "actual": "201; 6 unidades; total 600,00; VZ-056227; BUG-002",
+  "status": "Reprovado",
+  "evidenceId": "EV-035",
+  "bugIds": [
+    "BUG-002"
+  ],
+  "method": "POST",
+  "path": "/api/pedidos",
+  "request": {
+    "itens": [
+      {
+        "produtoId": "P005",
+        "quantidade": 6
+      }
+    ],
+    "cliente": {
+      "nome": "Maria Silva",
+      "email": "maria@example.com",
+      "cep": "01310-100"
+    }
+  },
+  "response": {
+    "numero": "VZ-056227",
+    "criadoEm": "2026-10-07T14:15:26.908Z",
+    "cliente": {
+      "nome": "Maria Silva",
+      "email": "maria@example.com",
+      "cep": "01310100"
+    },
+    "itens": [
+      {
+        "produtoId": "P005",
+        "nome": "Mochila Urbana 20L",
+        "precoUnitario": 100,
+        "quantidade": 6,
+        "total": 600
+      }
+    ],
+    "subtotal": 600,
+    "desconto": 0,
+    "frete": 0,
+    "freteGratis": true,
+    "valorFaltanteFreteGratis": 0,
+    "total": 600,
+    "cupom": null
+  },
+  "httpStatus": 201,
+  "sourcePath": "evidencias/execucao-2026-10-07/api-pendentes.json",
+  "sourceId": "CT-009-API-6P",
+  "recordedAtUTC": "2026-10-07T14:15:22.7585775Z",
+  "images": [],
+  "pairs": []
+}

@@ -1,0 +1,38 @@
+{
+  "id": "AUTO-005",
+  "title": "AUTO-005 | CT-006, CT-010 | Frete grátis no subtotal de R$ 200,00",
+  "layer": "UI",
+  "ctIds": [
+    "CT-006",
+    "CT-010"
+  ],
+  "status": "known_failure",
+  "bugIds": [
+    "BUG-001"
+  ],
+  "statusPlaywright": "failed",
+  "expectedStatus": "failed",
+  "startedAt": "2026-10-07T17:32:28.418Z",
+  "durationMs": 11152,
+  "errors": [
+    "Error: expect(locator).toHaveText(expected) failed\n\nLocator:  locator('section[aria-labelledby=\"titulo-resumo\"]').locator('[data-valor=\"frete\"]')\nExpected: \"Grátis\"\nReceived: \"R$ 19,90\"\nTimeout:  5000ms\n\nCall log:\n  - Expect \"soft toHaveText\" locator('section[aria-labelledby=\"titulo-resumo\"]').locator('[data-valor=\"frete\"]') with timeout 5000ms\n  - waiting for locator('section[aria-labelledby=\"titulo-resumo\"]').locator('[data-valor=\"frete\"]')\n    14 × locator resolved to <dd data-valor=\"frete\">R$ 19,90</dd>\n       - unexpected value \"R$ 19,90\"\n\n\n  90 |   // Só a assinatura já confirmada do bug é tratada como falha conhecida.\n  91 |   info.fail(frete === 'R$ 19,90' && total === 'R$ 199,90', 'BUG-001: frete cobrado no subtotal de R$ 200,00.');\n> 92 |   await expect.soft(carrinho.resumo.frete).toHaveText('Grátis');\n     |                                            ^\n  93 |   await expect.soft(carrinho.resumo.total).toHaveText('R$ 180,00');\n  94 | });\n  95 |\n    at .\\tests\\carrinho.spec.ts:92:44",
+    "Error: expect(locator).toHaveText(expected) failed\n\nLocator:  locator('section[aria-labelledby=\"titulo-resumo\"]').locator('[data-valor=\"total\"]')\nExpected: \"R$ 180,00\"\nReceived: \"R$ 199,90\"\nTimeout:  5000ms\n\nCall log:\n  - Expect \"soft toHaveText\" locator('section[aria-labelledby=\"titulo-resumo\"]').locator('[data-valor=\"total\"]') with timeout 5000ms\n  - waiting for locator('section[aria-labelledby=\"titulo-resumo\"]').locator('[data-valor=\"total\"]')\n    14 × locator resolved to <dd data-valor=\"total\">R$ 199,90</dd>\n       - unexpected value \"R$ 199,90\"\n\n\n  91 |   info.fail(frete === 'R$ 19,90' && total === 'R$ 199,90', 'BUG-001: frete cobrado no subtotal de R$ 200,00.');\n  92 |   await expect.soft(carrinho.resumo.frete).toHaveText('Grátis');\n> 93 |   await expect.soft(carrinho.resumo.total).toHaveText('R$ 180,00');\n     |                                            ^\n  94 | });\n  95 |\n  96 | test('AUTO-006 | CT-009, CT-010 | Limitar cinco unidades e recalcular quantidade', async ({ page }, info) => {\n    at .\\tests\\carrinho.spec.ts:93:44"
+  ],
+  "attachments": [
+    {
+      "name": "01-uma-unidade-com-cupom",
+      "path": "evidencias/automacao/2026-10-07/AUTO-005/01-uma-unidade-com-cupom.png",
+      "contentType": "image/png"
+    },
+    {
+      "name": "02-duas-unidades-com-cupom",
+      "path": "evidencias/automacao/2026-10-07/AUTO-005/02-duas-unidades-com-cupom.png",
+      "contentType": "image/png"
+    },
+    {
+      "name": "error-context",
+      "path": "evidencias/automacao/2026-10-07/AUTO-005/error-context.md",
+      "contentType": "text/markdown"
+    }
+  ]
+}

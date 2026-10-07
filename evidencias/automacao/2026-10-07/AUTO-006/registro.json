@@ -1,0 +1,33 @@
+{
+  "id": "AUTO-006",
+  "title": "AUTO-006 | CT-009, CT-010 | Limitar cinco unidades e recalcular quantidade",
+  "layer": "UI",
+  "ctIds": [
+    "CT-009",
+    "CT-010"
+  ],
+  "status": "passed",
+  "bugIds": [],
+  "statusPlaywright": "passed",
+  "expectedStatus": "passed",
+  "startedAt": "2026-10-07T17:32:39.597Z",
+  "durationMs": 1444,
+  "errors": [],
+  "attachments": [
+    {
+      "name": "01-quatro-unidades",
+      "path": "evidencias/automacao/2026-10-07/AUTO-006/01-quatro-unidades.png",
+      "contentType": "image/png"
+    },
+    {
+      "name": "02-limite-cinco-unidades",
+      "path": "evidencias/automacao/2026-10-07/AUTO-006/02-limite-cinco-unidades.png",
+      "contentType": "image/png"
+    },
+    {
+      "name": "03-quantidade-recalculada",
+      "path": "evidencias/automacao/2026-10-07/AUTO-006/03-quantidade-recalculada.png",
+      "contentType": "image/png"
+    }
+  ]
+}

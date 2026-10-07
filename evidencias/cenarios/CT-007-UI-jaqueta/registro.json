@@ -1,0 +1,85 @@
+{
+  "caseId": "CT-007-UI-jaqueta",
+  "group": "CT-007",
+  "layer": "UI",
+  "input": "P007 ×1; BEMVINDO10",
+  "date": "07/10 11:21:02",
+  "expected": "229,90 / 22,99 / 0,00 / 206,91",
+  "actual": "229,90 / 22,99 / 0,00 / 206,91",
+  "status": "Aprovado",
+  "evidenceId": "EV-040",
+  "bugIds": [],
+  "originalRecord": {
+    "id": "CT-007-UI-jaqueta",
+    "layer": "UI",
+    "group": "CT-007",
+    "input": "P007 ×1; BEMVINDO10",
+    "date": "07/10 11:21:02",
+    "expected": "229,90 / 22,99 / 0,00 / 206,91",
+    "actual": "Valores corretos; frete grátis",
+    "status": "Aprovado",
+    "evidenceId": "EV-040",
+    "bugIds": []
+  },
+  "evidenceRecord": {
+    "sourcePath": "evidencias/revisao-2026-10-07/ui-complementos.json",
+    "sourceId": "CT-007-UI-jaqueta",
+    "recordedAtUTC": "2026-10-07T15:21:02.573Z",
+    "dados": {
+      "produto": "P007",
+      "quantidade": 1,
+      "cupom": "BEMVINDO10"
+    },
+    "esperado": {
+      "subtotal": 229.9,
+      "desconto": 22.99,
+      "frete": 0,
+      "total": 206.91
+    },
+    "obtido": "Resumo do pedido\nSubtotal\nR$ 229,90\nDesconto (BEMVINDO10)\n- R$ 22,99\nFrete\nGrátis\nTotal\nR$ 206,91\nFinalizar compra",
+    "status": "Aprovado",
+    "arquivos": [
+      "evidencias/revisao-2026-10-07/CT-007-UI-jaqueta-antes.png",
+      "evidencias/revisao-2026-10-07/CT-007-UI-jaqueta-preenchido.png",
+      "evidencias/revisao-2026-10-07/CT-007-UI-jaqueta-depois.png"
+    ]
+  },
+  "dados": {
+    "produto": "P007",
+    "quantidade": 1,
+    "cupom": "BEMVINDO10"
+  },
+  "sourcePath": "evidencias/revisao-2026-10-07/ui-complementos.json",
+  "sourceId": "CT-007-UI-jaqueta",
+  "recordedAtUTC": "2026-10-07T15:21:02.573Z",
+  "images": [
+    {
+      "path": "evidencias/revisao-2026-10-07/CT-007-UI-jaqueta-antes.png",
+      "label": "Jaqueta sem cupom",
+      "stage": "Jaqueta sem cupom",
+      "time": "2026-10-07T15:21:02.040Z",
+      "phase": "before"
+    },
+    {
+      "path": "evidencias/revisao-2026-10-07/CT-007-UI-jaqueta-preenchido.png",
+      "label": "BEMVINDO10 preenchido",
+      "stage": "BEMVINDO10 preenchido",
+      "time": "2026-10-07T15:21:02.154Z",
+      "phase": "input"
+    },
+    {
+      "path": "evidencias/revisao-2026-10-07/CT-007-UI-jaqueta-depois.png",
+      "label": "Jaqueta com cupom; frete grátis",
+      "stage": "Jaqueta com cupom; frete grátis",
+      "time": "2026-10-07T15:21:02.556Z",
+      "phase": "after"
+    }
+  ],
+  "pairs": [
+    {
+      "label": "UI jaqueta",
+      "beforePath": "evidencias/revisao-2026-10-07/CT-007-UI-jaqueta-antes.png",
+      "afterPath": "evidencias/revisao-2026-10-07/CT-007-UI-jaqueta-depois.png"
+    }
+  ]
+}

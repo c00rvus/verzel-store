@@ -1,0 +1,27 @@
+{
+  "id": "AUTO-002",
+  "title": "AUTO-002 | CT-003 | Rejeitar NAOEXISTE",
+  "layer": "UI",
+  "ctIds": [
+    "CT-003"
+  ],
+  "status": "passed",
+  "bugIds": [],
+  "statusPlaywright": "passed",
+  "expectedStatus": "passed",
+  "startedAt": "2026-10-07T17:32:25.449Z",
+  "durationMs": 952,
+  "errors": [],
+  "attachments": [
+    {
+      "name": "01-antes-do-cupom",
+      "path": "evidencias/automacao/2026-10-07/AUTO-002/01-antes-do-cupom.png",
+      "contentType": "image/png"
+    },
+    {
+      "name": "02-cupom-rejeitado",
+      "path": "evidencias/automacao/2026-10-07/AUTO-002/02-cupom-rejeitado.png",
+      "contentType": "image/png"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "id": "AUTO-001",
+  "title": "AUTO-001 | CT-001, CT-002, CT-005 | Aplicar, remover e reaplicar cupom",
+  "layer": "UI",
+  "ctIds": [
+    "CT-001",
+    "CT-002",
+    "CT-005"
+  ],
+  "status": "passed",
+  "bugIds": [],
+  "statusPlaywright": "passed",
+  "expectedStatus": "passed",
+  "startedAt": "2026-10-07T17:32:21.049Z",
+  "durationMs": 4183,
+  "errors": [],
+  "attachments": [
+    {
+      "name": "01-antes-do-cupom",
+      "path": "evidencias/automacao/2026-10-07/AUTO-001/01-antes-do-cupom.png",
+      "contentType": "image/png"
+    },
+    {
+      "name": "02-cupom-normalizado",
+      "path": "evidencias/automacao/2026-10-07/AUTO-001/02-cupom-normalizado.png",
+      "contentType": "image/png"
+    },
+    {
+      "name": "03-cupom-removido",
+      "path": "evidencias/automacao/2026-10-07/AUTO-001/03-cupom-removido.png",
+      "contentType": "image/png"
+    },
+    {
+      "name": "04-cupom-reaplicado",
+      "path": "evidencias/automacao/2026-10-07/AUTO-001/04-cupom-reaplicado.png",
+      "contentType": "image/png"
+    }
+  ]
+}

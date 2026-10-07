@@ -1,0 +1,41 @@
+{
+  "caseId": "CT-004-API-P",
+  "group": "CT-004",
+  "layer": "API",
+  "input": "POST /api/pedidos; P005 ×1; VERAO2026; CEP 01310-100",
+  "date": "06/10 14:07:11",
+  "expected": "422 CUPOM_EXPIRADO",
+  "actual": "422 CUPOM_EXPIRADO; campo cupom; Cupom expirado.",
+  "status": "Aprovado",
+  "evidenceId": "EV-006",
+  "bugIds": [],
+  "method": "POST",
+  "path": "/api/pedidos",
+  "request": {
+    "cliente": {
+      "nome": "Maria Silva",
+      "email": "maria@example.com",
+      "cep": "01310-100"
+    },
+    "cupom": "VERAO2026",
+    "itens": [
+      {
+        "produtoId": "P005",
+        "quantidade": 1
+      }
+    ]
+  },
+  "response": {
+    "erro": {
+      "codigo": "CUPOM_EXPIRADO",
+      "mensagem": "Cupom expirado.",
+      "campo": "cupom"
+    }
+  },
+  "httpStatus": 422,
+  "sourcePath": "evidencias/revisao-ambiente/api-observacoes-powershell.json",
+  "sourceId": "CT-004-B",
+  "recordedAtUTC": "2026-10-06T18:07:11.9871638Z",
+  "images": [],
+  "pairs": []
+}

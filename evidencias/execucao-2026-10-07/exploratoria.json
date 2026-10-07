@@ -1,0 +1,40 @@
+{
+  "id": "EXP-01",
+  "objetivo": "Verificar recuperação após erros, limpeza de cupom e isolamento do carrinho por aba",
+  "inicioEmUTC": "2026-10-07T14:28:28.627Z",
+  "fimEmUTC": "2026-10-07T14:30:09.399Z",
+  "duracaoSegundos": 101,
+  "acoes": [
+    {
+      "acao": "Aplicar BEMVINDO10 e esvaziar carrinho",
+      "resultado": "Carrinho vazio; ao readicionar uma mochila, cupom ausente e total 119,90"
+    },
+    {
+      "acao": "Abrir outra aba e adicionar uma garrafa",
+      "resultado": "Nova aba: garrafa total 69,90; aba original: mochila total 119,90"
+    },
+    {
+      "acao": "Rejeitar e-mail e CEP vazios, corrigir e reenviar",
+      "resultado": "- note:\n  - paragraph:\n    - text: Ambiente de teste técnico do processo seletivo de QA da Verzel.\n    - link \"Leia a documentação antes de começar.\":\n      - /url: /documentacao\n- banner:\n  - link \"Verzel Store, página inicial\":\n    - /url: /\n    - generic: verzel\n    - generic: store\n  - navigation \"Principal\":\n    - link \"Produtos\":\n      - /url: /\n    - link \"Documentação\":\n      - /url: /documentacao\n    - link \"Carrinho 0 itens no carrinho\":\n      - /url: /carrinho\n      - text: Carrinho\n      - generic \"0 itens no carrinho\": \"0\"\n- main:\n  - paragraph: Pedido confirmado\n  - heading \"Pedido VZ-815848\" [level=1]\n  - paragraph: Obrigado, Maria. Seu pedido foi registrado e o pagamento será feito na entrega.\n  - region \"Itens do pedido\":\n    - heading \"Itens do pedido\" [level=2]\n    - term: Subtotal\n    - definition: R$ 100,00\n    - term: Desconto\n    - definition: R$ 0,00\n    - term: Frete\n    - definition: R$ 19,90\n    - term: Total\n    - definition: R$ 119,90\n    - list:\n      - generic: 1x Mochila Urbana 20L\n      - generic: R$ 100,00\n  - link \"Continuar comprando\":\n    - /url: /\n- contentinfo:\n  - paragraph: Verzel Store é um ambiente fictício criado para o teste técnico do processo seletivo de QA da Verzel. Nenhuma compra é real."
+    }
+  ],
+  "novosBugs": [],
+  "arquivos": [
+    "EXP-01-carrinho-antes-cupom.png",
+    "EXP-01-cupom-preenchido.png",
+    "EXP-01-carrinho-depois-cupom.png",
+    "EXP-01-antes-esvaziar.png",
+    "EXP-01-depois-esvaziar.png",
+    "EXP-01-vitrine-antes-readicionar.png",
+    "EXP-01-vitrine-depois-readicionar.png",
+    "EXP-01-depois-readicionar.png",
+    "EXP-01-aba-original-antes.png",
+    "EXP-01-aba-nova-antes.png",
+    "EXP-01-aba-nova-vitrine-antes.png",
+    "EXP-01-aba-nova-vitrine-depois.png",
+    "EXP-01-aba-nova-depois.png",
+    "EXP-01-aba-original-depois.png",
+    "EXP-01-checkout-antes-reenviar.png",
+    "EXP-01-checkout-depois-reenviar.png"
+  ]
+}

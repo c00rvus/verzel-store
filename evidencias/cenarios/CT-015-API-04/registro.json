@@ -1,0 +1,35 @@
+{
+  "caseId": "CT-015-API-04",
+  "group": "CT-015",
+  "layer": "API",
+  "input": "POST /api/carrinho/calcular; {\"itens\":[{\"produtoId\":\"P999\",\"quantidade\":1}]}",
+  "date": "07/10 10:15:24",
+  "expected": "422 PRODUTO_NAO_ENCONTRADO",
+  "actual": "422 PRODUTO_NAO_ENCONTRADO; campo itens[0].produtoId; Produto P999 não encontrado.",
+  "status": "Aprovado",
+  "evidenceId": "EV-035",
+  "bugIds": [],
+  "method": "POST",
+  "path": "/api/carrinho/calcular",
+  "request": {
+    "itens": [
+      {
+        "produtoId": "P999",
+        "quantidade": 1
+      }
+    ]
+  },
+  "response": {
+    "erro": {
+      "codigo": "PRODUTO_NAO_ENCONTRADO",
+      "mensagem": "Produto P999 não encontrado.",
+      "campo": "itens[0].produtoId"
+    }
+  },
+  "httpStatus": 422,
+  "sourcePath": "evidencias/execucao-2026-10-07/api-pendentes.json",
+  "sourceId": "CT-015-API-04",
+  "recordedAtUTC": "2026-10-07T14:15:24.0325557Z",
+  "images": [],
+  "pairs": []
+}

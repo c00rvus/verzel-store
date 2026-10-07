@@ -1,0 +1,85 @@
+{
+  "caseId": "CT-002-minusculas",
+  "group": "CT-002",
+  "layer": "UI",
+  "input": "\"bemvindo10\"",
+  "date": "07/10 11:19:40",
+  "expected": "100,00 / 10,00 / 19,90 / 109,90",
+  "actual": "100,00 / 10,00 / 19,90 / 109,90; faltante 100,00",
+  "status": "Aprovado",
+  "evidenceId": "EV-037",
+  "bugIds": [],
+  "originalRecord": {
+    "id": "CT-002-minusculas",
+    "layer": "UI",
+    "group": "CT-002",
+    "input": "\"bemvindo10\"",
+    "date": "07/10 11:19:40",
+    "expected": "100,00 / 10,00 / 19,90 / 109,90",
+    "actual": "Cupom normalizado; valores corretos",
+    "status": "Aprovado",
+    "evidenceId": "EV-037",
+    "bugIds": []
+  },
+  "evidenceRecord": {
+    "sourcePath": "evidencias/revisao-2026-10-07/ui-complementos.json",
+    "sourceId": "CT-002-minusculas",
+    "recordedAtUTC": "2026-10-07T15:19:40.174Z",
+    "dados": {
+      "produto": "P005",
+      "quantidade": 1,
+      "cupom": "bemvindo10"
+    },
+    "esperado": {
+      "subtotal": 100,
+      "desconto": 10,
+      "frete": 19.9,
+      "total": 109.9
+    },
+    "obtido": "Resumo do pedido\nSubtotal\nR$ 100,00\nDesconto (BEMVINDO10)\n- R$ 10,00\nFrete\nR$ 19,90\nTotal\nR$ 109,90\n\nFaltam R$ 100,00 para o frete grátis.\n\nFinalizar compra",
+    "status": "Aprovado",
+    "arquivos": [
+      "evidencias/revisao-2026-10-07/CT-002-minusculas-antes.png",
+      "evidencias/revisao-2026-10-07/CT-002-minusculas-preenchido.png",
+      "evidencias/revisao-2026-10-07/CT-002-minusculas-depois.png"
+    ]
+  },
+  "dados": {
+    "produto": "P005",
+    "quantidade": 1,
+    "cupom": "bemvindo10"
+  },
+  "sourcePath": "evidencias/revisao-2026-10-07/ui-complementos.json",
+  "sourceId": "CT-002-minusculas",
+  "recordedAtUTC": "2026-10-07T15:19:40.174Z",
+  "images": [
+    {
+      "path": "evidencias/revisao-2026-10-07/CT-002-minusculas-antes.png",
+      "label": "Antes de aplicar bemvindo10",
+      "stage": "Antes de aplicar bemvindo10",
+      "time": "2026-10-07T15:19:39.529Z",
+      "phase": "before"
+    },
+    {
+      "path": "evidencias/revisao-2026-10-07/CT-002-minusculas-preenchido.png",
+      "label": "bemvindo10 preenchido",
+      "stage": "bemvindo10 preenchido",
+      "time": "2026-10-07T15:19:39.694Z",
+      "phase": "input"
+    },
+    {
+      "path": "evidencias/revisao-2026-10-07/CT-002-minusculas-depois.png",
+      "label": "Cupom normalizado para BEMVINDO10",
+      "stage": "Cupom normalizado para BEMVINDO10",
+      "time": "2026-10-07T15:19:40.146Z",
+      "phase": "after"
+    }
+  ],
+  "pairs": [
+    {
+      "label": "minusculas",
+      "beforePath": "evidencias/revisao-2026-10-07/CT-002-minusculas-antes.png",
+      "afterPath": "evidencias/revisao-2026-10-07/CT-002-minusculas-depois.png"
+    }
+  ]
+}

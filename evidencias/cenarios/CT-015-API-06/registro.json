@@ -1,0 +1,35 @@
+{
+  "caseId": "CT-015-API-06",
+  "group": "CT-015",
+  "layer": "API",
+  "input": "POST /api/carrinho/calcular; {\"itens\":[{\"produtoId\":\"P005\",\"quantidade\":0}]}",
+  "date": "06/10 14:07:13",
+  "expected": "422 QUANTIDADE_INVALIDA",
+  "actual": "422 QUANTIDADE_INVALIDA; campo itens[0].quantidade; A quantidade deve ser um número inteiro maior ou igual a 1.",
+  "status": "Aprovado",
+  "evidenceId": "EV-006",
+  "bugIds": [],
+  "method": "POST",
+  "path": "/api/carrinho/calcular",
+  "request": {
+    "itens": [
+      {
+        "produtoId": "P005",
+        "quantidade": 0
+      }
+    ]
+  },
+  "response": {
+    "erro": {
+      "codigo": "QUANTIDADE_INVALIDA",
+      "mensagem": "A quantidade deve ser um número inteiro maior ou igual a 1.",
+      "campo": "itens[0].quantidade"
+    }
+  },
+  "httpStatus": 422,
+  "sourcePath": "evidencias/revisao-ambiente/api-observacoes-powershell.json",
+  "sourceId": "CT-015-E",
+  "recordedAtUTC": "2026-10-06T18:07:13.3816070Z",
+  "images": [],
+  "pairs": []
+}

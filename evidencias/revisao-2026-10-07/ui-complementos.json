@@ -1,0 +1,189 @@
+[
+  {
+    "id": "CT-002-minusculas",
+    "caseId": "CT-002-minusculas",
+    "dados": {
+      "produto": "P005",
+      "quantidade": 1,
+      "cupom": "bemvindo10"
+    },
+    "esperado": {
+      "subtotal": 100,
+      "desconto": 10,
+      "frete": 19.9,
+      "total": 109.9
+    },
+    "obtido": "Resumo do pedido\nSubtotal\nR$ 100,00\nDesconto (BEMVINDO10)\n- R$ 10,00\nFrete\nR$ 19,90\nTotal\nR$ 109,90\n\nFaltam R$ 100,00 para o frete grátis.\n\nFinalizar compra",
+    "status": "Aprovado",
+    "observadoEmUTC": "2026-10-07T15:19:40.174Z",
+    "arquivos": [
+      "evidencias/revisao-2026-10-07/CT-002-minusculas-antes.png",
+      "evidencias/revisao-2026-10-07/CT-002-minusculas-preenchido.png",
+      "evidencias/revisao-2026-10-07/CT-002-minusculas-depois.png"
+    ]
+  },
+  {
+    "id": "CT-006-UI-sem-cupom",
+    "caseId": "CT-006-UI-sem-cupom",
+    "dados": {
+      "produto": "P005",
+      "quantidade": 2,
+      "cupom": null
+    },
+    "esperado": {
+      "subtotal": 200,
+      "desconto": 0,
+      "frete": 0,
+      "total": 200
+    },
+    "obtido": "Resumo do pedido\nSubtotal\nR$ 200,00\nDesconto\nR$ 0,00\nFrete\nR$ 19,90\nTotal\nR$ 219,90\n\nFaltam R$ 0,00 para o frete grátis.\n\nFinalizar compra",
+    "status": "Reprovado",
+    "observadoEmUTC": "2026-10-07T15:19:59.456Z",
+    "arquivos": [
+      "evidencias/revisao-2026-10-07/CT-006-UI-sem-cupom-antes.png",
+      "evidencias/revisao-2026-10-07/CT-006-UI-sem-cupom-depois.png"
+    ]
+  },
+  {
+    "id": "CT-006-UI-com-cupom",
+    "caseId": "CT-006-UI-com-cupom",
+    "dados": {
+      "produto": "P005",
+      "quantidade": 2,
+      "cupom": "BEMVINDO10"
+    },
+    "esperado": {
+      "subtotal": 200,
+      "desconto": 20,
+      "frete": 0,
+      "total": 180
+    },
+    "obtido": "Resumo do pedido\nSubtotal\nR$ 200,00\nDesconto (BEMVINDO10)\n- R$ 20,00\nFrete\nR$ 19,90\nTotal\nR$ 199,90\n\nFaltam R$ 0,00 para o frete grátis.\n\nFinalizar compra",
+    "status": "Reprovado",
+    "observadoEmUTC": "2026-10-07T15:20:00.213Z",
+    "arquivos": [
+      "evidencias/revisao-2026-10-07/CT-006-UI-com-cupom-antes.png",
+      "evidencias/revisao-2026-10-07/CT-006-UI-com-cupom-preenchido.png",
+      "evidencias/revisao-2026-10-07/CT-006-UI-com-cupom-depois.png"
+    ]
+  },
+  {
+    "id": "CT-007-UI-jaqueta",
+    "caseId": "CT-007-UI-jaqueta",
+    "dados": {
+      "produto": "P007",
+      "quantidade": 1,
+      "cupom": "BEMVINDO10"
+    },
+    "esperado": {
+      "subtotal": 229.9,
+      "desconto": 22.99,
+      "frete": 0,
+      "total": 206.91
+    },
+    "obtido": "Resumo do pedido\nSubtotal\nR$ 229,90\nDesconto (BEMVINDO10)\n- R$ 22,99\nFrete\nGrátis\nTotal\nR$ 206,91\nFinalizar compra",
+    "status": "Aprovado",
+    "observadoEmUTC": "2026-10-07T15:21:02.573Z",
+    "arquivos": [
+      "evidencias/revisao-2026-10-07/CT-007-UI-jaqueta-antes.png",
+      "evidencias/revisao-2026-10-07/CT-007-UI-jaqueta-preenchido.png",
+      "evidencias/revisao-2026-10-07/CT-007-UI-jaqueta-depois.png"
+    ]
+  },
+  {
+    "id": "CT-007-UI-camiseta-garrafas",
+    "caseId": "CT-007-UI-camiseta-garrafas",
+    "dados": {
+      "produtos": [
+        {
+          "id": "P001",
+          "quantidade": 1
+        },
+        {
+          "id": "P008",
+          "quantidade": 3
+        }
+      ],
+      "cupom": "BEMVINDO10"
+    },
+    "esperado": {
+      "subtotal": 209.9,
+      "desconto": 20.99,
+      "frete": 0,
+      "total": 188.91
+    },
+    "obtido": "Resumo do pedido\nSubtotal\nR$ 209,90\nDesconto (BEMVINDO10)\n- R$ 20,99\nFrete\nGrátis\nTotal\nR$ 188,91\nFinalizar compra",
+    "status": "Aprovado",
+    "observadoEmUTC": "2026-10-07T15:21:14.619Z",
+    "arquivos": [
+      "evidencias/revisao-2026-10-07/CT-007-UI-camiseta-garrafas-antes.png",
+      "evidencias/revisao-2026-10-07/CT-007-UI-camiseta-garrafas-preenchido.png",
+      "evidencias/revisao-2026-10-07/CT-007-UI-camiseta-garrafas-depois.png"
+    ]
+  },
+  {
+    "id": "CT-008-UI",
+    "caseId": "CT-008-UI",
+    "dados": {
+      "produtos": [
+        {
+          "id": "P004",
+          "quantidade": 1
+        },
+        {
+          "id": "P008",
+          "quantidade": 3
+        }
+      ],
+      "cupom": "BEMVINDO10"
+    },
+    "esperado": {
+      "subtotal": 199.9,
+      "desconto": 19.99,
+      "frete": 19.9,
+      "total": 199.81,
+      "faltante": 0.1
+    },
+    "obtido": "Resumo do pedido\nSubtotal\nR$ 199,90\nDesconto (BEMVINDO10)\n- R$ 19,99\nFrete\nR$ 19,90\nTotal\nR$ 199,81\n\nFaltam R$ 0,10 para o frete grátis.\n\nFinalizar compra",
+    "status": "Aprovado",
+    "observadoEmUTC": "2026-10-07T15:21:32.580Z",
+    "arquivos": [
+      "evidencias/revisao-2026-10-07/CT-008-UI-antes.png",
+      "evidencias/revisao-2026-10-07/CT-008-UI-preenchido.png",
+      "evidencias/revisao-2026-10-07/CT-008-UI-depois.png"
+    ]
+  },
+  {
+    "id": "CT-011-UI",
+    "caseId": "CT-011-UI",
+    "dados": {
+      "produtos": [
+        {
+          "id": "P004",
+          "quantidade": 1
+        },
+        {
+          "id": "P008",
+          "quantidade": 3
+        }
+      ],
+      "cupom": "BEMVINDO10"
+    },
+    "esperado": {
+      "subtotal": 199.9,
+      "desconto": 19.99,
+      "frete": 19.9,
+      "total": 199.81,
+      "faltante": 0.1,
+      "formato": "Duas casas decimais"
+    },
+    "obtido": "Resumo do pedido\nSubtotal\nR$ 199,90\nDesconto (BEMVINDO10)\n- R$ 19,99\nFrete\nR$ 19,90\nTotal\nR$ 199,81\n\nFaltam R$ 0,10 para o frete grátis.\n\nFinalizar compra",
+    "status": "Aprovado",
+    "observadoEmUTC": "2026-10-07T15:21:33.636Z",
+    "arquivos": [
+      "evidencias/revisao-2026-10-07/CT-011-UI-antes.png",
+      "evidencias/revisao-2026-10-07/CT-011-UI-preenchido.png",
+      "evidencias/revisao-2026-10-07/CT-011-UI-depois.png"
+    ]
+  }
+]

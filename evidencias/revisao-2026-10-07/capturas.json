@@ -1,0 +1,122 @@
+[
+  {
+    "caseId": "CT-002-minusculas",
+    "arquivo": "evidencias/revisao-2026-10-07/CT-002-minusculas-antes.png",
+    "etapa": "Antes de aplicar bemvindo10",
+    "observadoEmUTC": "2026-10-07T15:19:39.529Z"
+  },
+  {
+    "caseId": "CT-002-minusculas",
+    "arquivo": "evidencias/revisao-2026-10-07/CT-002-minusculas-preenchido.png",
+    "etapa": "bemvindo10 preenchido",
+    "observadoEmUTC": "2026-10-07T15:19:39.694Z"
+  },
+  {
+    "caseId": "CT-002-minusculas",
+    "arquivo": "evidencias/revisao-2026-10-07/CT-002-minusculas-depois.png",
+    "etapa": "Cupom normalizado para BEMVINDO10",
+    "observadoEmUTC": "2026-10-07T15:19:40.146Z"
+  },
+  {
+    "caseId": "CT-006-UI-sem-cupom",
+    "arquivo": "evidencias/revisao-2026-10-07/CT-006-UI-sem-cupom-antes.png",
+    "etapa": "Uma mochila sem cupom antes de aumentar",
+    "observadoEmUTC": "2026-10-07T15:19:59.008Z"
+  },
+  {
+    "caseId": "CT-006-UI-sem-cupom",
+    "arquivo": "evidencias/revisao-2026-10-07/CT-006-UI-sem-cupom-depois.png",
+    "etapa": "Subtotal 200,00 sem cupom; frete cobrado",
+    "observadoEmUTC": "2026-10-07T15:19:59.438Z"
+  },
+  {
+    "caseId": "CT-006-UI-com-cupom",
+    "arquivo": "evidencias/revisao-2026-10-07/CT-006-UI-com-cupom-antes.png",
+    "etapa": "Subtotal 200,00 antes de aplicar cupom",
+    "observadoEmUTC": "2026-10-07T15:19:59.571Z"
+  },
+  {
+    "caseId": "CT-006-UI-com-cupom",
+    "arquivo": "evidencias/revisao-2026-10-07/CT-006-UI-com-cupom-preenchido.png",
+    "etapa": "BEMVINDO10 preenchido",
+    "observadoEmUTC": "2026-10-07T15:19:59.730Z"
+  },
+  {
+    "caseId": "CT-006-UI-com-cupom",
+    "arquivo": "evidencias/revisao-2026-10-07/CT-006-UI-com-cupom-depois.png",
+    "etapa": "Subtotal 200,00 com cupom; frete cobrado",
+    "observadoEmUTC": "2026-10-07T15:20:00.192Z"
+  },
+  {
+    "caseId": "CT-007-UI-jaqueta",
+    "arquivo": "evidencias/revisao-2026-10-07/CT-007-UI-jaqueta-antes.png",
+    "etapa": "Jaqueta sem cupom",
+    "observadoEmUTC": "2026-10-07T15:21:02.040Z"
+  },
+  {
+    "caseId": "CT-007-UI-jaqueta",
+    "arquivo": "evidencias/revisao-2026-10-07/CT-007-UI-jaqueta-preenchido.png",
+    "etapa": "BEMVINDO10 preenchido",
+    "observadoEmUTC": "2026-10-07T15:21:02.154Z"
+  },
+  {
+    "caseId": "CT-007-UI-jaqueta",
+    "arquivo": "evidencias/revisao-2026-10-07/CT-007-UI-jaqueta-depois.png",
+    "etapa": "Jaqueta com cupom; frete grátis",
+    "observadoEmUTC": "2026-10-07T15:21:02.556Z"
+  },
+  {
+    "caseId": "CT-007-UI-camiseta-garrafas",
+    "arquivo": "evidencias/revisao-2026-10-07/CT-007-UI-camiseta-garrafas-antes.png",
+    "etapa": "Subtotal 209,90 sem cupom",
+    "observadoEmUTC": "2026-10-07T15:21:14.019Z"
+  },
+  {
+    "caseId": "CT-007-UI-camiseta-garrafas",
+    "arquivo": "evidencias/revisao-2026-10-07/CT-007-UI-camiseta-garrafas-preenchido.png",
+    "etapa": "BEMVINDO10 preenchido",
+    "observadoEmUTC": "2026-10-07T15:21:14.184Z"
+  },
+  {
+    "caseId": "CT-007-UI-camiseta-garrafas",
+    "arquivo": "evidencias/revisao-2026-10-07/CT-007-UI-camiseta-garrafas-depois.png",
+    "etapa": "Frete grátis mantido antes do desconto",
+    "observadoEmUTC": "2026-10-07T15:21:14.601Z"
+  },
+  {
+    "caseId": "CT-008-UI",
+    "arquivo": "evidencias/revisao-2026-10-07/CT-008-UI-antes.png",
+    "etapa": "Subtotal 199,90 sem cupom",
+    "observadoEmUTC": "2026-10-07T15:21:31.983Z"
+  },
+  {
+    "caseId": "CT-008-UI",
+    "arquivo": "evidencias/revisao-2026-10-07/CT-008-UI-preenchido.png",
+    "etapa": "BEMVINDO10 preenchido",
+    "observadoEmUTC": "2026-10-07T15:21:32.139Z"
+  },
+  {
+    "caseId": "CT-008-UI",
+    "arquivo": "evidencias/revisao-2026-10-07/CT-008-UI-depois.png",
+    "etapa": "Frete 19,90; faltante 0,10",
+    "observadoEmUTC": "2026-10-07T15:21:32.564Z"
+  },
+  {
+    "caseId": "CT-011-UI",
+    "arquivo": "evidencias/revisao-2026-10-07/CT-011-UI-antes.png",
+    "etapa": "Valores monetários antes do cupom",
+    "observadoEmUTC": "2026-10-07T15:21:33.032Z"
+  },
+  {
+    "caseId": "CT-011-UI",
+    "arquivo": "evidencias/revisao-2026-10-07/CT-011-UI-preenchido.png",
+    "etapa": "BEMVINDO10 preenchido",
+    "observadoEmUTC": "2026-10-07T15:21:33.180Z"
+  },
+  {
+    "caseId": "CT-011-UI",
+    "arquivo": "evidencias/revisao-2026-10-07/CT-011-UI-depois.png",
+    "etapa": "Preços, resumo e faltante com duas casas decimais",
+    "observadoEmUTC": "2026-10-07T15:21:33.617Z"
+  }
+]

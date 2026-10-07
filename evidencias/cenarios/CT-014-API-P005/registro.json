@@ -1,0 +1,28 @@
+{
+  "caseId": "CT-014-API-P005",
+  "group": "CT-014",
+  "layer": "API",
+  "input": "GET /api/produtos/P005",
+  "date": "06/10 14:07:10",
+  "expected": "200; P005, nome, preço 100,00, descrição e categoria",
+  "actual": "200; campos consistentes com catálogo",
+  "status": "Aprovado",
+  "evidenceId": "EV-006",
+  "bugIds": [],
+  "method": "GET",
+  "path": "/api/produtos/P005",
+  "request": null,
+  "response": {
+    "id": "P005",
+    "nome": "Mochila Urbana 20L",
+    "descricao": "Compartimento acolchoado para notebook.",
+    "categoria": "Acessórios",
+    "preco": 100
+  },
+  "httpStatus": 200,
+  "sourcePath": "evidencias/revisao-ambiente/api-observacoes-powershell.json",
+  "sourceId": "CT-014-B",
+  "recordedAtUTC": "2026-10-06T18:07:10.8942809Z",
+  "images": [],
+  "pairs": []
+}

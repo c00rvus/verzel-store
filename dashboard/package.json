@@ -1,0 +1,13 @@
+{
+  "name": "qa-verzel-dashboard",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Dashboard estático dos resultados de QA da Verzel Store",
+  "scripts": {
+    "build": "node build.cjs",
+    "preview": "node serve.cjs"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

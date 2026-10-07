@@ -1,0 +1,130 @@
+{
+  "caseId": "CT-013-UI-email-vazio",
+  "group": "CT-013",
+  "layer": "UI",
+  "input": "E-mail vazio",
+  "date": "07/10 10:29:46",
+  "expected": "Bloquear pedido; indicar campo inválido; permitir correção",
+  "actual": "Informe o e-mail. Sem confirmação; campo corrigido e editável.",
+  "status": "Aprovado",
+  "evidenceId": "EV-033",
+  "bugIds": [],
+  "evidenceRecord": {
+    "sourcePath": "evidencias/execucao-2026-10-07/ui-resultados.json",
+    "sourceId": "CT-013-UI-email-vazio",
+    "recordedAtUTC": "2026-10-07T14:29:46.217Z",
+    "dados": {
+      "produto": "P005",
+      "quantidade": 1,
+      "nome": "Maria Silva",
+      "email": "",
+      "cep": "01310-100",
+      "execucaoAnteriorEmUTC": "2026-10-07T14:25:06.671Z"
+    },
+    "esperado": {
+      "mensagem": "Informe o e-mail.",
+      "pedidoConfirmado": false
+    },
+    "obtido": "- note:\n  - paragraph:\n    - text: Ambiente de teste técnico do processo seletivo de QA da Verzel.\n    - link \"Leia a documentação antes de começar.\":\n      - /url: /documentacao\n- banner:\n  - link \"Verzel Store, página inicial\":\n    - /url: /\n    - generic: verzel\n    - generic: store\n  - navigation \"Principal\":\n    - link \"Produtos\":\n      - /url: /\n    - link \"Documentação\":\n      - /url: /documentacao\n    - link \"Carrinho 1 itens no carrinho\":\n      - /url: /carrinho\n      - text: Carrinho\n      - generic \"1 itens no carrinho\": \"1\"\n- main:\n  - heading \"Finalizar compra\" [level=1]\n  - link \"Voltar ao carrinho\":\n    - /url: /carrinho\n  - heading \"Dados para entrega\" [level=2]\n  - generic: Nome completo\n  - textbox \"Nome completo\": Maria Silva\n  - generic: E-mail\n  - textbox \"E-mail\"\n  - paragraph: Informe o e-mail.\n  - generic: CEP\n  - textbox \"CEP\": 01310-100\n  - paragraph: Somente números ou no formato 00000-000.\n  - paragraph: O pagamento é feito na entrega.\n  - button \"Confirmar pedido\" [active]\n  - region \"Resumo do pedido\":\n    - heading \"Resumo do pedido\" [level=2]\n    - term: Subtotal\n    - definition: R$ 100,00\n    - term: Desconto\n    - definition: R$ 0,00\n    - term: Frete\n    - definition: R$ 19,90\n    - term: Total\n    - definition: R$ 119,90\n    - list:\n      - generic: 1x Mochila Urbana 20L\n      - generic: R$ 100,00\n- contentinfo:\n  - paragraph: Verzel Store é um ambiente fictício criado para o teste técnico do processo seletivo de QA da Verzel. Nenhuma compra é real.",
+    "status": "Aprovado",
+    "arquivos": [
+      "evidencias/execucao-2026-10-07/CT-013-email-vazio-formulario-antes.png",
+      "evidencias/execucao-2026-10-07/CT-013-email-vazio-antes-confirmar.png",
+      "evidencias/execucao-2026-10-07/CT-013-email-vazio-depois-confirmar.png",
+      "evidencias/execucao-2026-10-07/CT-013-email-vazio-depois-corrigir.png",
+      "evidencias/execucao-2026-10-07/CT-013-email-vazio-carrinho-antes-esvaziar.png",
+      "evidencias/execucao-2026-10-07/CT-013-email-vazio-carrinho-depois-adicionar.png",
+      "evidencias/execucao-2026-10-07/CT-013-email-vazio-carrinho-vazio.png",
+      "evidencias/execucao-2026-10-07/CT-013-email-vazio-vitrine-antes-adicionar.png",
+      "evidencias/execucao-2026-10-07/CT-013-email-vazio-vitrine-depois-adicionar.png"
+    ]
+  },
+  "dados": {
+    "produto": "P005",
+    "quantidade": 1,
+    "nome": "Maria Silva",
+    "email": "",
+    "cep": "01310-100",
+    "execucaoAnteriorEmUTC": "2026-10-07T14:25:06.671Z"
+  },
+  "sourcePath": "evidencias/execucao-2026-10-07/ui-resultados.json",
+  "sourceId": "CT-013-UI-email-vazio",
+  "recordedAtUTC": "2026-10-07T14:29:46.217Z",
+  "images": [
+    {
+      "path": "evidencias/execucao-2026-10-07/CT-013-email-vazio-carrinho-antes-esvaziar.png",
+      "label": "Preparação: carrinho antes de esvaziar",
+      "stage": "Preparação: carrinho antes de esvaziar",
+      "time": "2026-10-07T14:29:41.255Z",
+      "phase": "before"
+    },
+    {
+      "path": "evidencias/execucao-2026-10-07/CT-013-email-vazio-carrinho-vazio.png",
+      "label": "Preparação: carrinho vazio",
+      "stage": "Preparação: carrinho vazio",
+      "time": "2026-10-07T14:29:41.684Z",
+      "phase": "preparation"
+    },
+    {
+      "path": "evidencias/execucao-2026-10-07/CT-013-email-vazio-vitrine-antes-adicionar.png",
+      "label": "Preparação: vitrine antes de adicionar mochila",
+      "stage": "Preparação: vitrine antes de adicionar mochila",
+      "time": "2026-10-07T14:29:42.968Z",
+      "phase": "before"
+    },
+    {
+      "path": "evidencias/execucao-2026-10-07/CT-013-email-vazio-vitrine-depois-adicionar.png",
+      "label": "Preparação: mochila adicionada ao carrinho pela vitrine",
+      "stage": "Preparação: mochila adicionada ao carrinho pela vitrine",
+      "time": "2026-10-07T14:29:44.460Z",
+      "phase": "after"
+    },
+    {
+      "path": "evidencias/execucao-2026-10-07/CT-013-email-vazio-carrinho-depois-adicionar.png",
+      "label": "Preparação: uma mochila sem cupom",
+      "stage": "Preparação: uma mochila sem cupom",
+      "time": "2026-10-07T14:29:44.925Z",
+      "phase": "after"
+    },
+    {
+      "path": "evidencias/execucao-2026-10-07/CT-013-email-vazio-formulario-antes.png",
+      "label": "Formulário vazio; resumo completo",
+      "stage": "Formulário vazio; resumo completo",
+      "time": "2026-10-07T14:29:45.282Z",
+      "phase": "before"
+    },
+    {
+      "path": "evidencias/execucao-2026-10-07/CT-013-email-vazio-antes-confirmar.png",
+      "label": "E-mail vazio; demais dados válidos",
+      "stage": "E-mail vazio; demais dados válidos",
+      "time": "2026-10-07T14:29:45.533Z",
+      "phase": "before"
+    },
+    {
+      "path": "evidencias/execucao-2026-10-07/CT-013-email-vazio-depois-confirmar.png",
+      "label": "E-mail obrigatório rejeitado",
+      "stage": "E-mail obrigatório rejeitado",
+      "time": "2026-10-07T14:29:45.999Z",
+      "phase": "after"
+    },
+    {
+      "path": "evidencias/execucao-2026-10-07/CT-013-email-vazio-depois-corrigir.png",
+      "label": "E-mail corrigido; formulário editável",
+      "stage": "E-mail corrigido; formulário editável",
+      "time": "2026-10-07T14:29:46.214Z",
+      "phase": "after"
+    }
+  ],
+  "pairs": [
+    {
+      "label": "Validação do campo",
+      "beforePath": "evidencias/execucao-2026-10-07/CT-013-email-vazio-antes-confirmar.png",
+      "afterPath": "evidencias/execucao-2026-10-07/CT-013-email-vazio-depois-confirmar.png"
+    },
+    {
+      "label": "email vazio vitrine adicionar",
+      "beforePath": "evidencias/execucao-2026-10-07/CT-013-email-vazio-vitrine-antes-adicionar.png",
+      "afterPath": "evidencias/execucao-2026-10-07/CT-013-email-vazio-vitrine-depois-adicionar.png"
+    }
+  ]
+}

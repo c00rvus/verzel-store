@@ -1,0 +1,125 @@
+{
+  "caseId": "CT-012-UI-03",
+  "group": "CT-012",
+  "layer": "UI",
+  "input": "com BEMVINDO10; CEP 01310-100",
+  "date": "07/10 10:20:10",
+  "expected": "Pedido VZ- + 6 dígitos; 100,00 / 10,00 / 19,90 / 109,90",
+  "actual": "VZ-828121; valores preservados: 100,00 / 10,00 / 19,90 / 109,90",
+  "status": "Aprovado",
+  "evidenceId": "EV-026",
+  "bugIds": [],
+  "evidenceRecord": {
+    "sourcePath": "evidencias/execucao-2026-10-07/ui-resultados.json",
+    "sourceId": "CT-012-UI-03",
+    "recordedAtUTC": "2026-10-07T14:20:10.693Z",
+    "dados": {
+      "produto": "P005",
+      "quantidade": 1,
+      "cupom": "BEMVINDO10",
+      "nome": "Maria Silva",
+      "email": "maria@example.com",
+      "cep": "01310-100"
+    },
+    "esperado": {
+      "numero": "VZ- seguido de seis dígitos",
+      "subtotal": 100,
+      "desconto": 10,
+      "frete": 19.9,
+      "total": 109.9
+    },
+    "obtido": {
+      "numero": "VZ-828121",
+      "tela": "- note:\n  - paragraph:\n    - text: Ambiente de teste técnico do processo seletivo de QA da Verzel.\n    - link \"Leia a documentação antes de começar.\":\n      - /url: /documentacao\n- banner:\n  - link \"Verzel Store, página inicial\":\n    - /url: /\n    - generic: verzel\n    - generic: store\n  - navigation \"Principal\":\n    - link \"Produtos\":\n      - /url: /\n    - link \"Documentação\":\n      - /url: /documentacao\n    - link \"Carrinho 0 itens no carrinho\":\n      - /url: /carrinho\n      - text: Carrinho\n      - generic \"0 itens no carrinho\": \"0\"\n- main:\n  - paragraph: Pedido confirmado\n  - heading \"Pedido VZ-828121\" [level=1]\n  - paragraph: Obrigado, Maria. Seu pedido foi registrado e o pagamento será feito na entrega.\n  - region \"Itens do pedido\":\n    - heading \"Itens do pedido\" [level=2]\n    - term: Subtotal\n    - definition: R$ 100,00\n    - term: Desconto (BEMVINDO10)\n    - definition: \"- R$ 10,00\"\n    - term: Frete\n    - definition: R$ 19,90\n    - term: Total\n    - definition: R$ 109,90\n    - list:\n      - generic: 1x Mochila Urbana 20L\n      - generic: R$ 100,00\n  - link \"Continuar comprando\":\n    - /url: /\n- contentinfo:\n  - paragraph: Verzel Store é um ambiente fictício criado para o teste técnico do processo seletivo de QA da Verzel. Nenhuma compra é real."
+    },
+    "status": "Aprovado",
+    "arquivos": [
+      "evidencias/execucao-2026-10-07/CT-012-UI-03-cupom-antes.png",
+      "evidencias/execucao-2026-10-07/CT-012-UI-03-cupom-preenchido.png",
+      "evidencias/execucao-2026-10-07/CT-012-UI-03-cupom-depois.png",
+      "evidencias/execucao-2026-10-07/CT-012-UI-03-carrinho-antes-checkout.png",
+      "evidencias/execucao-2026-10-07/CT-012-UI-03-checkout-antes-preencher.png",
+      "evidencias/execucao-2026-10-07/CT-012-UI-03-checkout-depois-preencher.png",
+      "evidencias/execucao-2026-10-07/CT-012-UI-03-pedido-depois-confirmar.png"
+    ]
+  },
+  "dados": {
+    "produto": "P005",
+    "quantidade": 1,
+    "cupom": "BEMVINDO10",
+    "nome": "Maria Silva",
+    "email": "maria@example.com",
+    "cep": "01310-100"
+  },
+  "sourcePath": "evidencias/execucao-2026-10-07/ui-resultados.json",
+  "sourceId": "CT-012-UI-03",
+  "recordedAtUTC": "2026-10-07T14:20:10.693Z",
+  "images": [
+    {
+      "path": "evidencias/execucao-2026-10-07/CT-012-UI-03-cupom-antes.png",
+      "label": "Carrinho antes do cupom",
+      "stage": "Carrinho antes do cupom",
+      "time": "2026-10-07T14:20:09.067Z",
+      "phase": "before"
+    },
+    {
+      "path": "evidencias/execucao-2026-10-07/CT-012-UI-03-cupom-preenchido.png",
+      "label": "Cupom antes de aplicar",
+      "stage": "Cupom antes de aplicar",
+      "time": "2026-10-07T14:20:09.243Z",
+      "phase": "input"
+    },
+    {
+      "path": "evidencias/execucao-2026-10-07/CT-012-UI-03-cupom-depois.png",
+      "label": "Cupom aplicado",
+      "stage": "Cupom aplicado",
+      "time": "2026-10-07T14:20:09.694Z",
+      "phase": "after"
+    },
+    {
+      "path": "evidencias/execucao-2026-10-07/CT-012-UI-03-carrinho-antes-checkout.png",
+      "label": "Resumo antes do checkout",
+      "stage": "Resumo antes do checkout",
+      "time": "2026-10-07T14:20:09.810Z",
+      "phase": "before"
+    },
+    {
+      "path": "evidencias/execucao-2026-10-07/CT-012-UI-03-checkout-antes-preencher.png",
+      "label": "Formulário vazio e resumo",
+      "stage": "Formulário vazio e resumo",
+      "time": "2026-10-07T14:20:10.105Z",
+      "phase": "before"
+    },
+    {
+      "path": "evidencias/execucao-2026-10-07/CT-012-UI-03-checkout-depois-preencher.png",
+      "label": "Dados preenchidos antes de confirmar",
+      "stage": "Dados preenchidos antes de confirmar",
+      "time": "2026-10-07T14:20:10.317Z",
+      "phase": "after"
+    },
+    {
+      "path": "evidencias/execucao-2026-10-07/CT-012-UI-03-pedido-depois-confirmar.png",
+      "label": "Pedido confirmado com valores preservados",
+      "stage": "Pedido confirmado com valores preservados",
+      "time": "2026-10-07T14:20:10.686Z",
+      "phase": "after"
+    }
+  ],
+  "pairs": [
+    {
+      "label": "Confirmação do pedido",
+      "beforePath": "evidencias/execucao-2026-10-07/CT-012-UI-03-checkout-depois-preencher.png",
+      "afterPath": "evidencias/execucao-2026-10-07/CT-012-UI-03-pedido-depois-confirmar.png"
+    },
+    {
+      "label": "cupom",
+      "beforePath": "evidencias/execucao-2026-10-07/CT-012-UI-03-cupom-antes.png",
+      "afterPath": "evidencias/execucao-2026-10-07/CT-012-UI-03-cupom-depois.png"
+    },
+    {
+      "label": "checkout preencher",
+      "beforePath": "evidencias/execucao-2026-10-07/CT-012-UI-03-checkout-antes-preencher.png",
+      "afterPath": "evidencias/execucao-2026-10-07/CT-012-UI-03-checkout-depois-preencher.png"
+    }
+  ]
+}

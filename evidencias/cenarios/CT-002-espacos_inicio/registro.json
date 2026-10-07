@@ -1,0 +1,73 @@
+{
+  "caseId": "CT-002-espacos_inicio",
+  "group": "CT-002",
+  "layer": "UI",
+  "input": "Cupom \"  BEMVINDO10\"",
+  "date": "07/10 10:16:47",
+  "expected": "100,00 / 10,00 / 19,90 / 109,90",
+  "actual": "100,00 / 10,00 / 19,90 / 109,90",
+  "status": "Aprovado",
+  "evidenceId": "EV-017",
+  "bugIds": [],
+  "evidenceRecord": {
+    "sourcePath": "evidencias/execucao-2026-10-07/ui-resultados.json",
+    "sourceId": "CT-002-espacos_inicio",
+    "recordedAtUTC": "2026-10-07T14:16:47.841Z",
+    "dados": {
+      "produto": "P005",
+      "quantidade": 1,
+      "cupom": "  BEMVINDO10"
+    },
+    "esperado": {
+      "subtotal": 100,
+      "desconto": 10,
+      "frete": 19.9,
+      "total": 109.9
+    },
+    "obtido": "Resumo do pedido\nSubtotal\nR$ 100,00\nDesconto (BEMVINDO10)\n- R$ 10,00\nFrete\nR$ 19,90\nTotal\nR$ 109,90\n\nFaltam R$ 100,00 para o frete grátis.\n\nFinalizar compra",
+    "status": "Aprovado",
+    "arquivos": [
+      "evidencias/execucao-2026-10-07/CT-002-espacos-inicio-antes.png",
+      "evidencias/execucao-2026-10-07/CT-002-espacos-inicio-preenchido.png",
+      "evidencias/execucao-2026-10-07/CT-002-espacos-inicio-depois.png"
+    ]
+  },
+  "dados": {
+    "produto": "P005",
+    "quantidade": 1,
+    "cupom": "  BEMVINDO10"
+  },
+  "sourcePath": "evidencias/execucao-2026-10-07/ui-resultados.json",
+  "sourceId": "CT-002-espacos_inicio",
+  "recordedAtUTC": "2026-10-07T14:16:47.841Z",
+  "images": [
+    {
+      "path": "evidencias/execucao-2026-10-07/CT-002-espacos-inicio-antes.png",
+      "label": "Uma mochila sem cupom",
+      "stage": "Uma mochila sem cupom",
+      "time": "2026-10-07T14:16:47.122Z",
+      "phase": "before"
+    },
+    {
+      "path": "evidencias/execucao-2026-10-07/CT-002-espacos-inicio-preenchido.png",
+      "label": "Dois espaços antes de BEMVINDO10",
+      "stage": "Dois espaços antes de BEMVINDO10",
+      "time": "2026-10-07T14:16:47.353Z",
+      "phase": "input"
+    },
+    {
+      "path": "evidencias/execucao-2026-10-07/CT-002-espacos-inicio-depois.png",
+      "label": "Cupom com espaços iniciais aceito",
+      "stage": "Cupom com espaços iniciais aceito",
+      "time": "2026-10-07T14:16:47.825Z",
+      "phase": "after"
+    }
+  ],
+  "pairs": [
+    {
+      "label": "espacos inicio",
+      "beforePath": "evidencias/execucao-2026-10-07/CT-002-espacos-inicio-antes.png",
+      "afterPath": "evidencias/execucao-2026-10-07/CT-002-espacos-inicio-depois.png"
+    }
+  ]
+}

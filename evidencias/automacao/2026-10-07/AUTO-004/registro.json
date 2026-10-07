@@ -1,0 +1,27 @@
+{
+  "id": "AUTO-004",
+  "title": "AUTO-004 | CT-007 | Calcular frete antes do desconto",
+  "layer": "UI",
+  "ctIds": [
+    "CT-007"
+  ],
+  "status": "passed",
+  "bugIds": [],
+  "statusPlaywright": "passed",
+  "expectedStatus": "passed",
+  "startedAt": "2026-10-07T17:32:27.379Z",
+  "durationMs": 1027,
+  "errors": [],
+  "attachments": [
+    {
+      "name": "01-antes-do-cupom",
+      "path": "evidencias/automacao/2026-10-07/AUTO-004/01-antes-do-cupom.png",
+      "contentType": "image/png"
+    },
+    {
+      "name": "02-frete-gratis-apos-desconto",
+      "path": "evidencias/automacao/2026-10-07/AUTO-004/02-frete-gratis-apos-desconto.png",
+      "contentType": "image/png"
+    }
+  ]
+}

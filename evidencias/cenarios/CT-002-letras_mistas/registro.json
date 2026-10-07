@@ -1,0 +1,32 @@
+{
+  "caseId": "CT-002-letras_mistas",
+  "group": "CT-002",
+  "layer": "UI",
+  "input": "\"BeMvInDo10\"",
+  "date": "06/10 15:15",
+  "expected": "100,00 / 10,00 / 19,90 / 109,90",
+  "actual": "Cupom normalizado; valores corretos",
+  "status": "Aprovado",
+  "evidenceId": "EV-008",
+  "bugIds": [],
+  "dados": null,
+  "sourcePath": "docs/execucao.md",
+  "sourceId": "CT-002-letras_mistas",
+  "recordedAtUTC": null,
+  "images": [
+    {
+      "path": "evidencias/CT-002-letras-mistas.png",
+      "label": "Antes/depois",
+      "stage": "15:15; BeMvInDo10 aceito e normalizado; total R$ 109,90.",
+      "time": "06/10/2026 15:15 (Brasília, UTC-03:00)",
+      "phase": "evidence"
+    }
+  ],
+  "pairs": [
+    {
+      "label": "Comparativo em montagem",
+      "mode": "montage",
+      "montagePath": "evidencias/CT-002-letras-mistas.png"
+    }
+  ]
+}

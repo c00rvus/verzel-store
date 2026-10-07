@@ -1,0 +1,48 @@
+{
+  "caseId": "CT-006-API-02",
+  "group": "CT-006",
+  "layer": "API",
+  "input": "POST /api/carrinho/calcular; P005 ×2",
+  "date": "06/10 14:06:36",
+  "expected": "200; 200,00 / 0,00 / 0,00 / 200,00; frete grátis",
+  "actual": "200; 200,00 / 0,00 / 19,90 / 219,90; freteGratis=false; BUG-001",
+  "status": "Reprovado",
+  "evidenceId": "EV-002",
+  "bugIds": [
+    "BUG-001"
+  ],
+  "method": "POST",
+  "path": "/api/carrinho/calcular",
+  "request": {
+    "itens": [
+      {
+        "produtoId": "P005",
+        "quantidade": 2
+      }
+    ]
+  },
+  "response": {
+    "itens": [
+      {
+        "produtoId": "P005",
+        "nome": "Mochila Urbana 20L",
+        "precoUnitario": 100,
+        "quantidade": 2,
+        "total": 200
+      }
+    ],
+    "subtotal": 200,
+    "desconto": 0,
+    "frete": 19.9,
+    "freteGratis": false,
+    "valorFaltanteFreteGratis": 0,
+    "total": 219.9,
+    "cupom": null
+  },
+  "httpStatus": 200,
+  "sourcePath": "evidencias/revisao-ambiente/api-limite-frete.json",
+  "sourceId": "CT-006-sem-cupom",
+  "recordedAtUTC": "2026-10-06T18:06:36.8506434Z",
+  "images": [],
+  "pairs": []
+}

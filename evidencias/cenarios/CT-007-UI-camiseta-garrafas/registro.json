@@ -1,0 +1,101 @@
+{
+  "caseId": "CT-007-UI-camiseta-garrafas",
+  "group": "CT-007",
+  "layer": "UI",
+  "input": "P001 ×1 + P008 ×3; BEMVINDO10",
+  "date": "07/10 11:21:14",
+  "expected": "209,90 / 20,99 / 0,00 / 188,91",
+  "actual": "209,90 / 20,99 / 0,00 / 188,91",
+  "status": "Aprovado",
+  "evidenceId": "EV-041",
+  "bugIds": [],
+  "originalRecord": {
+    "id": "CT-007-UI-camiseta-garrafas",
+    "layer": "UI",
+    "group": "CT-007",
+    "input": "P001 ×1 + P008 ×3; BEMVINDO10",
+    "date": "07/10 11:21:14",
+    "expected": "209,90 / 20,99 / 0,00 / 188,91",
+    "actual": "Valores corretos; frete grátis antes do desconto",
+    "status": "Aprovado",
+    "evidenceId": "EV-041",
+    "bugIds": []
+  },
+  "evidenceRecord": {
+    "sourcePath": "evidencias/revisao-2026-10-07/ui-complementos.json",
+    "sourceId": "CT-007-UI-camiseta-garrafas",
+    "recordedAtUTC": "2026-10-07T15:21:14.619Z",
+    "dados": {
+      "produtos": [
+        {
+          "id": "P001",
+          "quantidade": 1
+        },
+        {
+          "id": "P008",
+          "quantidade": 3
+        }
+      ],
+      "cupom": "BEMVINDO10"
+    },
+    "esperado": {
+      "subtotal": 209.9,
+      "desconto": 20.99,
+      "frete": 0,
+      "total": 188.91
+    },
+    "obtido": "Resumo do pedido\nSubtotal\nR$ 209,90\nDesconto (BEMVINDO10)\n- R$ 20,99\nFrete\nGrátis\nTotal\nR$ 188,91\nFinalizar compra",
+    "status": "Aprovado",
+    "arquivos": [
+      "evidencias/revisao-2026-10-07/CT-007-UI-camiseta-garrafas-antes.png",
+      "evidencias/revisao-2026-10-07/CT-007-UI-camiseta-garrafas-preenchido.png",
+      "evidencias/revisao-2026-10-07/CT-007-UI-camiseta-garrafas-depois.png"
+    ]
+  },
+  "dados": {
+    "produtos": [
+      {
+        "id": "P001",
+        "quantidade": 1
+      },
+      {
+        "id": "P008",
+        "quantidade": 3
+      }
+    ],
+    "cupom": "BEMVINDO10"
+  },
+  "sourcePath": "evidencias/revisao-2026-10-07/ui-complementos.json",
+  "sourceId": "CT-007-UI-camiseta-garrafas",
+  "recordedAtUTC": "2026-10-07T15:21:14.619Z",
+  "images": [
+    {
+      "path": "evidencias/revisao-2026-10-07/CT-007-UI-camiseta-garrafas-antes.png",
+      "label": "Subtotal 209,90 sem cupom",
+      "stage": "Subtotal 209,90 sem cupom",
+      "time": "2026-10-07T15:21:14.019Z",
+      "phase": "before"
+    },
+    {
+      "path": "evidencias/revisao-2026-10-07/CT-007-UI-camiseta-garrafas-preenchido.png",
+      "label": "BEMVINDO10 preenchido",
+      "stage": "BEMVINDO10 preenchido",
+      "time": "2026-10-07T15:21:14.184Z",
+      "phase": "input"
+    },
+    {
+      "path": "evidencias/revisao-2026-10-07/CT-007-UI-camiseta-garrafas-depois.png",
+      "label": "Frete grátis mantido antes do desconto",
+      "stage": "Frete grátis mantido antes do desconto",
+      "time": "2026-10-07T15:21:14.601Z",
+      "phase": "after"
+    }
+  ],
+  "pairs": [
+    {
+      "label": "UI camiseta garrafas",
+      "beforePath": "evidencias/revisao-2026-10-07/CT-007-UI-camiseta-garrafas-antes.png",
+      "afterPath": "evidencias/revisao-2026-10-07/CT-007-UI-camiseta-garrafas-depois.png"
+    }
+  ]
+}

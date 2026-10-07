@@ -1,0 +1,39 @@
+{
+  "caseId": "CT-015-API-05",
+  "group": "CT-015",
+  "layer": "API",
+  "input": "POST /api/carrinho/calcular; {\"itens\":[{\"produtoId\":\"P005\",\"quantidade\":1},{\"produtoId\":\"P005\",\"quantidade\":1}]}",
+  "date": "06/10 14:07:13",
+  "expected": "422 ITEM_DUPLICADO",
+  "actual": "422 ITEM_DUPLICADO; campo itens[1].produtoId; O produto P005 aparece mais de uma vez.",
+  "status": "Aprovado",
+  "evidenceId": "EV-006",
+  "bugIds": [],
+  "method": "POST",
+  "path": "/api/carrinho/calcular",
+  "request": {
+    "itens": [
+      {
+        "produtoId": "P005",
+        "quantidade": 1
+      },
+      {
+        "produtoId": "P005",
+        "quantidade": 1
+      }
+    ]
+  },
+  "response": {
+    "erro": {
+      "codigo": "ITEM_DUPLICADO",
+      "mensagem": "O produto P005 aparece mais de uma vez.",
+      "campo": "itens[1].produtoId"
+    }
+  },
+  "httpStatus": 422,
+  "sourcePath": "evidencias/revisao-ambiente/api-observacoes-powershell.json",
+  "sourceId": "CT-015-D",
+  "recordedAtUTC": "2026-10-06T18:07:13.0798742Z",
+  "images": [],
+  "pairs": []
+}

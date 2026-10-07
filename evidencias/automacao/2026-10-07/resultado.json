@@ -1,0 +1,328 @@
+{
+  "schemaVersion": 1,
+  "startedAt": "2026-10-07T17:32:20.296Z",
+  "finishedAt": "2026-10-07T17:32:43.436Z",
+  "generatedAt": "2026-10-07T17:33:21.730Z",
+  "timeZone": "America/New_York",
+  "durationMs": 23140.604,
+  "environment": {
+    "node": "v22.23.3",
+    "playwright": "1.63.0",
+    "chromium": "153.0.8010.12",
+    "os": "Windows_NT 10.0.26300 x64",
+    "baseURL": "https://verzel-store.qa-test-verzel-store.workers.dev",
+    "trustedCertificates": "NODE_USE_SYSTEM_CA=1"
+  },
+  "summary": {
+    "total": 9,
+    "passed": 6,
+    "knownFailures": 3,
+    "unexpectedFailures": 0,
+    "skipped": 0
+  },
+  "tests": [
+    {
+      "id": "AUTO-001",
+      "title": "AUTO-001 | CT-001, CT-002, CT-005 | Aplicar, remover e reaplicar cupom",
+      "layer": "UI",
+      "ctIds": [
+        "CT-001",
+        "CT-002",
+        "CT-005"
+      ],
+      "status": "passed",
+      "bugIds": [],
+      "statusPlaywright": "passed",
+      "expectedStatus": "passed",
+      "startedAt": "2026-10-07T17:32:21.049Z",
+      "durationMs": 4183,
+      "errors": [],
+      "attachments": [
+        {
+          "name": "01-antes-do-cupom",
+          "path": "evidencias/automacao/2026-10-07/AUTO-001/01-antes-do-cupom.png",
+          "contentType": "image/png"
+        },
+        {
+          "name": "02-cupom-normalizado",
+          "path": "evidencias/automacao/2026-10-07/AUTO-001/02-cupom-normalizado.png",
+          "contentType": "image/png"
+        },
+        {
+          "name": "03-cupom-removido",
+          "path": "evidencias/automacao/2026-10-07/AUTO-001/03-cupom-removido.png",
+          "contentType": "image/png"
+        },
+        {
+          "name": "04-cupom-reaplicado",
+          "path": "evidencias/automacao/2026-10-07/AUTO-001/04-cupom-reaplicado.png",
+          "contentType": "image/png"
+        }
+      ]
+    },
+    {
+      "id": "AUTO-002",
+      "title": "AUTO-002 | CT-003 | Rejeitar NAOEXISTE",
+      "layer": "UI",
+      "ctIds": [
+        "CT-003"
+      ],
+      "status": "passed",
+      "bugIds": [],
+      "statusPlaywright": "passed",
+      "expectedStatus": "passed",
+      "startedAt": "2026-10-07T17:32:25.449Z",
+      "durationMs": 952,
+      "errors": [],
+      "attachments": [
+        {
+          "name": "01-antes-do-cupom",
+          "path": "evidencias/automacao/2026-10-07/AUTO-002/01-antes-do-cupom.png",
+          "contentType": "image/png"
+        },
+        {
+          "name": "02-cupom-rejeitado",
+          "path": "evidencias/automacao/2026-10-07/AUTO-002/02-cupom-rejeitado.png",
+          "contentType": "image/png"
+        }
+      ]
+    },
+    {
+      "id": "AUTO-003",
+      "title": "AUTO-003 | CT-004 | Rejeitar VERAO2026",
+      "layer": "UI",
+      "ctIds": [
+        "CT-004"
+      ],
+      "status": "passed",
+      "bugIds": [],
+      "statusPlaywright": "passed",
+      "expectedStatus": "passed",
+      "startedAt": "2026-10-07T17:32:26.414Z",
+      "durationMs": 954,
+      "errors": [],
+      "attachments": [
+        {
+          "name": "01-antes-do-cupom",
+          "path": "evidencias/automacao/2026-10-07/AUTO-003/01-antes-do-cupom.png",
+          "contentType": "image/png"
+        },
+        {
+          "name": "02-cupom-rejeitado",
+          "path": "evidencias/automacao/2026-10-07/AUTO-003/02-cupom-rejeitado.png",
+          "contentType": "image/png"
+        }
+      ]
+    },
+    {
+      "id": "AUTO-004",
+      "title": "AUTO-004 | CT-007 | Calcular frete antes do desconto",
+      "layer": "UI",
+      "ctIds": [
+        "CT-007"
+      ],
+      "status": "passed",
+      "bugIds": [],
+      "statusPlaywright": "passed",
+      "expectedStatus": "passed",
+      "startedAt": "2026-10-07T17:32:27.379Z",
+      "durationMs": 1027,
+      "errors": [],
+      "attachments": [
+        {
+          "name": "01-antes-do-cupom",
+          "path": "evidencias/automacao/2026-10-07/AUTO-004/01-antes-do-cupom.png",
+          "contentType": "image/png"
+        },
+        {
+          "name": "02-frete-gratis-apos-desconto",
+          "path": "evidencias/automacao/2026-10-07/AUTO-004/02-frete-gratis-apos-desconto.png",
+          "contentType": "image/png"
+        }
+      ]
+    },
+    {
+      "id": "AUTO-005",
+      "title": "AUTO-005 | CT-006, CT-010 | Frete grátis no subtotal de R$ 200,00",
+      "layer": "UI",
+      "ctIds": [
+        "CT-006",
+        "CT-010"
+      ],
+      "status": "known_failure",
+      "bugIds": [
+        "BUG-001"
+      ],
+      "statusPlaywright": "failed",
+      "expectedStatus": "failed",
+      "startedAt": "2026-10-07T17:32:28.418Z",
+      "durationMs": 11152,
+      "errors": [
+        "Error: expect(locator).toHaveText(expected) failed\n\nLocator:  locator('section[aria-labelledby=\"titulo-resumo\"]').locator('[data-valor=\"frete\"]')\nExpected: \"Grátis\"\nReceived: \"R$ 19,90\"\nTimeout:  5000ms\n\nCall log:\n  - Expect \"soft toHaveText\" locator('section[aria-labelledby=\"titulo-resumo\"]').locator('[data-valor=\"frete\"]') with timeout 5000ms\n  - waiting for locator('section[aria-labelledby=\"titulo-resumo\"]').locator('[data-valor=\"frete\"]')\n    14 × locator resolved to <dd data-valor=\"frete\">R$ 19,90</dd>\n       - unexpected value \"R$ 19,90\"\n\n\n  90 |   // Só a assinatura já confirmada do bug é tratada como falha conhecida.\n  91 |   info.fail(frete === 'R$ 19,90' && total === 'R$ 199,90', 'BUG-001: frete cobrado no subtotal de R$ 200,00.');\n> 92 |   await expect.soft(carrinho.resumo.frete).toHaveText('Grátis');\n     |                                            ^\n  93 |   await expect.soft(carrinho.resumo.total).toHaveText('R$ 180,00');\n  94 | });\n  95 |\n    at .\\tests\\carrinho.spec.ts:92:44",
+        "Error: expect(locator).toHaveText(expected) failed\n\nLocator:  locator('section[aria-labelledby=\"titulo-resumo\"]').locator('[data-valor=\"total\"]')\nExpected: \"R$ 180,00\"\nReceived: \"R$ 199,90\"\nTimeout:  5000ms\n\nCall log:\n  - Expect \"soft toHaveText\" locator('section[aria-labelledby=\"titulo-resumo\"]').locator('[data-valor=\"total\"]') with timeout 5000ms\n  - waiting for locator('section[aria-labelledby=\"titulo-resumo\"]').locator('[data-valor=\"total\"]')\n    14 × locator resolved to <dd data-valor=\"total\">R$ 199,90</dd>\n       - unexpected value \"R$ 199,90\"\n\n\n  91 |   info.fail(frete === 'R$ 19,90' && total === 'R$ 199,90', 'BUG-001: frete cobrado no subtotal de R$ 200,00.');\n  92 |   await expect.soft(carrinho.resumo.frete).toHaveText('Grátis');\n> 93 |   await expect.soft(carrinho.resumo.total).toHaveText('R$ 180,00');\n     |                                            ^\n  94 | });\n  95 |\n  96 | test('AUTO-006 | CT-009, CT-010 | Limitar cinco unidades e recalcular quantidade', async ({ page }, info) => {\n    at .\\tests\\carrinho.spec.ts:93:44"
+      ],
+      "attachments": [
+        {
+          "name": "01-uma-unidade-com-cupom",
+          "path": "evidencias/automacao/2026-10-07/AUTO-005/01-uma-unidade-com-cupom.png",
+          "contentType": "image/png"
+        },
+        {
+          "name": "02-duas-unidades-com-cupom",
+          "path": "evidencias/automacao/2026-10-07/AUTO-005/02-duas-unidades-com-cupom.png",
+          "contentType": "image/png"
+        },
+        {
+          "name": "error-context",
+          "path": "evidencias/automacao/2026-10-07/AUTO-005/error-context.md",
+          "contentType": "text/markdown"
+        }
+      ]
+    },
+    {
+      "id": "AUTO-006",
+      "title": "AUTO-006 | CT-009, CT-010 | Limitar cinco unidades e recalcular quantidade",
+      "layer": "UI",
+      "ctIds": [
+        "CT-009",
+        "CT-010"
+      ],
+      "status": "passed",
+      "bugIds": [],
+      "statusPlaywright": "passed",
+      "expectedStatus": "passed",
+      "startedAt": "2026-10-07T17:32:39.597Z",
+      "durationMs": 1444,
+      "errors": [],
+      "attachments": [
+        {
+          "name": "01-quatro-unidades",
+          "path": "evidencias/automacao/2026-10-07/AUTO-006/01-quatro-unidades.png",
+          "contentType": "image/png"
+        },
+        {
+          "name": "02-limite-cinco-unidades",
+          "path": "evidencias/automacao/2026-10-07/AUTO-006/02-limite-cinco-unidades.png",
+          "contentType": "image/png"
+        },
+        {
+          "name": "03-quantidade-recalculada",
+          "path": "evidencias/automacao/2026-10-07/AUTO-006/03-quantidade-recalculada.png",
+          "contentType": "image/png"
+        }
+      ]
+    },
+    {
+      "id": "AUTO-007",
+      "title": "AUTO-007 | CT-012, CT-013 | Corrigir CEP e concluir pedido com cupom",
+      "layer": "UI",
+      "ctIds": [
+        "CT-012",
+        "CT-013"
+      ],
+      "status": "passed",
+      "bugIds": [],
+      "statusPlaywright": "passed",
+      "expectedStatus": "passed",
+      "startedAt": "2026-10-07T17:32:41.072Z",
+      "durationMs": 1679,
+      "errors": [],
+      "attachments": [
+        {
+          "name": "01-checkout-antes-de-confirmar",
+          "path": "evidencias/automacao/2026-10-07/AUTO-007/01-checkout-antes-de-confirmar.png",
+          "contentType": "image/png"
+        },
+        {
+          "name": "02-cep-invalido-rejeitado",
+          "path": "evidencias/automacao/2026-10-07/AUTO-007/02-cep-invalido-rejeitado.png",
+          "contentType": "image/png"
+        },
+        {
+          "name": "03-cep-corrigido",
+          "path": "evidencias/automacao/2026-10-07/AUTO-007/03-cep-corrigido.png",
+          "contentType": "image/png"
+        },
+        {
+          "name": "pedido-confirmado",
+          "path": "evidencias/automacao/2026-10-07/AUTO-007/pedido-confirmado.json",
+          "contentType": "application/json"
+        },
+        {
+          "name": "04-pedido-confirmado",
+          "path": "evidencias/automacao/2026-10-07/AUTO-007/04-pedido-confirmado.png",
+          "contentType": "image/png"
+        }
+      ]
+    },
+    {
+      "id": "AUTO-008",
+      "title": "AUTO-008 | CT-009-API-6C | Rejeitar seis unidades em /api/carrinho/calcular",
+      "layer": "API",
+      "ctIds": [
+        "CT-009-API-6C"
+      ],
+      "status": "known_failure",
+      "bugIds": [
+        "BUG-002"
+      ],
+      "statusPlaywright": "failed",
+      "expectedStatus": "failed",
+      "startedAt": "2026-10-07T17:32:42.777Z",
+      "durationMs": 265,
+      "errors": [
+        "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: 422\nReceived: 200\n\n  25 |       && (caso.statusBug === 201 ? /^VZ-\\d{6}$/.test(dados.numero) : dados.numero === undefined);\n  26 |     info.fail(bugConfirmado, 'BUG-002: API aceita seis unidades por produto.');\n> 27 |     expect.soft(resposta.status()).toBe(422);\n     |                                    ^\n  28 |     expect.soft(dados.erro?.codigo).toBe('QUANTIDADE_MAXIMA_EXCEDIDA');\n  29 |     expect.soft(dados.erro?.campo).toBe('itens[0].quantidade');\n  30 |     expect.soft(dados.erro?.mensagem).toMatch(/(?:5|cinco).*unidades.*produto/i);\n    at .\\tests\\limite-api.spec.ts:27:36",
+        "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: \"QUANTIDADE_MAXIMA_EXCEDIDA\"\nReceived: undefined\n\n  26 |     info.fail(bugConfirmado, 'BUG-002: API aceita seis unidades por produto.');\n  27 |     expect.soft(resposta.status()).toBe(422);\n> 28 |     expect.soft(dados.erro?.codigo).toBe('QUANTIDADE_MAXIMA_EXCEDIDA');\n     |                                     ^\n  29 |     expect.soft(dados.erro?.campo).toBe('itens[0].quantidade');\n  30 |     expect.soft(dados.erro?.mensagem).toMatch(/(?:5|cinco).*unidades.*produto/i);\n  31 |     expect.soft(dados.numero).toBeUndefined();\n    at .\\tests\\limite-api.spec.ts:28:37",
+        "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: \"itens[0].quantidade\"\nReceived: undefined\n\n  27 |     expect.soft(resposta.status()).toBe(422);\n  28 |     expect.soft(dados.erro?.codigo).toBe('QUANTIDADE_MAXIMA_EXCEDIDA');\n> 29 |     expect.soft(dados.erro?.campo).toBe('itens[0].quantidade');\n     |                                    ^\n  30 |     expect.soft(dados.erro?.mensagem).toMatch(/(?:5|cinco).*unidades.*produto/i);\n  31 |     expect.soft(dados.numero).toBeUndefined();\n  32 |   });\n    at .\\tests\\limite-api.spec.ts:29:36",
+        "TypeError: expect(received).toMatch(expected)\n\nMatcher error: received value must be a string\n\nReceived has value: undefined\n\n  28 |     expect.soft(dados.erro?.codigo).toBe('QUANTIDADE_MAXIMA_EXCEDIDA');\n  29 |     expect.soft(dados.erro?.campo).toBe('itens[0].quantidade');\n> 30 |     expect.soft(dados.erro?.mensagem).toMatch(/(?:5|cinco).*unidades.*produto/i);\n     |                                       ^\n  31 |     expect.soft(dados.numero).toBeUndefined();\n  32 |   });\n  33 | }\n    at .\\tests\\limite-api.spec.ts:30:39"
+      ],
+      "attachments": [
+        {
+          "name": "requisicao-resposta",
+          "path": "evidencias/automacao/2026-10-07/AUTO-008/requisicao-resposta.json",
+          "contentType": "application/json"
+        },
+        {
+          "name": "error-context",
+          "path": "evidencias/automacao/2026-10-07/AUTO-008/error-context.md",
+          "contentType": "text/markdown"
+        }
+      ]
+    },
+    {
+      "id": "AUTO-009",
+      "title": "AUTO-009 | CT-009-API-6P | Rejeitar seis unidades em /api/pedidos",
+      "layer": "API",
+      "ctIds": [
+        "CT-009-API-6P"
+      ],
+      "status": "known_failure",
+      "bugIds": [
+        "BUG-002"
+      ],
+      "statusPlaywright": "failed",
+      "expectedStatus": "failed",
+      "startedAt": "2026-10-07T17:32:43.062Z",
+      "durationMs": 212,
+      "errors": [
+        "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: 422\nReceived: 201\n\n  25 |       && (caso.statusBug === 201 ? /^VZ-\\d{6}$/.test(dados.numero) : dados.numero === undefined);\n  26 |     info.fail(bugConfirmado, 'BUG-002: API aceita seis unidades por produto.');\n> 27 |     expect.soft(resposta.status()).toBe(422);\n     |                                    ^\n  28 |     expect.soft(dados.erro?.codigo).toBe('QUANTIDADE_MAXIMA_EXCEDIDA');\n  29 |     expect.soft(dados.erro?.campo).toBe('itens[0].quantidade');\n  30 |     expect.soft(dados.erro?.mensagem).toMatch(/(?:5|cinco).*unidades.*produto/i);\n    at .\\tests\\limite-api.spec.ts:27:36",
+        "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: \"QUANTIDADE_MAXIMA_EXCEDIDA\"\nReceived: undefined\n\n  26 |     info.fail(bugConfirmado, 'BUG-002: API aceita seis unidades por produto.');\n  27 |     expect.soft(resposta.status()).toBe(422);\n> 28 |     expect.soft(dados.erro?.codigo).toBe('QUANTIDADE_MAXIMA_EXCEDIDA');\n     |                                     ^\n  29 |     expect.soft(dados.erro?.campo).toBe('itens[0].quantidade');\n  30 |     expect.soft(dados.erro?.mensagem).toMatch(/(?:5|cinco).*unidades.*produto/i);\n  31 |     expect.soft(dados.numero).toBeUndefined();\n    at .\\tests\\limite-api.spec.ts:28:37",
+        "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: \"itens[0].quantidade\"\nReceived: undefined\n\n  27 |     expect.soft(resposta.status()).toBe(422);\n  28 |     expect.soft(dados.erro?.codigo).toBe('QUANTIDADE_MAXIMA_EXCEDIDA');\n> 29 |     expect.soft(dados.erro?.campo).toBe('itens[0].quantidade');\n     |                                    ^\n  30 |     expect.soft(dados.erro?.mensagem).toMatch(/(?:5|cinco).*unidades.*produto/i);\n  31 |     expect.soft(dados.numero).toBeUndefined();\n  32 |   });\n    at .\\tests\\limite-api.spec.ts:29:36",
+        "TypeError: expect(received).toMatch(expected)\n\nMatcher error: received value must be a string\n\nReceived has value: undefined\n\n  28 |     expect.soft(dados.erro?.codigo).toBe('QUANTIDADE_MAXIMA_EXCEDIDA');\n  29 |     expect.soft(dados.erro?.campo).toBe('itens[0].quantidade');\n> 30 |     expect.soft(dados.erro?.mensagem).toMatch(/(?:5|cinco).*unidades.*produto/i);\n     |                                       ^\n  31 |     expect.soft(dados.numero).toBeUndefined();\n  32 |   });\n  33 | }\n    at .\\tests\\limite-api.spec.ts:30:39",
+        "Error: expect(received).toBeUndefined()\n\nReceived: \"VZ-974869\"\n\n  29 |     expect.soft(dados.erro?.campo).toBe('itens[0].quantidade');\n  30 |     expect.soft(dados.erro?.mensagem).toMatch(/(?:5|cinco).*unidades.*produto/i);\n> 31 |     expect.soft(dados.numero).toBeUndefined();\n     |                               ^\n  32 |   });\n  33 | }\n  34 |\n    at .\\tests\\limite-api.spec.ts:31:31"
+      ],
+      "attachments": [
+        {
+          "name": "requisicao-resposta",
+          "path": "evidencias/automacao/2026-10-07/AUTO-009/requisicao-resposta.json",
+          "contentType": "application/json"
+        },
+        {
+          "name": "error-context",
+          "path": "evidencias/automacao/2026-10-07/AUTO-009/error-context.md",
+          "contentType": "text/markdown"
+        }
+      ]
+    }
+  ]
+}

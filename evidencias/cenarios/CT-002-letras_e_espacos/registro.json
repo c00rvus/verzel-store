@@ -1,0 +1,73 @@
+{
+  "caseId": "CT-002-letras_e_espacos",
+  "group": "CT-002",
+  "layer": "UI",
+  "input": "Cupom \"  BeMvInDo10  \"",
+  "date": "07/10 10:17:19",
+  "expected": "100,00 / 10,00 / 19,90 / 109,90",
+  "actual": "100,00 / 10,00 / 19,90 / 109,90",
+  "status": "Aprovado",
+  "evidenceId": "EV-017",
+  "bugIds": [],
+  "evidenceRecord": {
+    "sourcePath": "evidencias/execucao-2026-10-07/ui-resultados.json",
+    "sourceId": "CT-002-letras_e_espacos",
+    "recordedAtUTC": "2026-10-07T14:17:19.226Z",
+    "dados": {
+      "produto": "P005",
+      "quantidade": 1,
+      "cupom": "  BeMvInDo10  "
+    },
+    "esperado": {
+      "subtotal": 100,
+      "desconto": 10,
+      "frete": 19.9,
+      "total": 109.9
+    },
+    "obtido": "Resumo do pedido\nSubtotal\nR$ 100,00\nDesconto (BEMVINDO10)\n- R$ 10,00\nFrete\nR$ 19,90\nTotal\nR$ 109,90\n\nFaltam R$ 100,00 para o frete grátis.\n\nFinalizar compra",
+    "status": "Aprovado",
+    "arquivos": [
+      "evidencias/execucao-2026-10-07/CT-002-letras-espacos-antes.png",
+      "evidencias/execucao-2026-10-07/CT-002-letras-espacos-preenchido.png",
+      "evidencias/execucao-2026-10-07/CT-002-letras-espacos-depois.png"
+    ]
+  },
+  "dados": {
+    "produto": "P005",
+    "quantidade": 1,
+    "cupom": "  BeMvInDo10  "
+  },
+  "sourcePath": "evidencias/execucao-2026-10-07/ui-resultados.json",
+  "sourceId": "CT-002-letras_e_espacos",
+  "recordedAtUTC": "2026-10-07T14:17:19.226Z",
+  "images": [
+    {
+      "path": "evidencias/execucao-2026-10-07/CT-002-letras-espacos-antes.png",
+      "label": "Carrinho sem cupom",
+      "stage": "Carrinho sem cupom",
+      "time": "2026-10-07T14:17:18.509Z",
+      "phase": "before"
+    },
+    {
+      "path": "evidencias/execucao-2026-10-07/CT-002-letras-espacos-preenchido.png",
+      "label": "Entrada exata registrada em JSON",
+      "stage": "Entrada exata registrada em JSON",
+      "time": "2026-10-07T14:17:18.747Z",
+      "phase": "input"
+    },
+    {
+      "path": "evidencias/execucao-2026-10-07/CT-002-letras-espacos-depois.png",
+      "label": "Cupom aceito e resumo atualizado",
+      "stage": "Cupom aceito e resumo atualizado",
+      "time": "2026-10-07T14:17:19.200Z",
+      "phase": "after"
+    }
+  ],
+  "pairs": [
+    {
+      "label": "letras espacos",
+      "beforePath": "evidencias/execucao-2026-10-07/CT-002-letras-espacos-antes.png",
+      "afterPath": "evidencias/execucao-2026-10-07/CT-002-letras-espacos-depois.png"
+    }
+  ]
+}

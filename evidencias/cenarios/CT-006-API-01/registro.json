@@ -1,0 +1,53 @@
+{
+  "caseId": "CT-006-API-01",
+  "group": "CT-006",
+  "layer": "API",
+  "input": "POST /api/carrinho/calcular; P005 ×2; BEMVINDO10",
+  "date": "06/10 14:06:36",
+  "expected": "200; 200,00 / 20,00 / 0,00 / 180,00; frete grátis",
+  "actual": "200; 200,00 / 20,00 / 19,90 / 199,90; freteGratis=false; BUG-001",
+  "status": "Reprovado",
+  "evidenceId": "EV-002",
+  "bugIds": [
+    "BUG-001"
+  ],
+  "method": "POST",
+  "path": "/api/carrinho/calcular",
+  "request": {
+    "itens": [
+      {
+        "produtoId": "P005",
+        "quantidade": 2
+      }
+    ],
+    "cupom": "BEMVINDO10"
+  },
+  "response": {
+    "itens": [
+      {
+        "produtoId": "P005",
+        "nome": "Mochila Urbana 20L",
+        "precoUnitario": 100,
+        "quantidade": 2,
+        "total": 200
+      }
+    ],
+    "subtotal": 200,
+    "desconto": 20,
+    "frete": 19.9,
+    "freteGratis": false,
+    "valorFaltanteFreteGratis": 0,
+    "total": 199.9,
+    "cupom": {
+      "codigo": "BEMVINDO10",
+      "aplicado": true,
+      "mensagem": "Cupom aplicado: 10% de desconto nos produtos."
+    }
+  },
+  "httpStatus": 200,
+  "sourcePath": "evidencias/revisao-ambiente/api-limite-frete.json",
+  "sourceId": "CT-006-com-cupom",
+  "recordedAtUTC": "2026-10-06T18:06:36.6836655Z",
+  "images": [],
+  "pairs": []
+}

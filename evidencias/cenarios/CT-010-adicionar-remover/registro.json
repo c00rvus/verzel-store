@@ -1,0 +1,136 @@
+{
+  "caseId": "CT-010-adicionar-remover",
+  "group": "CT-010",
+  "layer": "UI",
+  "input": "P005 ×1 + P008 ×1; remover P008; BEMVINDO10",
+  "date": "07/10 10:18:39",
+  "expected": "Adicionar: 150,00 / 15,00 / 19,90 / 154,90; remover: 100,00 / 10,00 / 19,90 / 109,90",
+  "actual": "Valores corretos nos dois estados; faltante 50,00 → 100,00",
+  "status": "Aprovado",
+  "evidenceId": "EV-023",
+  "bugIds": [],
+  "evidenceRecord": {
+    "sourcePath": "evidencias/execucao-2026-10-07/ui-resultados.json",
+    "sourceId": "CT-010-adicionar-remover",
+    "recordedAtUTC": "2026-10-07T14:18:39.947Z",
+    "dados": {
+      "produtos": [
+        {
+          "id": "P005",
+          "quantidade": 1
+        },
+        {
+          "id": "P008",
+          "quantidade": 1
+        }
+      ],
+      "cupom": "BEMVINDO10"
+    },
+    "esperado": {
+      "adicionado": {
+        "subtotal": 150,
+        "desconto": 15,
+        "frete": 19.9,
+        "total": 154.9,
+        "faltante": 50
+      },
+      "removido": {
+        "subtotal": 100,
+        "desconto": 10,
+        "frete": 19.9,
+        "total": 109.9,
+        "faltante": 100
+      }
+    },
+    "obtido": {
+      "adicionado": "Resumo do pedido\nSubtotal\nR$ 150,00\nDesconto (BEMVINDO10)\n- R$ 15,00\nFrete\nR$ 19,90\nTotal\nR$ 154,90\n\nFaltam R$ 50,00 para o frete grátis.\n\nFinalizar compra",
+      "removido": "Resumo do pedido\nSubtotal\nR$ 100,00\nDesconto (BEMVINDO10)\n- R$ 10,00\nFrete\nR$ 19,90\nTotal\nR$ 109,90\n\nFaltam R$ 100,00 para o frete grátis.\n\nFinalizar compra"
+    },
+    "status": "Aprovado",
+    "arquivos": [
+      "evidencias/execucao-2026-10-07/CT-010-adicionar-antes.png",
+      "evidencias/execucao-2026-10-07/CT-010-vitrine-antes-adicionar.png",
+      "evidencias/execucao-2026-10-07/CT-010-vitrine-depois-adicionar.png",
+      "evidencias/execucao-2026-10-07/CT-010-adicionar-depois.png",
+      "evidencias/execucao-2026-10-07/CT-010-remover-antes.png",
+      "evidencias/execucao-2026-10-07/CT-010-remover-depois.png"
+    ]
+  },
+  "dados": {
+    "produtos": [
+      {
+        "id": "P005",
+        "quantidade": 1
+      },
+      {
+        "id": "P008",
+        "quantidade": 1
+      }
+    ],
+    "cupom": "BEMVINDO10"
+  },
+  "sourcePath": "evidencias/execucao-2026-10-07/ui-resultados.json",
+  "sourceId": "CT-010-adicionar-remover",
+  "recordedAtUTC": "2026-10-07T14:18:39.947Z",
+  "images": [
+    {
+      "path": "evidencias/execucao-2026-10-07/CT-010-adicionar-antes.png",
+      "label": "Resumo antes de adicionar outro produto",
+      "stage": "Resumo antes de adicionar outro produto",
+      "time": "2026-10-07T14:18:19.855Z",
+      "phase": "before"
+    },
+    {
+      "path": "evidencias/execucao-2026-10-07/CT-010-vitrine-antes-adicionar.png",
+      "label": "Vitrine antes de adicionar a garrafa",
+      "stage": "Vitrine antes de adicionar a garrafa",
+      "time": "2026-10-07T14:18:37.450Z",
+      "phase": "before"
+    },
+    {
+      "path": "evidencias/execucao-2026-10-07/CT-010-vitrine-depois-adicionar.png",
+      "label": "Garrafa adicionada à mochila",
+      "stage": "Garrafa adicionada à mochila",
+      "time": "2026-10-07T14:18:38.947Z",
+      "phase": "after"
+    },
+    {
+      "path": "evidencias/execucao-2026-10-07/CT-010-adicionar-depois.png",
+      "label": "Resumo recalculado com mochila e garrafa",
+      "stage": "Resumo recalculado com mochila e garrafa",
+      "time": "2026-10-07T14:18:39.272Z",
+      "phase": "after"
+    },
+    {
+      "path": "evidencias/execucao-2026-10-07/CT-010-remover-antes.png",
+      "label": "Duas linhas de produtos antes da remoção",
+      "stage": "Duas linhas de produtos antes da remoção",
+      "time": "2026-10-07T14:18:39.405Z",
+      "phase": "before"
+    },
+    {
+      "path": "evidencias/execucao-2026-10-07/CT-010-remover-depois.png",
+      "label": "Resumo recalculado após remover garrafa",
+      "stage": "Resumo recalculado após remover garrafa",
+      "time": "2026-10-07T14:18:39.917Z",
+      "phase": "after"
+    }
+  ],
+  "pairs": [
+    {
+      "label": "adicionar",
+      "beforePath": "evidencias/execucao-2026-10-07/CT-010-adicionar-antes.png",
+      "afterPath": "evidencias/execucao-2026-10-07/CT-010-adicionar-depois.png"
+    },
+    {
+      "label": "vitrine adicionar",
+      "beforePath": "evidencias/execucao-2026-10-07/CT-010-vitrine-antes-adicionar.png",
+      "afterPath": "evidencias/execucao-2026-10-07/CT-010-vitrine-depois-adicionar.png"
+    },
+    {
+      "label": "remover",
+      "beforePath": "evidencias/execucao-2026-10-07/CT-010-remover-antes.png",
+      "afterPath": "evidencias/execucao-2026-10-07/CT-010-remover-depois.png"
+    }
+  ]
+}

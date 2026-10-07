@@ -1,0 +1,109 @@
+{
+  "caseId": "CT-013-UI-cep-sete-digitos",
+  "group": "CT-013",
+  "layer": "UI",
+  "input": "CEP: \"0131010\"",
+  "date": "07/10 10:23:30",
+  "expected": "Bloquear pedido; indicar campo inválido; permitir correção",
+  "actual": "Informe um CEP com 8 dígitos. Sem confirmação; campo corrigido e editável.",
+  "status": "Aprovado",
+  "evidenceId": "EV-030",
+  "bugIds": [],
+  "evidenceRecord": {
+    "sourcePath": "evidencias/execucao-2026-10-07/ui-resultados.json",
+    "sourceId": "CT-013-UI-cep-sete-digitos",
+    "recordedAtUTC": "2026-10-07T14:23:30.939Z",
+    "dados": {
+      "nome": "Maria Silva",
+      "email": "maria@example.com",
+      "cep": "0131010",
+      "cupom": null
+    },
+    "esperado": {
+      "confirmado": false,
+      "campo": "CEP",
+      "correcao": "01310-100"
+    },
+    "obtido": {
+      "rejeicao": "- note:\n  - paragraph:\n    - text: Ambiente de teste técnico do processo seletivo de QA da Verzel.\n    - link \"Leia a documentação antes de começar.\":\n      - /url: /documentacao\n- banner:\n  - link \"Verzel Store, página inicial\":\n    - /url: /\n    - generic: verzel\n    - generic: store\n  - navigation \"Principal\":\n    - link \"Produtos\":\n      - /url: /\n    - link \"Documentação\":\n      - /url: /documentacao\n    - link \"Carrinho 1 itens no carrinho\":\n      - /url: /carrinho\n      - text: Carrinho\n      - generic \"1 itens no carrinho\": \"1\"\n- main:\n  - heading \"Finalizar compra\" [level=1]\n  - link \"Voltar ao carrinho\":\n    - /url: /carrinho\n  - heading \"Dados para entrega\" [level=2]\n  - generic: Nome completo\n  - textbox \"Nome completo\": Maria Silva\n  - generic: E-mail\n  - textbox \"E-mail\": <redacted>\n  - generic: CEP\n  - textbox \"CEP\": \"0131010\"\n  - paragraph: Somente números ou no formato 00000-000.\n  - paragraph: Informe um CEP com 8 dígitos.\n  - paragraph: O pagamento é feito na entrega.\n  - button \"Confirmar pedido\" [active]\n  - region \"Resumo do pedido\":\n    - heading \"Resumo do pedido\" [level=2]\n    - term: Subtotal\n    - definition: R$ 100,00\n    - term: Desconto\n    - definition: R$ 0,00\n    - term: Frete\n    - definition: R$ 19,90\n    - term: Total\n    - definition: R$ 119,90\n    - list:\n      - generic: 1x Mochila Urbana 20L\n      - generic: R$ 100,00\n- contentinfo:\n  - paragraph: Verzel Store é um ambiente fictício criado para o teste técnico do processo seletivo de QA da Verzel. Nenhuma compra é real.",
+      "correcao": "- note:\n  - paragraph:\n    - text: Ambiente de teste técnico do processo seletivo de QA da Verzel.\n    - link \"Leia a documentação antes de começar.\":\n      - /url: /documentacao\n- banner:\n  - link \"Verzel Store, página inicial\":\n    - /url: /\n    - generic: verzel\n    - generic: store\n  - navigation \"Principal\":\n    - link \"Produtos\":\n      - /url: /\n    - link \"Documentação\":\n      - /url: /documentacao\n    - link \"Carrinho 1 itens no carrinho\":\n      - /url: /carrinho\n      - text: Carrinho\n      - generic \"1 itens no carrinho\": \"1\"\n- main:\n  - heading \"Finalizar compra\" [level=1]\n  - link \"Voltar ao carrinho\":\n    - /url: /carrinho\n  - heading \"Dados para entrega\" [level=2]\n  - generic: Nome completo\n  - textbox \"Nome completo\": Maria Silva\n  - generic: E-mail\n  - textbox \"E-mail\": <redacted>\n  - generic: CEP\n  - textbox \"CEP\" [active]: 01310-100\n  - paragraph: Somente números ou no formato 00000-000.\n  - paragraph: Informe um CEP com 8 dígitos.\n  - paragraph: O pagamento é feito na entrega.\n  - button \"Confirmar pedido\"\n  - region \"Resumo do pedido\":\n    - heading \"Resumo do pedido\" [level=2]\n    - term: Subtotal\n    - definition: R$ 100,00\n    - term: Desconto\n    - definition: R$ 0,00\n    - term: Frete\n    - definition: R$ 19,90\n    - term: Total\n    - definition: R$ 119,90\n    - list:\n      - generic: 1x Mochila Urbana 20L\n      - generic: R$ 100,00\n- contentinfo:\n  - paragraph: Verzel Store é um ambiente fictício criado para o teste técnico do processo seletivo de QA da Verzel. Nenhuma compra é real."
+    },
+    "status": "Aprovado",
+    "arquivos": [
+      "evidencias/execucao-2026-10-07/CT-013-cep-sete-digitos-carrinho-antes-esvaziar.png",
+      "evidencias/execucao-2026-10-07/CT-013-cep-sete-digitos-carrinho-vazio.png",
+      "evidencias/execucao-2026-10-07/CT-013-cep-sete-digitos-carrinho-depois-adicionar.png",
+      "evidencias/execucao-2026-10-07/CT-013-cep-sete-digitos-formulario-antes.png",
+      "evidencias/execucao-2026-10-07/CT-013-cep-sete-digitos-antes-confirmar.png",
+      "evidencias/execucao-2026-10-07/CT-013-cep-sete-digitos-depois-confirmar.png",
+      "evidencias/execucao-2026-10-07/CT-013-cep-sete-digitos-depois-corrigir.png"
+    ]
+  },
+  "dados": {
+    "nome": "Maria Silva",
+    "email": "maria@example.com",
+    "cep": "0131010",
+    "cupom": null
+  },
+  "sourcePath": "evidencias/execucao-2026-10-07/ui-resultados.json",
+  "sourceId": "CT-013-UI-cep-sete-digitos",
+  "recordedAtUTC": "2026-10-07T14:23:30.939Z",
+  "images": [
+    {
+      "path": "evidencias/execucao-2026-10-07/CT-013-cep-sete-digitos-carrinho-antes-esvaziar.png",
+      "label": "Preparação: carrinho anterior",
+      "stage": "Preparação: carrinho anterior",
+      "time": "2026-10-07T14:23:28.335Z",
+      "phase": "before"
+    },
+    {
+      "path": "evidencias/execucao-2026-10-07/CT-013-cep-sete-digitos-carrinho-vazio.png",
+      "label": "Pré-condição: carrinho vazio",
+      "stage": "Pré-condição: carrinho vazio",
+      "time": "2026-10-07T14:23:28.749Z",
+      "phase": "preparation"
+    },
+    {
+      "path": "evidencias/execucao-2026-10-07/CT-013-cep-sete-digitos-carrinho-depois-adicionar.png",
+      "label": "Preparação: uma mochila sem cupom",
+      "stage": "Preparação: uma mochila sem cupom",
+      "time": "2026-10-07T14:23:29.679Z",
+      "phase": "after"
+    },
+    {
+      "path": "evidencias/execucao-2026-10-07/CT-013-cep-sete-digitos-formulario-antes.png",
+      "label": "Formulário vazio",
+      "stage": "Formulário vazio",
+      "time": "2026-10-07T14:23:30.009Z",
+      "phase": "before"
+    },
+    {
+      "path": "evidencias/execucao-2026-10-07/CT-013-cep-sete-digitos-antes-confirmar.png",
+      "label": "Um campo inválido; demais campos válidos",
+      "stage": "Um campo inválido; demais campos válidos",
+      "time": "2026-10-07T14:23:30.265Z",
+      "phase": "before"
+    },
+    {
+      "path": "evidencias/execucao-2026-10-07/CT-013-cep-sete-digitos-depois-confirmar.png",
+      "label": "Erro do campo e pedido não confirmado",
+      "stage": "Erro do campo e pedido não confirmado",
+      "time": "2026-10-07T14:23:30.742Z",
+      "phase": "after"
+    },
+    {
+      "path": "evidencias/execucao-2026-10-07/CT-013-cep-sete-digitos-depois-corrigir.png",
+      "label": "Campo corrigido e formulário editável",
+      "stage": "Campo corrigido e formulário editável",
+      "time": "2026-10-07T14:23:30.935Z",
+      "phase": "after"
+    }
+  ],
+  "pairs": [
+    {
+      "label": "Validação do campo",
+      "beforePath": "evidencias/execucao-2026-10-07/CT-013-cep-sete-digitos-antes-confirmar.png",
+      "afterPath": "evidencias/execucao-2026-10-07/CT-013-cep-sete-digitos-depois-confirmar.png"
+    }
+  ]
+}

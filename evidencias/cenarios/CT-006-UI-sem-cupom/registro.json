@@ -1,0 +1,81 @@
+{
+  "caseId": "CT-006-UI-sem-cupom",
+  "group": "CT-006",
+  "layer": "UI",
+  "input": "P005 ×2; sem cupom",
+  "date": "07/10 11:19:59",
+  "expected": "200,00 / 0,00 / 0,00 / 200,00",
+  "actual": "200,00 / 0,00 / 19,90 / 219,90; faltante 0,00",
+  "status": "Reprovado",
+  "evidenceId": "EV-038",
+  "bugIds": [
+    "BUG-001"
+  ],
+  "originalRecord": {
+    "id": "CT-006-UI-sem-cupom",
+    "layer": "UI",
+    "group": "CT-006",
+    "input": "P005 ×2; sem cupom",
+    "date": "07/10 11:19:59",
+    "expected": "200,00 / 0,00 / 0,00 / 200,00",
+    "actual": "200,00 / 0,00 / 19,90 / 219,90; BUG-001",
+    "status": "Reprovado",
+    "evidenceId": "EV-038",
+    "bugIds": [
+      "BUG-001"
+    ]
+  },
+  "evidenceRecord": {
+    "sourcePath": "evidencias/revisao-2026-10-07/ui-complementos.json",
+    "sourceId": "CT-006-UI-sem-cupom",
+    "recordedAtUTC": "2026-10-07T15:19:59.456Z",
+    "dados": {
+      "produto": "P005",
+      "quantidade": 2,
+      "cupom": null
+    },
+    "esperado": {
+      "subtotal": 200,
+      "desconto": 0,
+      "frete": 0,
+      "total": 200
+    },
+    "obtido": "Resumo do pedido\nSubtotal\nR$ 200,00\nDesconto\nR$ 0,00\nFrete\nR$ 19,90\nTotal\nR$ 219,90\n\nFaltam R$ 0,00 para o frete grátis.\n\nFinalizar compra",
+    "status": "Reprovado",
+    "arquivos": [
+      "evidencias/revisao-2026-10-07/CT-006-UI-sem-cupom-antes.png",
+      "evidencias/revisao-2026-10-07/CT-006-UI-sem-cupom-depois.png"
+    ]
+  },
+  "dados": {
+    "produto": "P005",
+    "quantidade": 2,
+    "cupom": null
+  },
+  "sourcePath": "evidencias/revisao-2026-10-07/ui-complementos.json",
+  "sourceId": "CT-006-UI-sem-cupom",
+  "recordedAtUTC": "2026-10-07T15:19:59.456Z",
+  "images": [
+    {
+      "path": "evidencias/revisao-2026-10-07/CT-006-UI-sem-cupom-antes.png",
+      "label": "Uma mochila sem cupom antes de aumentar",
+      "stage": "Uma mochila sem cupom antes de aumentar",
+      "time": "2026-10-07T15:19:59.008Z",
+      "phase": "before"
+    },
+    {
+      "path": "evidencias/revisao-2026-10-07/CT-006-UI-sem-cupom-depois.png",
+      "label": "Subtotal 200,00 sem cupom; frete cobrado",
+      "stage": "Subtotal 200,00 sem cupom; frete cobrado",
+      "time": "2026-10-07T15:19:59.438Z",
+      "phase": "after"
+    }
+  ],
+  "pairs": [
+    {
+      "label": "UI sem cupom",
+      "beforePath": "evidencias/revisao-2026-10-07/CT-006-UI-sem-cupom-antes.png",
+      "afterPath": "evidencias/revisao-2026-10-07/CT-006-UI-sem-cupom-depois.png"
+    }
+  ]
+}

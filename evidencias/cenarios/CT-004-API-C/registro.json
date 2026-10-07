@@ -1,0 +1,51 @@
+{
+  "caseId": "CT-004-API-C",
+  "group": "CT-004",
+  "layer": "API",
+  "input": "POST /api/carrinho/calcular; P005 ×1; VERAO2026",
+  "date": "06/10 14:07:11",
+  "expected": "200; 100,00 / 0,00 / 19,90 / 119,90; cupom rejeitado sem desconto",
+  "actual": "200; 100,00 / 0,00 / 19,90 / 119,90; Cupom expirado.",
+  "status": "Aprovado",
+  "evidenceId": "EV-006",
+  "bugIds": [],
+  "method": "POST",
+  "path": "/api/carrinho/calcular",
+  "request": {
+    "cupom": "VERAO2026",
+    "itens": [
+      {
+        "produtoId": "P005",
+        "quantidade": 1
+      }
+    ]
+  },
+  "response": {
+    "itens": [
+      {
+        "produtoId": "P005",
+        "nome": "Mochila Urbana 20L",
+        "precoUnitario": 100,
+        "quantidade": 1,
+        "total": 100
+      }
+    ],
+    "subtotal": 100,
+    "desconto": 0,
+    "frete": 19.9,
+    "freteGratis": false,
+    "valorFaltanteFreteGratis": 100,
+    "total": 119.9,
+    "cupom": {
+      "codigo": "VERAO2026",
+      "aplicado": false,
+      "mensagem": "Cupom expirado."
+    }
+  },
+  "httpStatus": 200,
+  "sourcePath": "evidencias/revisao-ambiente/api-observacoes-powershell.json",
+  "sourceId": "CT-004-A",
+  "recordedAtUTC": "2026-10-06T18:07:11.6677448Z",
+  "images": [],
+  "pairs": []
+}

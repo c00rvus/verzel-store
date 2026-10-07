@@ -1,0 +1,27 @@
+{
+  "id": "AUTO-003",
+  "title": "AUTO-003 | CT-004 | Rejeitar VERAO2026",
+  "layer": "UI",
+  "ctIds": [
+    "CT-004"
+  ],
+  "status": "passed",
+  "bugIds": [],
+  "statusPlaywright": "passed",
+  "expectedStatus": "passed",
+  "startedAt": "2026-10-07T17:32:26.414Z",
+  "durationMs": 954,
+  "errors": [],
+  "attachments": [
+    {
+      "name": "01-antes-do-cupom",
+      "path": "evidencias/automacao/2026-10-07/AUTO-003/01-antes-do-cupom.png",
+      "contentType": "image/png"
+    },
+    {
+      "name": "02-cupom-rejeitado",
+      "path": "evidencias/automacao/2026-10-07/AUTO-003/02-cupom-rejeitado.png",
+      "contentType": "image/png"
+    }
+  ]
+}

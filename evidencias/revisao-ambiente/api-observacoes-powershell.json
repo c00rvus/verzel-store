@@ -1,0 +1,627 @@
+{
+  "baseURL": "https://verzel-store.qa-test-verzel-store.workers.dev",
+  "natureza": "Inspeção pontual; não substitui a execução completa dos esquemas Gherkin.",
+  "resultados": [
+    {
+      "id": "CA08-base-antes-desconto",
+      "observadoEmUTC": "2026-10-06T18:07:10.2878425Z",
+      "method": "POST",
+      "path": "/api/carrinho/calcular",
+      "request": {
+        "cupom": "BEMVINDO10",
+        "itens": [
+          {
+            "produtoId": "P001",
+            "quantidade": 1
+          },
+          {
+            "produtoId": "P008",
+            "quantidade": 3
+          }
+        ]
+      },
+      "status": 200,
+      "response": {
+        "itens": [
+          {
+            "produtoId": "P001",
+            "nome": "Camiseta Essencial",
+            "precoUnitario": 59.9,
+            "quantidade": 1,
+            "total": 59.9
+          },
+          {
+            "produtoId": "P008",
+            "nome": "Garrafa Térmica 750ml",
+            "precoUnitario": 50,
+            "quantidade": 3,
+            "total": 150
+          }
+        ],
+        "subtotal": 209.9,
+        "desconto": 20.99,
+        "frete": 0,
+        "freteGratis": true,
+        "valorFaltanteFreteGratis": 0,
+        "total": 188.91,
+        "cupom": {
+          "codigo": "BEMVINDO10",
+          "aplicado": true,
+          "mensagem": "Cupom aplicado: 10% de desconto nos produtos."
+        }
+      }
+    },
+    {
+      "id": "CT-014-A",
+      "observadoEmUTC": "2026-10-06T18:07:10.7165439Z",
+      "method": "GET",
+      "path": "/api/produtos",
+      "request": null,
+      "status": 200,
+      "response": [
+        {
+          "id": "P001",
+          "nome": "Camiseta Essencial",
+          "descricao": "Algodão penteado e corte reto.",
+          "categoria": "Vestuário",
+          "preco": 59.9
+        },
+        {
+          "id": "P002",
+          "nome": "Calça Jeans Slim",
+          "descricao": "Jeans com elastano e lavagem escura.",
+          "categoria": "Vestuário",
+          "preco": 139.9
+        },
+        {
+          "id": "P003",
+          "nome": "Tênis Casual Urbano",
+          "descricao": "Solado de borracha e cabedal em lona.",
+          "categoria": "Calçados",
+          "preco": 189.9
+        },
+        {
+          "id": "P004",
+          "nome": "Boné Aba Curva",
+          "descricao": "Ajuste traseiro com fivela metálica.",
+          "categoria": "Acessórios",
+          "preco": 49.9
+        },
+        {
+          "id": "P005",
+          "nome": "Mochila Urbana 20L",
+          "descricao": "Compartimento acolchoado para notebook.",
+          "categoria": "Acessórios",
+          "preco": 100
+        },
+        {
+          "id": "P006",
+          "nome": "Kit 3 Pares de Meias",
+          "descricao": "Cano médio, algodão com reforço no calcanhar.",
+          "categoria": "Vestuário",
+          "preco": 29.9
+        },
+        {
+          "id": "P007",
+          "nome": "Jaqueta Corta-Vento",
+          "descricao": "Tecido leve e repelente à água.",
+          "categoria": "Vestuário",
+          "preco": 229.9
+        },
+        {
+          "id": "P008",
+          "nome": "Garrafa Térmica 750ml",
+          "descricao": "Mantém a temperatura por até 12 horas.",
+          "categoria": "Acessórios",
+          "preco": 50
+        }
+      ]
+    },
+    {
+      "id": "CT-014-B",
+      "observadoEmUTC": "2026-10-06T18:07:10.8942809Z",
+      "method": "GET",
+      "path": "/api/produtos/P005",
+      "request": null,
+      "status": 200,
+      "response": {
+        "id": "P005",
+        "nome": "Mochila Urbana 20L",
+        "descricao": "Compartimento acolchoado para notebook.",
+        "categoria": "Acessórios",
+        "preco": 100
+      }
+    },
+    {
+      "id": "CT-014-C",
+      "observadoEmUTC": "2026-10-06T18:07:11.0109713Z",
+      "method": "GET",
+      "path": "/api/produtos/P999",
+      "request": null,
+      "status": 404,
+      "response": {
+        "erro": {
+          "codigo": "PRODUTO_NAO_ENCONTRADO",
+          "mensagem": "Produto P999 não encontrado."
+        }
+      }
+    },
+    {
+      "id": "CT-003-A",
+      "observadoEmUTC": "2026-10-06T18:07:11.3473762Z",
+      "method": "POST",
+      "path": "/api/carrinho/calcular",
+      "request": {
+        "cupom": "INEXISTENTE",
+        "itens": [
+          {
+            "produtoId": "P005",
+            "quantidade": 1
+          }
+        ]
+      },
+      "status": 200,
+      "response": {
+        "itens": [
+          {
+            "produtoId": "P005",
+            "nome": "Mochila Urbana 20L",
+            "precoUnitario": 100,
+            "quantidade": 1,
+            "total": 100
+          }
+        ],
+        "subtotal": 100,
+        "desconto": 0,
+        "frete": 19.9,
+        "freteGratis": false,
+        "valorFaltanteFreteGratis": 100,
+        "total": 119.9,
+        "cupom": {
+          "codigo": "INEXISTENTE",
+          "aplicado": false,
+          "mensagem": "Cupom inválido."
+        }
+      }
+    },
+    {
+      "id": "CT-003-B",
+      "observadoEmUTC": "2026-10-06T18:07:11.5665253Z",
+      "method": "POST",
+      "path": "/api/pedidos",
+      "request": {
+        "cliente": {
+          "nome": "Maria Silva",
+          "email": "maria@example.com",
+          "cep": "01310-100"
+        },
+        "cupom": "INEXISTENTE",
+        "itens": [
+          {
+            "produtoId": "P005",
+            "quantidade": 1
+          }
+        ]
+      },
+      "status": 422,
+      "response": {
+        "erro": {
+          "codigo": "CUPOM_INVALIDO",
+          "mensagem": "Cupom inválido.",
+          "campo": "cupom"
+        }
+      }
+    },
+    {
+      "id": "CT-004-A",
+      "observadoEmUTC": "2026-10-06T18:07:11.6677448Z",
+      "method": "POST",
+      "path": "/api/carrinho/calcular",
+      "request": {
+        "cupom": "VERAO2026",
+        "itens": [
+          {
+            "produtoId": "P005",
+            "quantidade": 1
+          }
+        ]
+      },
+      "status": 200,
+      "response": {
+        "itens": [
+          {
+            "produtoId": "P005",
+            "nome": "Mochila Urbana 20L",
+            "precoUnitario": 100,
+            "quantidade": 1,
+            "total": 100
+          }
+        ],
+        "subtotal": 100,
+        "desconto": 0,
+        "frete": 19.9,
+        "freteGratis": false,
+        "valorFaltanteFreteGratis": 100,
+        "total": 119.9,
+        "cupom": {
+          "codigo": "VERAO2026",
+          "aplicado": false,
+          "mensagem": "Cupom expirado."
+        }
+      }
+    },
+    {
+      "id": "CT-004-B",
+      "observadoEmUTC": "2026-10-06T18:07:11.9871638Z",
+      "method": "POST",
+      "path": "/api/pedidos",
+      "request": {
+        "cliente": {
+          "nome": "Maria Silva",
+          "email": "maria@example.com",
+          "cep": "01310-100"
+        },
+        "cupom": "VERAO2026",
+        "itens": [
+          {
+            "produtoId": "P005",
+            "quantidade": 1
+          }
+        ]
+      },
+      "status": 422,
+      "response": {
+        "erro": {
+          "codigo": "CUPOM_EXPIRADO",
+          "mensagem": "Cupom expirado.",
+          "campo": "cupom"
+        }
+      }
+    },
+    {
+      "id": "CT-009-A",
+      "observadoEmUTC": "2026-10-06T18:07:12.1042387Z",
+      "method": "POST",
+      "path": "/api/carrinho/calcular",
+      "request": {
+        "itens": [
+          {
+            "produtoId": "P005",
+            "quantidade": 5
+          }
+        ]
+      },
+      "status": 200,
+      "response": {
+        "itens": [
+          {
+            "produtoId": "P005",
+            "nome": "Mochila Urbana 20L",
+            "precoUnitario": 100,
+            "quantidade": 5,
+            "total": 500
+          }
+        ],
+        "subtotal": 500,
+        "desconto": 0,
+        "frete": 0,
+        "freteGratis": true,
+        "valorFaltanteFreteGratis": 0,
+        "total": 500,
+        "cupom": null
+      }
+    },
+    {
+      "id": "CT-009-B",
+      "observadoEmUTC": "2026-10-06T18:07:12.2930480Z",
+      "method": "POST",
+      "path": "/api/carrinho/calcular",
+      "request": {
+        "itens": [
+          {
+            "produtoId": "P005",
+            "quantidade": 6
+          }
+        ]
+      },
+      "status": 200,
+      "response": {
+        "itens": [
+          {
+            "produtoId": "P005",
+            "nome": "Mochila Urbana 20L",
+            "precoUnitario": 100,
+            "quantidade": 6,
+            "total": 600
+          }
+        ],
+        "subtotal": 600,
+        "desconto": 0,
+        "frete": 0,
+        "freteGratis": true,
+        "valorFaltanteFreteGratis": 0,
+        "total": 600,
+        "cupom": null
+      }
+    },
+    {
+      "id": "CT-011-A",
+      "observadoEmUTC": "2026-10-06T18:07:12.4527898Z",
+      "method": "POST",
+      "path": "/api/carrinho/calcular",
+      "request": {
+        "cupom": "BEMVINDO10",
+        "itens": [
+          {
+            "produtoId": "P004",
+            "quantidade": 1
+          },
+          {
+            "produtoId": "P008",
+            "quantidade": 3
+          }
+        ]
+      },
+      "status": 200,
+      "response": {
+        "itens": [
+          {
+            "produtoId": "P004",
+            "nome": "Boné Aba Curva",
+            "precoUnitario": 49.9,
+            "quantidade": 1,
+            "total": 49.9
+          },
+          {
+            "produtoId": "P008",
+            "nome": "Garrafa Térmica 750ml",
+            "precoUnitario": 50,
+            "quantidade": 3,
+            "total": 150
+          }
+        ],
+        "subtotal": 199.9,
+        "desconto": 19.99,
+        "frete": 19.9,
+        "freteGratis": false,
+        "valorFaltanteFreteGratis": 0.1,
+        "total": 199.81,
+        "cupom": {
+          "codigo": "BEMVINDO10",
+          "aplicado": true,
+          "mensagem": "Cupom aplicado: 10% de desconto nos produtos."
+        }
+      }
+    },
+    {
+      "id": "CT-012-A",
+      "observadoEmUTC": "2026-10-06T18:07:12.6225001Z",
+      "method": "POST",
+      "path": "/api/pedidos",
+      "request": {
+        "cliente": {
+          "nome": "Maria Silva",
+          "email": "maria@example.com",
+          "cep": "01310-100"
+        },
+        "cupom": "BEMVINDO10",
+        "itens": [
+          {
+            "produtoId": "P005",
+            "quantidade": 1
+          }
+        ]
+      },
+      "status": 201,
+      "response": {
+        "numero": "VZ-282055",
+        "criadoEm": "2026-10-06T18:07:18.417Z",
+        "cliente": {
+          "nome": "Maria Silva",
+          "email": "maria@example.com",
+          "cep": "01310100"
+        },
+        "itens": [
+          {
+            "produtoId": "P005",
+            "nome": "Mochila Urbana 20L",
+            "precoUnitario": 100,
+            "quantidade": 1,
+            "total": 100
+          }
+        ],
+        "subtotal": 100,
+        "desconto": 10,
+        "frete": 19.9,
+        "freteGratis": false,
+        "valorFaltanteFreteGratis": 100,
+        "total": 109.9,
+        "cupom": {
+          "codigo": "BEMVINDO10",
+          "aplicado": true,
+          "mensagem": "Cupom aplicado: 10% de desconto nos produtos."
+        }
+      }
+    },
+    {
+      "id": "CT-012-B",
+      "observadoEmUTC": "2026-10-06T18:07:12.7953207Z",
+      "method": "POST",
+      "path": "/api/pedidos",
+      "request": {
+        "cliente": {
+          "nome": "Maria Silva",
+          "email": "maria@example.com",
+          "cep": "01310100"
+        },
+        "cupom": "BEMVINDO10",
+        "itens": [
+          {
+            "produtoId": "P005",
+            "quantidade": 1
+          }
+        ]
+      },
+      "status": 201,
+      "response": {
+        "numero": "VZ-070557",
+        "criadoEm": "2026-10-06T18:07:18.605Z",
+        "cliente": {
+          "nome": "Maria Silva",
+          "email": "maria@example.com",
+          "cep": "01310100"
+        },
+        "itens": [
+          {
+            "produtoId": "P005",
+            "nome": "Mochila Urbana 20L",
+            "precoUnitario": 100,
+            "quantidade": 1,
+            "total": 100
+          }
+        ],
+        "subtotal": 100,
+        "desconto": 10,
+        "frete": 19.9,
+        "freteGratis": false,
+        "valorFaltanteFreteGratis": 100,
+        "total": 109.9,
+        "cupom": {
+          "codigo": "BEMVINDO10",
+          "aplicado": true,
+          "mensagem": "Cupom aplicado: 10% de desconto nos produtos."
+        }
+      }
+    },
+    {
+      "id": "CT-013-A",
+      "observadoEmUTC": "2026-10-06T18:07:12.9818478Z",
+      "method": "POST",
+      "path": "/api/pedidos",
+      "request": {
+        "itens": [
+          {
+            "produtoId": "P005",
+            "quantidade": 1
+          }
+        ],
+        "cliente": {
+          "nome": "Maria",
+          "email": "invalido",
+          "cep": "123"
+        }
+      },
+      "status": 422,
+      "response": {
+        "erro": {
+          "codigo": "DADOS_INVALIDOS",
+          "mensagem": "Existem campos inválidos no pedido.",
+          "campos": [
+            {
+              "campo": "cliente.nome",
+              "mensagem": "Informe nome e sobrenome."
+            },
+            {
+              "campo": "cliente.email",
+              "mensagem": "Informe um e-mail válido."
+            },
+            {
+              "campo": "cliente.cep",
+              "mensagem": "Informe um CEP com 8 dígitos."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "CT-015-D",
+      "observadoEmUTC": "2026-10-06T18:07:13.0798742Z",
+      "method": "POST",
+      "path": "/api/carrinho/calcular",
+      "request": {
+        "itens": [
+          {
+            "produtoId": "P005",
+            "quantidade": 1
+          },
+          {
+            "produtoId": "P005",
+            "quantidade": 1
+          }
+        ]
+      },
+      "status": 422,
+      "response": {
+        "erro": {
+          "codigo": "ITEM_DUPLICADO",
+          "mensagem": "O produto P005 aparece mais de uma vez.",
+          "campo": "itens[1].produtoId"
+        }
+      }
+    },
+    {
+      "id": "CT-015-E",
+      "observadoEmUTC": "2026-10-06T18:07:13.3816070Z",
+      "method": "POST",
+      "path": "/api/carrinho/calcular",
+      "request": {
+        "itens": [
+          {
+            "produtoId": "P005",
+            "quantidade": 0
+          }
+        ]
+      },
+      "status": 422,
+      "response": {
+        "erro": {
+          "codigo": "QUANTIDADE_INVALIDA",
+          "mensagem": "A quantidade deve ser um número inteiro maior ou igual a 1.",
+          "campo": "itens[0].quantidade"
+        }
+      }
+    },
+    {
+      "id": "CT-016-A",
+      "observadoEmUTC": "2026-10-06T18:07:13.6890126Z",
+      "method": "POST",
+      "path": "/api/carrinho/calcular",
+      "request": "{\"itens\":",
+      "status": 400,
+      "response": {
+        "erro": {
+          "codigo": "JSON_INVALIDO",
+          "mensagem": "O corpo da requisição deve ser um objeto JSON válido."
+        }
+      }
+    },
+    {
+      "id": "CT-016-B",
+      "observadoEmUTC": "2026-10-06T18:07:13.8667412Z",
+      "method": "GET",
+      "path": "/api/rota-inexistente",
+      "request": null,
+      "status": 404,
+      "response": {
+        "erro": {
+          "codigo": "ROTA_NAO_ENCONTRADA",
+          "mensagem": "Rota não encontrada."
+        }
+      }
+    },
+    {
+      "id": "CT-016-C",
+      "observadoEmUTC": "2026-10-06T18:07:14.0818652Z",
+      "method": "GET",
+      "path": "/api/pedidos",
+      "request": null,
+      "status": 405,
+      "response": {
+        "erro": {
+          "codigo": "METODO_NAO_PERMITIDO",
+          "mensagem": "O método GET não é permitido nesta rota."
+        }
+      }
+    }
+  ]
+}

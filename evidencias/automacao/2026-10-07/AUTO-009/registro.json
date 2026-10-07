@@ -1,0 +1,35 @@
+{
+  "id": "AUTO-009",
+  "title": "AUTO-009 | CT-009-API-6P | Rejeitar seis unidades em /api/pedidos",
+  "layer": "API",
+  "ctIds": [
+    "CT-009-API-6P"
+  ],
+  "status": "known_failure",
+  "bugIds": [
+    "BUG-002"
+  ],
+  "statusPlaywright": "failed",
+  "expectedStatus": "failed",
+  "startedAt": "2026-10-07T17:32:43.062Z",
+  "durationMs": 212,
+  "errors": [
+    "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: 422\nReceived: 201\n\n  25 |       && (caso.statusBug === 201 ? /^VZ-\\d{6}$/.test(dados.numero) : dados.numero === undefined);\n  26 |     info.fail(bugConfirmado, 'BUG-002: API aceita seis unidades por produto.');\n> 27 |     expect.soft(resposta.status()).toBe(422);\n     |                                    ^\n  28 |     expect.soft(dados.erro?.codigo).toBe('QUANTIDADE_MAXIMA_EXCEDIDA');\n  29 |     expect.soft(dados.erro?.campo).toBe('itens[0].quantidade');\n  30 |     expect.soft(dados.erro?.mensagem).toMatch(/(?:5|cinco).*unidades.*produto/i);\n    at .\\tests\\limite-api.spec.ts:27:36",
+    "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: \"QUANTIDADE_MAXIMA_EXCEDIDA\"\nReceived: undefined\n\n  26 |     info.fail(bugConfirmado, 'BUG-002: API aceita seis unidades por produto.');\n  27 |     expect.soft(resposta.status()).toBe(422);\n> 28 |     expect.soft(dados.erro?.codigo).toBe('QUANTIDADE_MAXIMA_EXCEDIDA');\n     |                                     ^\n  29 |     expect.soft(dados.erro?.campo).toBe('itens[0].quantidade');\n  30 |     expect.soft(dados.erro?.mensagem).toMatch(/(?:5|cinco).*unidades.*produto/i);\n  31 |     expect.soft(dados.numero).toBeUndefined();\n    at .\\tests\\limite-api.spec.ts:28:37",
+    "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: \"itens[0].quantidade\"\nReceived: undefined\n\n  27 |     expect.soft(resposta.status()).toBe(422);\n  28 |     expect.soft(dados.erro?.codigo).toBe('QUANTIDADE_MAXIMA_EXCEDIDA');\n> 29 |     expect.soft(dados.erro?.campo).toBe('itens[0].quantidade');\n     |                                    ^\n  30 |     expect.soft(dados.erro?.mensagem).toMatch(/(?:5|cinco).*unidades.*produto/i);\n  31 |     expect.soft(dados.numero).toBeUndefined();\n  32 |   });\n    at .\\tests\\limite-api.spec.ts:29:36",
+    "TypeError: expect(received).toMatch(expected)\n\nMatcher error: received value must be a string\n\nReceived has value: undefined\n\n  28 |     expect.soft(dados.erro?.codigo).toBe('QUANTIDADE_MAXIMA_EXCEDIDA');\n  29 |     expect.soft(dados.erro?.campo).toBe('itens[0].quantidade');\n> 30 |     expect.soft(dados.erro?.mensagem).toMatch(/(?:5|cinco).*unidades.*produto/i);\n     |                                       ^\n  31 |     expect.soft(dados.numero).toBeUndefined();\n  32 |   });\n  33 | }\n    at .\\tests\\limite-api.spec.ts:30:39",
+    "Error: expect(received).toBeUndefined()\n\nReceived: \"VZ-974869\"\n\n  29 |     expect.soft(dados.erro?.campo).toBe('itens[0].quantidade');\n  30 |     expect.soft(dados.erro?.mensagem).toMatch(/(?:5|cinco).*unidades.*produto/i);\n> 31 |     expect.soft(dados.numero).toBeUndefined();\n     |                               ^\n  32 |   });\n  33 | }\n  34 |\n    at .\\tests\\limite-api.spec.ts:31:31"
+  ],
+  "attachments": [
+    {
+      "name": "requisicao-resposta",
+      "path": "evidencias/automacao/2026-10-07/AUTO-009/requisicao-resposta.json",
+      "contentType": "application/json"
+    },
+    {
+      "name": "error-context",
+      "path": "evidencias/automacao/2026-10-07/AUTO-009/error-context.md",
+      "contentType": "text/markdown"
+    }
+  ]
+}

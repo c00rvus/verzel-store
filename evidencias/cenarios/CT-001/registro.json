@@ -1,0 +1,95 @@
+{
+  "caseId": "CT-001",
+  "group": "CT-001",
+  "layer": "UI",
+  "input": "Cupom \"BEMVINDO10\"",
+  "date": "07/10 10:16:46",
+  "expected": "100,00 / 10,00 / 19,90 / 109,90",
+  "actual": "100,00 / 10,00 / 19,90 / 109,90",
+  "status": "Aprovado",
+  "evidenceId": "EV-016",
+  "bugIds": [],
+  "evidenceRecord": {
+    "sourcePath": "evidencias/execucao-2026-10-07/ui-resultados.json",
+    "sourceId": "CT-001",
+    "recordedAtUTC": "2026-10-07T14:16:46.664Z",
+    "dados": {
+      "produto": "P005",
+      "quantidade": 1,
+      "cupom": "BEMVINDO10"
+    },
+    "esperado": {
+      "subtotal": 100,
+      "desconto": 10,
+      "frete": 19.9,
+      "total": 109.9,
+      "faltante": 100
+    },
+    "obtido": "Resumo do pedido\nSubtotal\nR$ 100,00\nDesconto (BEMVINDO10)\n- R$ 10,00\nFrete\nR$ 19,90\nTotal\nR$ 109,90\n\nFaltam R$ 100,00 para o frete grátis.\n\nFinalizar compra",
+    "status": "Aprovado",
+    "arquivos": [
+      "evidencias/execucao-2026-10-07/CT-001-cupom-antes.png",
+      "evidencias/execucao-2026-10-07/CT-001-cupom-preenchido.png",
+      "evidencias/execucao-2026-10-07/CT-001-cupom-depois.png",
+      "evidencias/execucao-2026-10-07/CT-001-vitrine-antes-adicionar.png",
+      "evidencias/execucao-2026-10-07/CT-001-vitrine-depois-adicionar.png"
+    ]
+  },
+  "dados": {
+    "produto": "P005",
+    "quantidade": 1,
+    "cupom": "BEMVINDO10"
+  },
+  "sourcePath": "evidencias/execucao-2026-10-07/ui-resultados.json",
+  "sourceId": "CT-001",
+  "recordedAtUTC": "2026-10-07T14:16:46.664Z",
+  "images": [
+    {
+      "path": "evidencias/execucao-2026-10-07/CT-001-vitrine-antes-adicionar.png",
+      "label": "Vitrine com carrinho vazio",
+      "stage": "Vitrine com carrinho vazio",
+      "time": "2026-10-07T14:15:13.788Z",
+      "phase": "before"
+    },
+    {
+      "path": "evidencias/execucao-2026-10-07/CT-001-vitrine-depois-adicionar.png",
+      "label": "Uma mochila adicionada",
+      "stage": "Uma mochila adicionada",
+      "time": "2026-10-07T14:15:14.227Z",
+      "phase": "after"
+    },
+    {
+      "path": "evidencias/execucao-2026-10-07/CT-001-cupom-antes.png",
+      "label": "Resumo completo sem cupom",
+      "stage": "Resumo completo sem cupom",
+      "time": "2026-10-07T14:16:06.592Z",
+      "phase": "before"
+    },
+    {
+      "path": "evidencias/execucao-2026-10-07/CT-001-cupom-preenchido.png",
+      "label": "BEMVINDO10 preenchido antes de aplicar",
+      "stage": "BEMVINDO10 preenchido antes de aplicar",
+      "time": "2026-10-07T14:16:06.779Z",
+      "phase": "input"
+    },
+    {
+      "path": "evidencias/execucao-2026-10-07/CT-001-cupom-depois.png",
+      "label": "Cupom aplicado e resumo recalculado",
+      "stage": "Cupom aplicado e resumo recalculado",
+      "time": "2026-10-07T14:16:07.238Z",
+      "phase": "after"
+    }
+  ],
+  "pairs": [
+    {
+      "label": "Aplicação do cupom",
+      "beforePath": "evidencias/execucao-2026-10-07/CT-001-cupom-antes.png",
+      "afterPath": "evidencias/execucao-2026-10-07/CT-001-cupom-depois.png"
+    },
+    {
+      "label": "vitrine adicionar",
+      "beforePath": "evidencias/execucao-2026-10-07/CT-001-vitrine-antes-adicionar.png",
+      "afterPath": "evidencias/execucao-2026-10-07/CT-001-vitrine-depois-adicionar.png"
+    }
+  ]
+}

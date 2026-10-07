@@ -1,0 +1,45 @@
+{
+  "caseId": "CT-013-API-05",
+  "group": "CT-013",
+  "layer": "API",
+  "input": "POST /api/pedidos; cliente {\"nome\":\"Maria Silva\",\"email\":\"\",\"cep\":\"01310-100\"}",
+  "date": "07/10 10:15:23",
+  "expected": "422 DADOS_INVALIDOS",
+  "actual": "422 DADOS_INVALIDOS; cliente.email: Informe o e-mail.",
+  "status": "Aprovado",
+  "evidenceId": "EV-035",
+  "bugIds": [],
+  "method": "POST",
+  "path": "/api/pedidos",
+  "request": {
+    "itens": [
+      {
+        "produtoId": "P005",
+        "quantidade": 1
+      }
+    ],
+    "cliente": {
+      "nome": "Maria Silva",
+      "email": "",
+      "cep": "01310-100"
+    }
+  },
+  "response": {
+    "erro": {
+      "codigo": "DADOS_INVALIDOS",
+      "mensagem": "Existem campos inválidos no pedido.",
+      "campos": [
+        {
+          "campo": "cliente.email",
+          "mensagem": "Informe o e-mail."
+        }
+      ]
+    }
+  },
+  "httpStatus": 422,
+  "sourcePath": "evidencias/execucao-2026-10-07/api-pendentes.json",
+  "sourceId": "CT-013-API-05",
+  "recordedAtUTC": "2026-10-07T14:15:23.4656578Z",
+  "images": [],
+  "pairs": []
+}
